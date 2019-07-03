@@ -1,0 +1,94 @@
+<extend name="public:base" />
+<block name="content">
+<!-- 页面标签 -->
+<script type="text/html" template="" lay-done="layui.element.render('nav', 'layadmin-pagetabs-nav')">
+    {{# if(layui.setter.pageTabs){ }}
+    <div class="layadmin-pagetabs" id="LAY_app_tabs">
+        <div class="layui-icon layadmin-tabs-control layui-icon-prev" layadmin-event="leftPage"></div>
+        <div class="layui-icon layadmin-tabs-control layui-icon-next" layadmin-event="rightPage"></div>
+        <div class="layui-icon layadmin-tabs-control layui-icon-down">
+            <ul class="layui-nav layadmin-tabs-select" lay-filter="layadmin-pagetabs-nav">
+                <li class="layui-nav-item" lay-unselect>
+                    <a href="javascript:;"></a>
+                    <dl class="layui-nav-child layui-anim-fadein">
+                        <dd layadmin-event="closeThisTabs"><a href="javascript:;">关闭当前标签页</a></dd>
+                        <dd layadmin-event="closeOtherTabs"><a href="javascript:;">关闭其它标签页</a></dd>
+                        <dd layadmin-event="closeAllTabs"><a href="javascript:;">关闭全部标签页</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <div class="layui-tab" lay-unauto lay-allowClose="true" lay-filter="layadmin-layout-tabs">
+            <ul class="layui-tab-title" id="LAY_app_tabsheader">
+                <li lay-id="/"><i class="layui-icon layui-icon-home"></i></li>
+            </ul>
+        </div>
+    </div>
+    {{# } }}
+</script>
+
+
+<!-- 主体内容 -->
+<div class="layui-body" id="LAY_app_body">
+    <div class="layadmin-tabsbody-item layui-show"><div class="layui-card layadmin-header">
+        <div class="layui-breadcrumb" lay-filter="breadcrumb" style="visibility: visible;">
+            <a lay-href="">主页</a><span lay-separator="">/</span>
+            <a><cite>用户</cite></a><span lay-separator="">/</span>
+            <a><cite>角色管理</cite></a>
+        </div>
+    </div><div class="layui-fluid">
+        <div class="layui-card">
+            <div class="layui-form layui-card-header layuiadmin-card-header-auto" lay-filter="layadmin-useradminrole-formlist">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        角色筛选
+                    </div>
+                    <div class="layui-inline">
+                        <select name="rolename" lay-filter="LAY-user-adminrole-type">
+                            <option value="-1">全部角色</option>
+                            <option value="0">管理员</option>
+                            <option value="1">超级管理员</option>
+                            <option value="2">纠错员</option>
+                            <option value="3">采购员</option>
+                            <option value="4">推销员</option>
+                            <option value="5">运营人员</option>
+                            <option value="6">编辑</option>
+                        </select><div class="layui-unselect layui-form-select"><div class="layui-select-title"><input type="text" placeholder="请选择" value="全部角色" readonly="" class="layui-input layui-unselect"><i class="layui-edge"></i></div><dl class="layui-anim layui-anim-upbit"><dd lay-value="-1" class="layui-this">全部角色</dd><dd lay-value="0" class="">管理员</dd><dd lay-value="1" class="">超级管理员</dd><dd lay-value="2" class="">纠错员</dd><dd lay-value="3" class="">采购员</dd><dd lay-value="4" class="">推销员</dd><dd lay-value="5" class="">运营人员</dd><dd lay-value="6" class="">编辑</dd></dl></div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-card-body">
+                <div style="padding-bottom: 10px;">
+                    <button class="layui-btn layuiadmin-btn-role" data-type="batchdel">删除</button>
+                    <button class="layui-btn layuiadmin-btn-role" data-type="add">添加</button>
+                </div>
+
+                <table class="layui-hide" id="test"></table>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+</div>
+<script>
+    layui.use('table', function(){
+        var table = layui.table;
+
+        table.render({
+            elem: '#test'
+            ,url:'/demo/table/user/'
+            ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+            ,cols: [[
+                {type:'checkbox'}
+                ,{field:'id', title: 'ID', sort: true}
+                ,{field:'username', title: '角色名'} //width 支持：数字、百分比和不填写。你还可以通过 minWidth 参数局部定义当前单元格的最小宽度，layui 2.2.1 新增
+                ,{field:'sex', title: '拥有权限', sort: true}
+                ,{field:'city', title: '邮箱'}
+                ,{field:'city', title: '具体描述'}
+                ,{field:'experience', title: '操作', sort: true, align: 'right'} //单元格内容水平居中
+            ]]
+        });
+    });
+</script>
+</block>

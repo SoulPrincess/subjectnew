@@ -1,0 +1,181 @@
+
+<link rel="stylesheet" href="../../../../../sfkj/sfkj-07-02/css/templatemo-style(2).css">
+<block name="biaoti">品牌防伪</block>
+<extend name="base:index" />
+<block name="head_content">
+<div class="parallax-content baner-content baner-content-brand" >
+    <div class="container about-content-last">
+        <div class="text-content about-content-last">
+            <h2 class="  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">一物一码产品身份唯一性</h2>
+            <p class="fraud-text  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">造假的克星</p>
+            <div class="item-list  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                <a href="#" class="fraud" data-id="about">扫码辨真伪</a>
+                <a href="#" class="fraud" data-id="about">动态营销</a>
+                <a href="#" class="fraud" data-id="about">在线互动</a>
+                <a href="#" class="fraud" data-id="about">积分</a>
+                <a href="#" class="fraud" data-id="about">兑奖</a>
+            </div>
+        </div>
+        <div class="primary-white-button">
+            <a href="javascript:void (0);" class="scroll-link scroll-jump" data-id="about">了解详情</a>
+        </div>
+        <!--<a href="#" class="parallax-down"><img src="img/down.png" alt=""></a>-->
+    </div>
+</div>
+<!--The head of navigation-->
+
+<!--Let brand anti - counterfeiting with dazzling vitality-->
+<section class="page-section">
+    <div class="container">
+        <div class="text-content">
+            <h3 class="text-content-color h3-fear   wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">{$brand['info']['title']}</h3>
+            <p class="text-content-color  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">{$brand['info']['entitle']}</p>
+        </div>
+        <div class="solution">
+            <div class="col-xs-12 col-sm-6 wow animated bounceInLeft"  data-wow-duration="1.5s" data-wow-delay="0.2s">
+                <img src="{$brand1['info']['rmationimg']}" alt="">
+            </div>
+            <div class="col-xs-12 col-sm-6 loop wow animated bounceInRight"  data-wow-duration="1.5s" data-wow-delay="0.2s" >
+                <h6 class="loop-right">{$brand1['info']['title']}</h6>
+                {$brand1['info']['describe']}
+            </div>
+            <div class="col-xs-12 brand">
+                <a href="javascript:void (0);" class="scroll-jump brand-btn" data-id="about">了解详情</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Let brand anti - counterfeiting with dazzling vitality-->
+<!--WeChat scan instant identification-->
+<section id="identify" class="page-section">
+    <div class="container">
+        <div class="text-content">
+            <h3 class="h3-fear h3-fear wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">微信扫一扫即刻辩真伪</h3>
+        </div>
+        <div class="solution">
+            <foreach name="brand4['info']" item="vo" key="k">
+                <if condition="$k eq 0|$k eq 1|$k eq 2">
+                    <div class="col-xs-12 col-sm-4 identify-borR wow animated bounceInLeft"  data-wow-duration="1.5s" data-wow-delay="0.2s">
+                        <img src="{$vo['rmationimg']}" alt="" data-key="{$k}">
+                    </div>
+                <else/>
+                    <div class="col-xs-12 col-sm-4 identify-borR wow animated bounceInRight"  data-wow-duration="1.5s" data-wow-delay="0.2s">
+                        <img src="{$vo['rmationimg']}" alt="" data-key="{$k}">
+                    </div>
+                </if>
+            </foreach>
+
+            <!--<div class="col-xs-12 col-sm-4 identify-borR wow animated bounceInLeft"  data-wow-duration="1.5s" data-wow-delay="0.2s">-->
+                <!--<img src="__PUBLIC__/home/img/subpage/operate.png" alt="">-->
+            <!--</div>-->
+            <!--<div class="col-xs-12 col-sm-4 identify-borR wow animated bounceInLeft"  data-wow-duration="1.5s" data-wow-delay="0.2s">-->
+                <!--<img src="__PUBLIC__/home/img/subpage/person.png" alt="">-->
+            <!--</div>-->
+            <!--<div class="col-xs-12 col-sm-4 identify-borR wow animated bounceInRight"  data-wow-duration="1.5s" data-wow-delay="0.2s">-->
+                <!--<img src="__PUBLIC__/home/img/subpage/online.png"  alt="">-->
+            <!--</div>-->
+            <!--<div class="col-xs-12 col-sm-4 identify-borR wow animated bounceInRight"  data-wow-duration="1.5s" data-wow-delay="0.2s">-->
+                <!--<img src="__PUBLIC__/home/img/subpage/control.png" alt="">-->
+            <!--</div>-->
+            <!--<div class="col-xs-12 col-sm-4 identify-borR wow animated bounceInRight"  data-wow-duration="1.5s" data-wow-delay="0.2s">-->
+                <!--<img src="__PUBLIC__/home/img/subpage/analysis.png" alt="">-->
+            <!--</div>-->
+        </div>
+    </div>
+</section>
+<!--WeChat scan instant identification-->
+<!--Using digital identity management leaves fakes nowhere to hide-->
+<section class="page-section">
+    <div class="container">
+        <div class="text-content">
+            <h3 class="text-content-color h3-fear  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">{$brand2['info']['title']}</h3>
+        </div>
+        <div class="solution">
+            <div class="col-xs-12 col-sm-6 computer-con computer  wow animated bounceInLeft"  data-wow-duration="1.5s" data-wow-delay="0.2s" >
+                <h6>{$brand3['info']['title']}</h6>
+                {$brand3['info']['describe']}
+            </div>
+            <div class="col-xs-12 col-sm-6 computer  wow animated bounceInRight"  data-wow-duration="1.5s" data-wow-delay="0.2s">
+                <img src="{$brand3['info']['rmationimg']}" alt="">
+            </div>
+
+            <div class="col-xs-12 brand">
+                <a href="javascript:void (0);" class="scroll-jump brand-btn" data-id="about">了解详情</a>
+            </div>
+        </div>
+    </div>
+</section>
+    <script>
+        $('.identify-borR').mouseenter(function () {
+            var $this = $(this),
+                current = $this.children('img').attr('src'),
+                key1 = $this.children('img').attr('data-key'),
+                suffixQ = current.lastIndexOf('.png'),
+                suffix = current.substr(current.lastIndexOf('.')),//获取后缀
+                str = current.substr(0,suffixQ);
+            str = current.substr(0,suffixQ);
+            var str1=<?php echo json_encode($brand4['info'])?>;
+                var aa=str1[key1].describe;
+                $(this).children('img').attr('src',aa.substr(aa.indexOf('src="')+5,aa.indexOf('" alt')-10));
+        }).mouseleave(function () {
+            var $this = $(this),
+                current = $this.children('img').attr('src'),
+                key1 = $this.children('img').attr('data-key'),
+                suffixQ = current.lastIndexOf('-B.png'),
+                suffix = current.substr(current.lastIndexOf('.')),//获取后缀
+                str = current.substr(0,suffixQ);
+        var str1=<?php echo json_encode($brand4[info])?>;
+        var aa=str1[key1].rmationimg;
+        $(this).children('img').attr('src',aa);
+        })
+        $('.bit').mouseenter(function () {
+            var $this = $(this),
+                layer = $this.children('span').remove();
+            $('.Luxury,.FMCG').append('<span class="layer"></span>');
+            $('.Industrial').append('<span class="layerT"></span>')
+            $(layer);
+        }).mouseleave(function () {
+            var $this = $(this),
+                layer = $this.append('<span class="layerT"></span>');
+            $(layer);
+            $(this).children('span').remove();
+        })
+        $('.Luxury').mouseenter(function () {
+            var $this = $(this),
+                layer = $this.children('span').remove();
+            $('.FMCG').append('<span class="layer"></span>');
+            $('.bit,.Industrial').append('<span class="layerT"></span>')
+            $(layer);
+        }).mouseleave(function () {
+            var $this = $(this),
+                layer = $this.append('<span class="layerT"></span>');
+            $(layer);
+            $(this).children('span').remove();
+        })
+        $('.Industrial').mouseenter(function () {
+            var $this = $(this),
+                layer = $this.children('span').remove();
+            $('.Luxury,.FMCG').append('<span class="layer"></span>');
+            $('.bit').append('<span class="layerT"></span>')
+            $(layer);
+        }).mouseleave(function () {
+            var $this = $(this),
+                layer = $this.append('<span class="layerT"></span>');
+            $(layer);
+            $(this).children('span').remove();
+        })
+        $('.FMCG').mouseenter(function () {
+            var $this = $(this),
+                layer = $this.children('span').remove();
+            $('.Luxury').append('<span class="layer"></span>');
+            $('.bit,.Industrial').append('<span class="layerT"></span>')
+            $(layer);
+        }).mouseleave(function () {
+            var $this = $(this),
+                layer = $this.append('<span class="layerT"></span>');
+            $(layer);
+            $(this).children('span').remove();
+        })
+    </script>
+<!--Using digital identity management leaves fakes nowhere to hide-->
+</block>

@@ -1,0 +1,13 @@
+
+.layui-form-item .layui-input-block .layui-form-radio{
+    margin: 0;
+}
+.layui-form-item .layui-input-inline .layui-form-radio{
+    margin: 0;
+}
+.layui-form-item .revel{
+    width: 113px;
+}
+/*.layui-input-block .textA{*/
+    /*width: 26.5%;*/
+/*}*/

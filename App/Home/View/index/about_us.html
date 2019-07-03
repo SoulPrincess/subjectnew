@@ -1,0 +1,125 @@
+<link rel="stylesheet" href="../../../../../sfkj/sfkj-07-02/css/templatemo-style(6).css">
+<block name="biaoti">关于我们</block>
+<extend name="base:index" />
+<block name="head_content">
+    <!--<script src="__PUBLIC__/admin/layui/layui/lay/modules/layer.js"></script>-->
+<div class="parallax-content baner-content baner-content-about">
+    <div class="container">
+        <div class="text-content about-congtent">
+            <h2 class="wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">NEXUS</h2>
+            <h2 class="wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">统一客户数据平台+IQ智能+PRISM驱动客户洞察</h2>
+        </div>
+
+        <a href="#" class="parallax-down"><img src="__PUBLIC__/home/img/down.png" alt=""></a>
+    </div>
+</div>
+<!--The head of navigation-->
+
+<!--about-congtent-->
+<section class="page-section">
+    <div class="container">
+        <div class="text-content  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <h3 class="text-content-color">{$aboutf1['info']['title']}</h3>
+            <p class="text-content-color">{$aboutf1['info']['entitle']}</p>
+        </div>
+        <div class="solution">
+            <p class="about-content computer  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                {$aboutf1['info']['describe']|strip_tags}
+            </p>
+            <div class="col-xs-12 col-sm-6 market-numR wow animated bounceInLeft"  data-wow-duration="1.5s" data-wow-delay="0.2s">
+                <img src="{$aboutf0['info'][0]['rmationimg']}" alt="{$aboutf1['info']['title']}">
+            </div>
+            <div class="col-xs-12 col-sm-6 market-numL wow animated bounceInRight"  data-wow-duration="1.5s" data-wow-delay="0.2s" >
+                <img src="{$aboutf0['info'][1]['rmationimg']}" alt="{$aboutf1['info']['title']}">
+            </div>
+        </div>
+    </div>
+</section>
+<!--about-congtent-->
+<!--Research purpose-->
+<section class="page-section wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+    <div class="container">
+        <div class="text-content  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <h3 class="text-content-color h3-fear">{$aboutf2['info']['title']}</h3>
+            <p class="text-content-color">{$aboutf2['info']['entitle']}</p>
+        </div>
+        <div class="solution">
+            <div class="about-content about-content-last wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                {$aboutf2['info']['describe']}
+            </div>
+            <foreach name="aboutf3['info']" item="vo" >
+                <div class="col-xs-12 col-sm-3 identify-borR wow animated bounceInLeft" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                    <div class="equipment">
+                        <img src="{$vo['rmationimg']}" alt="{$vo['title']}">
+                        <span>{$vo['title']}</span>
+                    </div>
+                </div>
+            </foreach>
+        </div>
+    </div>
+</section>
+<!--Research purpose-->
+<!--Contact us-->
+    <section id="contact">
+        <div class="container">
+            <div class="text-content wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                <h3 class="h3-fear">联系我们</h3>
+                <p>Our Customers</p>
+            </div>
+            <div class="solution wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                <div class="col-xs-12 col-sm-6 about-content-last wow animated bounceInLeft" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                    <div class="i-tail-ffund">
+                        <ul>
+                            <li><i class="i-tail-bupic1"></i><p>电话：021-3412-2712</p></li>
+                            <li><i class="i-tail-bupic2"></i><p>上海市闵行区泰虹路168号</p></li>
+                            <li><i class="i-tail-bupic3"></i><p>postmaster@xingbafw.com</p></li>
+                            <li><i class="i-tail-bupic4"></i><p>网址：www.sfengrz.com</p></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 contact-title wow animated bounceInRight" data-wow-duration="1.5s" data-wow-delay="0.2s" >
+                    <p>业务咨询</p>
+                    <ul>
+                        <li> <small>公司名称：</small> <input type="text" name="name"> </li>
+                        <li> <small>联系电话：</small> <input type="text" name="phone"> </li>
+                        <li>
+                            <small class="small-last">您的留言：</small>
+                            <textarea  name="message"  id="" cols="30" rows="10"></textarea>
+                        </li>
+                        <button id="send_mes">发送</button>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        $('#send_mes').click(function(){
+            $.ajax ({
+                url :"{:U('admin/message/messageadd')}",
+                data : {
+                    name : $('input[name=name]').val(),
+                    phone : $('input[name=phone]').val(),
+                    message : $('textarea[name=message]').val(),
+                },
+                type: 'post',
+                success: function (data) {
+                    if (data.status==1) {
+                        alert(data.info);
+                    }
+                    else {
+                        alert(data.info);
+                    }
+                    $('input[name=name]').val("");
+                    $('input[name=phone]').val("");
+                    $('textarea[name=message]').val("");
+                }
+            },'json')
+        });
+
+    </script>
+<!--Contact us-->
+</block>

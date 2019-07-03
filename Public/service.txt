@@ -1,0 +1,7 @@
+a:11:{s:4:"type";s:11:"scrollright";s:5:"float";s:1:"2";s:5:"color";s:1:"1";s:18:"servicename_status";s:2:"on";s:8:"optimize";s:12:"测试信息";s:2:"qq";s:29:"/Public/admin/img/qq/qq_6.jpg";s:3:"msn";s:32:"/Public/admin/img/MsN/msn_10.gif";s:6:"taobao";s:37:"/Public/admin/img/taobao/taobao_1.jpg";s:5:"skype";s:36:"/Public/admin/img/skupe/skype_13.gif";s:7:"alibaba";s:36:"/Public/admin/img/ali/alibaba_12.jpg";s:6:"typejs";s:453:"&lt;script&gt; $('#defined_type').css({'width':'50px','height':'100px','border':'1px solid','position':'absolute','top':'100px','right':'5px','z-index':'999'});
+var menuYloc = $('#defined_type_right_src').offset().top;
+        $(window).scroll(function () {
+            var offsetTop = menuYloc + $(window).scrollTop() + 'px';
+            $('#defined_type').animate({ top: offsetTop }, { duration: 100, queue: false });
+        });
+&lt;/script&gt;";}

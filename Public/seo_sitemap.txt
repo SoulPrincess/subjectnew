@@ -1,0 +1,1 @@
+a:4:{s:4:"auto";s:1:"0";s:10:"filtration";s:1:"1";s:8:"language";s:1:"0";s:8:"site_map";s:1:"1";}

@@ -1,0 +1,256 @@
+<extend name="public:base" />
+<block name="content">
+
+    <!-- 页面标签 -->
+    <script type="text/html" template="" lay-done="layui.element.render('nav', 'layadmin-pagetabs-nav')">
+        {{# if(layui.setter.pageTabs){ }}
+        <div class="layadmin-pagetabs" id="LAY_app_tabs">
+            <div class="layui-icon layadmin-tabs-control layui-icon-prev" layadmin-event="leftPage"></div>
+            <div class="layui-icon layadmin-tabs-control layui-icon-next" layadmin-event="rightPage"></div>
+            <div class="layui-icon layadmin-tabs-control layui-icon-down">
+                <ul class="layui-nav layadmin-tabs-select" lay-filter="layadmin-pagetabs-nav">
+                    <li class="layui-nav-item" lay-unselect>
+                        <a href="javascript:;"></a>
+                        <dl class="layui-nav-child layui-anim-fadein">
+                            <dd layadmin-event="closeThisTabs"><a href="javascript:;">关闭当前标签页</a></dd>
+                            <dd layadmin-event="closeOtherTabs"><a href="javascript:;">关闭其它标签页</a></dd>
+                            <dd layadmin-event="closeAllTabs"><a href="javascript:;">关闭全部标签页</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <div class="layui-tab" lay-unauto lay-allowClose="true" lay-filter="layadmin-layout-tabs">
+                <ul class="layui-tab-title" id="LAY_app_tabsheader">
+                    <li lay-id="/"><i class="layui-icon layui-icon-home"></i></li>
+                </ul>
+            </div>
+        </div>
+        {{# } }}
+    </script>
+
+
+    <!-- 主体内容 -->
+    <div class="layui-body" id="LAY_app_body">
+        <div class="layadmin-tabsbody-item layui-show">
+            <div class="layui-card layadmin-header">
+                <div class="layui-breadcrumb" lay-filter="breadcrumb" style="visibility: visible;">
+                    <a lay-href="">主页</a><span lay-separator="">/</span>
+                    <a><cite>内容系统</cite></a><span lay-separator="">/</span>
+                    <a><cite>分类管理</cite></a>
+                </div>
+            </div><div class="layui-fluid">
+            <div class="layui-card">
+                <div class="layui-card-header layuiadmin-card-header-auto">
+                    <button class="layui-btn layuiadmin-btn-tags" id="btn-add">添加一级分类</button>
+                    <div class="layui-btn-group">
+                        <button class="layui-btn" id="btn-expand">全部展开</button>
+                        <button class="layui-btn" id="btn-fold">全部折叠</button>
+                        <button class="layui-btn" id="btn-refresh">刷新表格</button>
+                    </div>
+                </div>
+                <div class="layui-card-body">
+                    <table class="layui-hide" id="consult_type" lay-filter="consult_type"></table>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- 辅助元素，一般用于移动设备下遮罩 -->
+    <div class="layadmin-body-shade" layadmin-event="shade"></div>
+    <script>
+        layui.config({
+            base: '/public/admin/module/'
+        }).extend({
+            treetable: 'treetable-lay/treetable'
+        }).use(['layer', 'table', 'treetable'], function () {
+            var $ = layui.jquery;
+            var table = layui.table;
+            var layer = layui.layer;
+            var treetable = layui.treetable;
+
+            //渲染表格
+            var renderTable = function () {
+                    treetable.render({
+                        treeColIndex: 1,
+                        treeSpid:0,
+                        url:"{:U('product/productmanagement')}",
+                        treeIdName: 'id',
+                        treePidName: 'pid',
+                        treeDefaultClose: true,
+                        treeLinkage: true,
+                        elem: '#consult_type',
+                        page: false,
+                        cols: [[
+                            { type: 'numbers' },
+                            { field: 'c_id', title: '分类Id', align: 'center' },
+                            { field: 'name', title: '分类名', edit: 'text', align: 'left' },
+                            { field: 'describe', title: '描述', edit: 'text', align: 'center' },
+                            { templet: '#barDemo', title: '操作', align: 'right' ,width:250}
+                        ]],
+                        done: function () {
+                            layer.closeAll('loading');
+                        }
+                    });
+            };
+
+            renderTable();
+
+            $('#btn-expand').click(function () {
+                treetable.expandAll('#consult_type');
+            });
+
+            $('#btn-fold').click(function () {
+                treetable.foldAll('#consult_type');
+            });
+
+            $('#btn-refresh').click(function () {
+                renderTable();
+            });
+            $('#btn-add').click(function () {
+                //向服务端发送添加指令
+                layer.open({
+                    title:'新增一级分类',//标题
+                    type: 2,//类型
+                    shadeClose:true,//是否点击遮罩关闭
+                    fixed: true,//固定
+                    resize:false,//是否允许拉伸
+                    anim: 0,//动画
+                    // area: ['550px', '500px'],
+                    skin: 1, //加上边框
+                    content: ['addmanagement.html', 'no'],
+                    end: function(index, layero){
+                        renderTable();
+                    }
+                });
+            })
+            //监听工具条
+            table.on('tool(consult_type)', function (obj) {
+                var data = obj.data;
+                var value = obj.value //得到修改后的值
+                    , field = obj.field; //得到字段
+                var layEvent = obj.event;
+
+                if (layEvent === 'del') {
+                    layer.confirm('你确定删除数据吗？此操作不能撤销！', function (index) {
+                        //向服务端发送删除指令
+                        layui.$.post(
+                            "{:U('product/delmanagement')}",
+                            {
+                                p_id: data.c_id,
+                            },
+                            function (data) {
+                                if (data.status) {
+                                    layer.msg(data.info);
+                                    obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
+                                    renderTable();
+                                    layer.close(index);
+                                }
+                                else {
+                                    layer.msg(data.info);
+                                }
+                            }
+                        )
+                    });
+                }
+                else if (layEvent === 'save') {
+                    layui.$.post(
+                        "{:U('product/updatemanagement')}",
+                        {
+                            p_id: data.c_id,
+                            Name: data.name,
+                            Describe: data.describe
+                        },
+                        function (data) {
+                            if (data.status==1) {
+                                layer.msg(data.info);
+                                renderTable();
+                                layer.close(index);
+                            }
+                            else {
+                                layer.msg(data.info,{time:1500});
+                            }
+                        }
+                    )
+                }
+                else if (layEvent === 'add') {
+                    var id = data.id;
+                    layer.ready(function(){
+                        layer.open({
+                            title:'添加子分类',//标题
+                            type: 2,//类型
+                            shadeClose:true,//是否点击遮罩关闭
+                            fixed: true,//固定
+                            resize:false,//是否允许拉伸
+                            anim: 0,//动画
+                            skin: 1, //加上边框
+                            content: ['addmanagement.html', 'no'],
+                            end: function(index, layero){
+                                renderTable();
+                            },
+                            success: function (layero, index) {
+                                //传参给新增窗口
+                                var iframe = window['layui-layer-iframe' + index];
+                                iframe.pid(id)
+                            }
+                        });
+                    });
+                }
+                else if (layEvent === 'stop'){
+                    layui.$.post(
+                        "{:U('product/statusmanagement')}",
+                        {
+                            p_id: data.c_id,
+                            off: data.lock
+                        },
+                        function (data) {
+                            if (data.status==1) {
+                                layer.msg(data.info);
+                                obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
+                                renderTable();
+                            }
+                            else {
+                                layer.msg(data.info);
+                            }
+                        }
+                    )
+                }
+            });
+        });
+
+
+    </script>
+    <script type="text/html" id="barDemo">
+        {{#  if(d.pid == 0){ }}
+        <a {:authcheck('addmanagement')} class="layui-btn layui-btn-xs" lay-event="add">添加子类</a>
+        <a {:authcheck('updatemanagement')} class="layui-btn layui-btn-xs" lay-event="save">保存</a>
+        {{#  if(d.lock == 0){ }}
+        <a {:authcheck('statusmanagement')} class="layui-btn layui-btn-xs" style="background-color:#c0c2c5" lay-event="stop">禁用</a>
+        {{#  } else { }}
+        <a {:authcheck('statusmanagement')} class="layui-btn  layui-btn-xs" style="background-color:#c0c2c5" lay-event="stop">显示</a>
+        {{#  } }}
+        <a {:authcheck('delmanagement')} class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+        {{#  } else { }}
+        <a {:authcheck('updatemanagement')} class="layui-btn layui-btn-xs" lay-event="save">保存</a>
+        {{#  if(d.lock == 0){ }}
+        <a {:authcheck('statusmanagement')} class="layui-btn layui-btn-xs" style="background-color:#c0c2c5" lay-event="stop">禁用</a>
+        {{#  } else { }}
+        <a {:authcheck('statusmanagement')} class="layui-btn layui-btn-xs" style="background-color:#c0c2c5" lay-event="stop">显示</a>
+        {{#  } }}
+        <a {:authcheck('delmanagement')} class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+        {{#  } }}
+    </script>
+    <style id="LAY_layadmin_theme">
+        .layui-side-menu, .layadmin-pagetabs .layui-tab-title li:after, .layadmin-pagetabs .layui-tab-title li.layui-this:after, .layui-layer-admin .layui-layer-title, .layadmin-side-shrink .layui-side-menu .layui-nav > .layui-nav-item > .layui-nav-child {
+            background-color: #20222A !important;
+        }
+
+        .layui-nav-tree .layui-this, .layui-nav-tree .layui-this > a, .layui-nav-tree .layui-nav-child dd.layui-this, .layui-nav-tree .layui-nav-child dd.layui-this a {
+            background-color: #009688 !important;
+        }
+
+        .layui-layout-admin .layui-logo {
+            background-color: #20222A !important;
+        }
+    </style><div class="layui-layer-move"></div>
+
+</block>

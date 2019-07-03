@@ -1,0 +1,17 @@
+[ 2019-05-04T17:33:42+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000944s ]
+
+[ 2019-05-04T17:36:00+08:00 ] 127.0.0.1 /Consult/GetLgData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001221s ]
+ERR: 无法加载模块:Consult
+
+[ 2019-05-04T17:37:28+08:00 ] 127.0.0.1 /demo/table/user/?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002326s ]
+ERR: 无法加载模块:Demo
+

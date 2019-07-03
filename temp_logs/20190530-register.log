@@ -1,0 +1,6 @@
+[2019-05-30 09:03:24]  注册错误'1062:Duplicate entry \'22\' for key \'name\'
+ [ SQL语句 ] : INSERT INTO `userinfoes` (`LoginName`,`UserPhone`,`LoginPwd`,`UserRealName`,`Lock`,`UserRegistrTime`) VALUES (\'22\',\'15639256325\',\'e10adc3949ba59abbe56e057f20f883e\',\'111\',\'1\',\'2019-05-30 09:03:24\')'
+[2019-05-30 09:17:18]  注册错误'1062:Duplicate entry \'搜索\' for key \'name\'
+ [ SQL语句 ] : INSERT INTO `userinfoes` (`LoginName`,`UserPhone`,`LoginPwd`,`UserRealName`,`Lock`,`UserRegistrTime`) VALUES (\'搜索\',\'15236523654\',\'e10adc3949ba59abbe56e057f20f883e\',\'11\',\'1\',\'2019-05-30 09:17:18\')'
+[2019-05-30 09:31:32]  注册错误'1062:Duplicate entry \'33\' for key \'name\'
+ [ SQL语句 ] : INSERT INTO `userinfoes` (`LoginName`,`UserPhone`,`LoginPwd`,`UserRealName`,`Lock`,`Type_Id`,`UserRegistrTime`) VALUES (\'33\',\'15236545632\',\'e10adc3949ba59abbe56e057f20f883e\',\'55\',\'1\',\'2\',\'2019-05-30 09:31:32\')'

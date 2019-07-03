@@ -1,0 +1,363 @@
+[ 2019-05-06T09:53:24+08:00 ] 127.0.0.1 /Public/build/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Build
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T09:53:24+08:00 ] 127.0.0.1 /Public/build/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Build
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T09:53:25+08:00 ] 127.0.0.1 /Public/plugins/layui/layui-v2.4.3/layui.all.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Plugins
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T09:53:25+08:00 ] 127.0.0.1 /Public/dist/js/common.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Dist
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T10:26:14+08:00 ] 127.0.0.1 /Public/plugins/layui/layui-v2.4.3/css/layui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Plugins
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T10:26:15+08:00 ] 127.0.0.1 /Public/dist/css/common.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Dist
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T10:26:15+08:00 ] 127.0.0.1 /Public/build/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Build
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T10:26:15+08:00 ] 127.0.0.1 /Public/plugins/layui/layui-v2.4.3/layui.all.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Plugins
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T10:26:15+08:00 ] 127.0.0.1 /Public/dist/js/common.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Dist
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T11:22:29+08:00 ] 127.0.0.1 /Public/plugins/treetable-lay/treetable.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Plugins
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T11:22:30+08:00 ] 127.0.0.1 /Public/plugins/treetable-lay/treetable.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Plugins
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T12:19:07+08:00 ] 127.0.0.1 /Public/admin/modoule/treetable-lay/treetable.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Admin
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T12:19:07+08:00 ] 127.0.0.1 /Public/admin/modoule/treetable-lay/treetable.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Admin
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T12:20:54+08:00 ] 127.0.0.1 /Public/admin/modoule/treetable-lay/treetable.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Admin
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T12:20:55+08:00 ] 127.0.0.1 /Public/admin/modoule/treetable-lay/treetable.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Admin
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T13:22:24+08:00 ] 127.0.0.1 /Public/plugins/layui/layui-v2.4.3/css/layui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Plugins
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T13:22:25+08:00 ] 127.0.0.1 /Public/dist/css/common.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Dist
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T13:22:25+08:00 ] 127.0.0.1 /Public/build/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Build
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T13:22:25+08:00 ] 127.0.0.1 /Public/plugins/layui/layui-v2.4.3/layui.all.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Plugins
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T13:22:25+08:00 ] 127.0.0.1 /Public/dist/js/common.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Dist
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T13:25:14+08:00 ] 127.0.0.1 /Public/plugins/layui/layui-v2.4.3/css/layui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Plugins
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T13:25:14+08:00 ] 127.0.0.1 /Public/build/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Build
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T13:25:14+08:00 ] 127.0.0.1 /Public/dist/css/common.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Dist
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T13:25:15+08:00 ] 127.0.0.1 /Public/dist/js/common.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Dist
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T13:25:15+08:00 ] 127.0.0.1 /Public/plugins/layui/layui-v2.4.3/layui.all.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Plugins
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T13:25:15+08:00 ] 127.0.0.1 /Public/dist/js/common.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Dist
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T13:26:11+08:00 ] 127.0.0.1 /Public/dist/css/common.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Dist
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T13:26:11+08:00 ] 127.0.0.1 /Public/plugins/layui/layui-v2.4.3/css/layui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Plugins
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T13:26:11+08:00 ] 127.0.0.1 /Public/build/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Build
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T13:26:12+08:00 ] 127.0.0.1 /Public/plugins/layui/layui-v2.4.3/layui.all.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Plugins
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T13:26:12+08:00 ] 127.0.0.1 /Public/dist/js/common.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Dist
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T13:26:14+08:00 ] 127.0.0.1 /Public/plugins/layui/layui-v2.4.3/css/layui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+ERR: 无法加载控制器:Plugins
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-06T13:26:14+08:00 ] 127.0.0.1 /Public/dist/css/common.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Dist
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+

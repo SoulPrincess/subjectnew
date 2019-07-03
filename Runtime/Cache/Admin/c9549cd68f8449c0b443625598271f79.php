@@ -1,0 +1,995 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>标题</title>
+    <link rel="stylesheet" type="text/css" href="/Public/admin/layui/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="/Public/admin/css/tai.css">
+    <link rel="stylesheet" type="text/css" href="/Public/admin/css/popup.css">
+    <link rel="stylesheet" type="text/css" href="/Public/admin/css/class.css">
+
+    <script type="text/javascript" src="/Public/admin/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/Public/admin/js/echarts.min.js"></script>
+    <script type="text/javascript" src="/Public/admin/layui/laydate/laydate.js"></script>
+    <script type="text/javascript" src="/Public/admin/layui/layui/layui.js" ></script>
+</head>
+<style>
+    ul {
+        list-style: disc;
+        padding-left: 40px;
+    }
+    ul ul {
+        list-style: circle;
+    }
+    ul ul ul {
+        list-style: square;
+    }
+    li {
+        display: list-item;
+    }
+</style>
+<body class="layui-layout-body" layadmin-themealias="default">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-headerC">
+        <!-- 头部区域（可配合layui已有的水平导航） -->
+        <ul class="layui-nav navCo layui-layout-left">
+            <li class="layui-nav-item"></li>
+            <li class="layui-nav-item"></li>
+            <li class="layui-nav-item"></li>
+        </ul>
+        <ul class="layui-nav navCo layui-layout-right">
+            <li class="layui-nav-item"><a href="<?php echo U('message/messageinfo');?>">待回复(<cite id="mes" style="color:red">0</cite>)</a></li>
+            <li class="layui-nav-item">
+
+                <a href="javascript:;">
+                    <?php if(session('userInfo.admin_pic') != '' ): ?><img src="<?php echo session('userInfo.admin_pic');?>" class="layui-nav-img"><?php endif; ?>
+
+                    <?php echo session('userInfo.admin_username');?>
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="<?php echo U('user/information');?>">基本资料</a></dd>
+                    <dd><a href="<?php echo U('user/userpwd');?>">修改密码</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="<?php echo U('login/logout');?>">退了</a></li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <div class="layui-logoC" lay-href=""><img src="/Public/admin/img/logo.png" alt="">  </div>
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree"  id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu" lay-shrink="all">
+
+            </ul>
+            <span class="layui-nav-bar" style="top: 252px; height: 0px; opacity: 0;"></span>
+        </div>
+
+    </div>
+    
+
+<!-- 页面标签 -->
+<script type="text/html" template="" lay-done="layui.element.render('nav', 'layadmin-pagetabs-nav')">
+    {{# if(layui.setter.pageTabs){ }}
+    <div class="layadmin-pagetabs" id="LAY_app_tabs">
+        <div class="layui-icon layadmin-tabs-control layui-icon-prev" layadmin-event="leftPage"></div>
+        <div class="layui-icon layadmin-tabs-control layui-icon-next" layadmin-event="rightPage"></div>
+        <div class="layui-icon layadmin-tabs-control layui-icon-down">
+            <ul class="layui-nav layadmin-tabs-select" lay-filter="layadmin-pagetabs-nav">
+                <li class="layui-nav-item" lay-unselect>
+                    <a href="javascript:;"></a>
+                    <dl class="layui-nav-child layui-anim-fadein">
+                        <dd layadmin-event="closeThisTabs"><a href="javascript:;">关闭当前标签页</a></dd>
+                        <dd layadmin-event="closeOtherTabs"><a href="javascript:;">关闭其它标签页</a></dd>
+                        <dd layadmin-event="closeAllTabs"><a href="javascript:;">关闭全部标签页</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <div class="layui-tab" lay-unauto lay-allowClose="true" lay-filter="layadmin-layout-tabs">
+            <ul class="layui-tab-title" id="LAY_app_tabsheader">
+                <li lay-id="/"><i class="layui-icon layui-icon-home"></i></li>
+            </ul>
+        </div>
+    </div>
+    {{# } }}
+</script>
+
+
+<!-- 主体内容 -->
+<div class="layui-body" id="LAY_app_body">
+    <div class="layadmin-tabsbody-item layui-show">
+        <div class="layui-card layadmin-header">
+            <div class="layui-breadcrumb" lay-filter="breadcrumb" style="visibility: visible;">
+                <a lay-href="">应用</a><span lay-separator="">/</span>
+                <a><cite>广告系统</cite></a><span lay-separator="">/</span>
+                <a><cite>广告管理</cite></a>
+            </div>
+        </div>
+        <div class="layui-fluid">
+            <div class="layui-card">
+                <div class="layui-form layui-card-header layuiadmin-card-header-auto" lay-filter="app-content-list">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <button class="layui-btn adv">广告列表</button>
+                            <button class="layui-btn adv layui-btn-primary ">广告位置</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-tab-content">
+                    <div class="layui-tab-item advk layui-show">
+                        <blockquote class="layui-elem-quote layui-text">
+
+                            <div class="layui-row layui-col-space10 word">
+                                <div class="layui-col-md10">
+
+                                    <div class="layui-form layui-card-header layuiadmin-card-header-auto" lay-filter="app-content-list">
+                                        <div class="layui-form-item">
+                                            <div class="layui-inline">
+                                                <div class="layui-input-inline">
+                                                    <select name="adver_type" id="adver_type">
+
+                                                    </select>
+                                                </div>
+                                                <div class="layui-input-inline ">
+                                                    <input type="text" name="adver_name" id="adver_name" placeholder="请输入" autocomplete="off" class="layui-input">
+                                                </div>
+                                            </div>
+                                            <div class="layui-inline">
+                                                <button class="layui-btn layuiadmin-btn-list" lay-submit="" lay-filter="LAY-app-contlist-search" id="adver-search">
+                                                    <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </blockquote>
+                        <table class="layui-hide" id="test" lay-filter="test"></table>
+
+                    </div>
+                    <div class="layui-tab-item advk">
+                        <blockquote class="layui-elem-quote layui-text">
+
+                            <div class="layui-row layui-col-space10 word">
+                                <div class="layui-col-md10">
+
+                                    <div class="layui-form layui-card-header layuiadmin-card-header-auto" lay-filter="app-content-list">
+                                        <div class="layui-form-item">
+                                            <div class="layui-inline">
+                                                <div class="layui-input-inline ">
+                                                    <input type="text" name="type_name" id="type_name" placeholder="请输入" autocomplete="off" class="layui-input">
+                                                </div>
+                                            </div>
+                                            <div class="layui-inline">
+                                                <button class="layui-btn layuiadmin-btn-list" lay-submit="" lay-filter="LAY-app-contlist-search" id="LAY-app-contlist-search">
+                                                    <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </blockquote>
+                        <table class="layui-hide" id="test1" lay-filter="test1"></table>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 辅助元素，一般用于移动设备下遮罩 -->
+    <div class="layadmin-body-shade" layadmin-event="shade"></div>
+
+</div>
+    <script>
+        layui.use('table', function(){
+            var table = layui.table;
+
+            table.render({
+                elem: '#test'
+                ,url:"<?php echo U('advertising/advertisinginfo');?>"
+                ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+                , toolbar: '#toolbarDemo1'
+                ,cols: [[
+                    {type:'checkbox'}
+                    ,{field:'id', title: 'ID'}
+                    ,{field:'adevername', title: '广告名称'}
+                    ,{field:'link', title: '广告链接'}
+                    ,{field:'typename', title: '广告位置'}
+                    ,{field:'adeverimg', title: '广告图片',toolbar:'#AdverImg'}
+                    ,{field:'user_name', title: '创建人'}
+                    ,{field:'releasedate', title: '创建时间'}
+                    ,{field:'city', title: '操作',toolbar:'#barDemo1',width:150}
+                ]]
+                ,page: {
+                    layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'] //自定义分页布局
+                    ,limit:5 //一页显示多少条
+                    ,limits:[5,10,15,20,25]//每页条数的选择项
+                    ,groups: 5 //只显示 5 个连续页码
+                    ,first: "首页" //不显示首页
+                    ,last: "尾页" //不显示尾页
+                }
+                , done: function (res, curr, count) {
+                    hoverOpenImg();//显示大图
+                    $('table tr').on('click', function () {
+                        $('table tr').css('background', '');
+                        $(this).css('background', '<%=PropKit.use("config.properties").get("table_color")%>');
+                    });
+                }
+            });
+            $("#adver-search").click(function () {
+                table.reload('test', {
+                    where: {
+                        adver_name: $('#adver_name').val(),
+                        adver_type: $('#adver_type').val(),
+                    },
+                    page: {
+                        curr: 1
+                    }
+                });
+            })
+            //头工具栏事件
+            table.on('toolbar(test)', function (obj) {
+                var checkStatus = table.checkStatus(obj.config.id);
+                if (obj.event == 'adver_add') {
+                    layer.open({
+                        type: 1
+                        ,title: false //不显示标题栏
+                        ,closeBtn: true
+                        ,area:['50%','72%']
+                        ,content:  $('#Senior_section')
+                        ,btnAlign: 'l'
+                        ,skin:'my-skin'
+                    })
+                }
+                if (obj.event == 'adver_del') {
+                    var arr = [];
+                    var data = checkStatus.data;
+                    for (var i = 0; i < data.length; i++) {    //循环筛选出id
+                        arr.push(data[i].id);
+                        layer.alert(data[i].id)
+                    }
+                    if (arr.length != 0) {
+                        layer.confirm('真的删除吗，此操作不能撤销！', function (index) {
+                            //向服务端发送删除指令
+                            layui.$.post(
+                                "<?php echo U('advertising/adverdel');?>",
+                                { arr: arr },
+                                function (data, status) {
+                                    if (data.status==1) {
+                                        layer.msg(data.info);
+                                        //更新数据
+                                        table.reload('test', {
+                                            where: {
+                                                adver_name: $('#adver_name').val(),
+                                                adver_type: $('#adver_type').val(),
+                                            },
+                                            page: {
+                                                curr: 1
+                                            }
+                                        });
+                                    }
+                                    else {
+                                        layer.msg(data.info);
+                                    }
+                                }
+                            )
+                        });
+                    }
+                    else {
+                        layer.msg("请先选中!")
+                    }
+                }
+            });
+            //监听工具条
+            table.on('tool(test)', function (obj) {
+                var data = obj.data;
+                var layEvent = obj.event;
+                var tr = obj.tr;
+                var arr=new Array(data.id);
+                if (layEvent == 'edit') {
+                    layer.open({
+                        type: 2,
+                        title: '编辑广告',
+                        content:"<?php echo U('advertising/adverupdate');?>?id="+ data.id,
+                        area: ['50%', '72%'],
+                        end: function () {
+                            table.reload('test', {
+                                where: {
+                                    adver_name: $('#adver_name').val(),
+                                    adver_type: $('#adver_type').val(),
+                                },
+                                page: {
+                                    curr: 1
+                                }
+                            });
+                        }
+                    })
+                }
+                if (layEvent == 'del') {
+                    layer.confirm('真的删除吗，此操作不能撤销！', function (index) {
+                        //向服务端发送删除指令
+                        layui.$.post(
+                            "<?php echo U('advertising/adverdel');?>",
+                            { arr: arr },
+                            function (data, status) {
+                                if (data.status) {
+                                    layer.msg(data.info);
+                                    obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
+                                    layer.close(index);
+                                }
+                                else {
+                                    layer.msg(data.info);
+                                }
+                            }
+                        )
+                    });
+                }
+                if (layEvent === 'stop') {
+                    layui.$.post(
+                        "<?php echo U('advertising/adverstatus');?>",
+                        {
+                            id: data.id,
+                            off: data.lock
+                        },
+                        function (data, status) {
+                            if (data.status==1) {
+                                layer.msg(data.info,{time:1500},function(){
+                                    //更新数据
+                                    table.reload('test', {
+                                        where: {
+                                            adver_name: $('#adver_name').val(),
+                                            adver_type: $('#adver_type').val(),
+                                        },
+                                        page: {
+                                            curr: 1
+                                        }
+                                    });
+                                    layer.closeAll();
+                                });
+
+                            }
+                            else {
+                                layer.msg(data.info);
+                            }
+                        }
+                    )
+                }
+            });
+        });
+        layui.use('table', function(){
+            var table = layui.table;
+
+            table.render({
+                elem: '#test1'
+                ,url:"<?php echo U('advertising/advertisingtype');?>"
+                ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+                , toolbar: '#toolbarDemo'
+                ,cols: [[
+                    {type:'checkbox'}
+                    ,{field:'id', title: 'ID',sort:true}
+                    ,{field:'typename', title: '广告位名称'} //width 支持：数字、百分比和不填写。你还可以通过 minWidth 参数局部定义当前单元格的最小宽度，layui 2.2.1 新增
+                    ,{field:'width', title: '宽度(PX)'}
+                    ,{field:'height', title: '高度(PX)'}
+                    ,{field:'describe', title: '描述'}
+                    ,{field:'total', title: '已有广告',sort:true}
+                    ,{field:'Right', title: '操作',toolbar:'#barDemo',width:170}
+                ]]
+                ,page: {
+                    layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'] //自定义分页布局
+                    ,limit:5 //一页显示多少条
+                    ,limits:[5,10,15,20,25]//每页条数的选择项
+                    ,groups: 5 //只显示 5 个连续页码
+                    ,first: "首页" //不显示首页
+                    ,last: "尾页" //不显示尾页
+                }
+            });
+
+            $("#LAY-app-contlist-search").click(function () {
+                table.reload('test1', {
+                    where: {
+                        type_name: $('#type_name').val(),
+                    },
+                    page: {
+                        curr: 1
+                    }
+                });
+            })
+            //头工具栏事件
+            table.on('toolbar(test1)', function (obj) {
+                var checkStatus = table.checkStatus(obj.config.id);
+                if (obj.event == 'type_add') {
+                    layer.open({
+                        type: 1
+                        ,title: false //不显示标题栏
+                        ,closeBtn: true
+                        ,area:['50%','70%']
+                        ,content: $('#Senior_Location')
+                        ,btnAlign: 'l'
+                        ,skin:'my-skin'
+                    })
+                }
+                if (obj.event == 'type_del') {
+                    var arr = [];
+                    var data = checkStatus.data;
+                    for (var i = 0; i < data.length; i++) {    //循环筛选出id
+                        arr.push(data[i].id);
+                        layer.alert(data[i].id)
+                    }
+                    if (arr.length != 0) {
+                        layer.confirm('真的删除吗，此操作不能撤销！', function (index) {
+                            //向服务端发送删除指令
+                            layui.$.post(
+                                "<?php echo U('advertising/deltype');?>",
+                                { arr: arr },
+                                function (data, status) {
+                                    if (data.status==1) {
+                                        layer.msg(data.info);
+                                        //更新数据
+                                        table.reload('test1', {
+                                            where: {
+                                                type_name: $('#type_name').val(),
+                                            },
+                                            page: {
+                                                curr: 1
+                                            }
+                                        });
+                                    }
+                                    else {
+                                        layer.msg(data.info);
+                                    }
+                                }
+                            )
+                        });
+                    }
+                    else {
+                        layer.msg("请先选中!")
+                    }
+                }
+            });
+            //监听工具条
+            table.on('tool(test1)', function (obj) {console.log(obj);
+                var data = obj.data;
+                var layEvent = obj.event;
+                var tr = obj.tr;
+                var arr=new Array(data.id);
+                if (layEvent == 'edit') {
+                    layer.open({
+                        type: 2,
+                        title: false,
+                        content:"<?php echo U('advertising/updatetype');?>?id="+ data.id,
+                        area: ['80%', '95%'],
+                        end: function () {
+                            table.reload('test1', {
+                                where: {
+                                    type_name: $('#type_name').val(),
+                                },
+                                page: {
+                                    curr: 1
+                                }
+                            });
+                        }
+                    })
+                }
+                if (layEvent == 'del') {
+                    layer.confirm('真的删除吗，此操作不能撤销！', function (index) {
+                        //向服务端发送删除指令
+                        layui.$.post(
+                            "<?php echo U('advertising/deltype');?>",
+                            { arr: arr },
+                            function (data, status) {
+                                if (data.status) {
+                                    layer.msg(data.info);
+                                    obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
+                                    layer.close(index);
+                                }
+                                else {
+                                    layer.msg(data.info);
+                                }
+                            }
+                        )
+                    });
+                }
+                if (layEvent === 'stop') {
+                    layui.$.post(
+                        "<?php echo U('advertising/statustype');?>",
+                        {
+                            id: data.id,
+                            off: data.lock
+                        },
+                        function (data, status) {
+                            if (data.status==1) {
+                                layer.msg(data.info,{time:1500},function(){
+                                    //更新数据
+                                    table.reload('test1', {
+                                        where: {
+                                            type_name: $('#type_name').val(),
+                                        },
+                                        page: {
+                                            curr: 1
+                                        }
+                                    });
+                                    layer.closeAll();
+                                });
+
+                            }
+                            else {
+                                layer.msg(data.info);
+                            }
+                        }
+                    )
+                }
+            });
+
+        });
+
+
+
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            get_type();
+        });
+        function get_type() {
+            $.getJSON(
+                "<?php echo U('advertising/advertype');?>",
+                function (data) {
+                    $("<option></option>").val("0").text("请选择标签").appendTo($("#adver_type"));
+                    for (var i = 0; i < data.length; i++) {
+                        $("<option></option>").val(data[i].id).text(data[i].typename).appendTo($("#adver_type"));
+                        $("<option></option>").val(data[i].id).text(data[i].typename).appendTo($("#adver_type_add"));
+                    }
+                });
+        }
+        //显示大图片
+        function show_img(t) {
+            var t = $(t).find("img");
+            //页面层
+            layer.open({
+                type: 1,
+                skin: 'layui-layer-rim', //加上边框
+                area: ['80%', '80%'], //宽高 t.width() t.height()
+                shadeClose: true, //开启遮罩关闭
+                end: function (index, layero) {
+                    return false;
+                },
+                content: '<div style="text-align:center"><img src="' + $(t).attr('src') + '" /></div>'
+            });
+        }
+        function hoverOpenImg() {
+            var img_show = null; // tips提示
+            $('td img').hover(function () {
+                var img = "<img class='img_msg' src='" + $(this).attr('src') + "' style='width:220px;' />";
+                img_show = layer.tips(img, this, {
+                    tips: [2, 'rgba(41,41,41,.5)']
+                    , area: ['250px']
+                });
+            }, function () {
+                layer.close(img_show);
+            });
+            $('td img').attr('style', 'max-width:70px');
+        }
+    </script>
+    <script>
+        $('.adv').click(function () {
+            $(this).removeClass('layui-btn-primary').siblings().addClass('layui-btn-primary')
+            var _index = $(this).index();
+            $('.advk').eq(_index).addClass('layui-show').siblings().removeClass('layui-show');
+        })
+
+    </script>
+
+<div class="layui-card"id="Senior_section" style="display: none">
+    <div class="layui-form layui-card-header layuiadmin-card-header-auto" lay-filter="app-content-list">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <button class="layui-btn senior">常规选项</button>
+                <!--<button class="layui-btn senior layui-btn-primary ">高级选项</button>-->
+            </div>
+        </div>
+    </div>
+    <div class="layui-tab-content">
+        <form action="<?php echo U('advertising/adveradd');?>" class="layui-form">
+        <div class="layui-tab-item item layui-show">
+            <div class="layui-card-body" pad15="">
+                <div class="layui-form" lay-filter="">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-labelStatic">广告名称</label>
+                            <div class="layui-input-inline ">
+                                <input type="text" name="adver_name"  placeholder="请输入……" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-labelStatic">广告位置</label>
+                            <div class="layui-input-inline">
+                                <select name="adver_type" id="adver_type_add" >
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-labelStatic">创建人</label>
+                            <div class="layui-input-inline ">
+                                <input type="text" name="User" placeholder="" autocomplete="off" class="layui-input" value="<?php echo session('userInfo.admin_username');?>" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-labelStatic">排序</label>
+                            <div class="layui-input-inline ">
+                                <input type="text" name="Sort" placeholder="0" autocomplete="off" class="layui-input small" lay-verify="number">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-labelStatic">广告链接</label>
+                            <div class="layui-input-inline ">
+                                <input type="text" name="adver_link" placeholder="http://" autocomplete="off" class="layui-input" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-labelStatic">广告图片</label>
+                            <div class="layui-input-inline ">
+                                <input type="text" name="adver_img" placeholder="图片地址" autocomplete="off" class="layui-input" id="LAY_avatarUpload_url">
+                            </div>
+                            <div class="layui-input-inline layui-btn-container">
+                                <button type="button" class="layui-btn layui-btn-primary" id="LAY_avatarUpload">
+                                    <i class="layui-icon"></i>上传图片
+                                </button>
+                                <input class="layui-upload-file" type="file" accept="undefined" name="file">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item Ontheborder">
+                <div class="layui-input-inline ">
+                    <button class="layui-btn"  lay-filter="adver_save1" lay-submit="adver_save1"> 保存</button>
+                </div>
+            </div>
+        </div>
+        </form>
+        <div class="layui-tab-item item ">
+            <form action="<?php echo U('advertising/adveradd');?>" class="layui-form">
+            <div class="layui-card-body" pad15="">
+                <div class="layui-form" lay-filter="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-labelSet">隐藏栏目</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="Lock" value="是" title="是"><div class="layui-unselect layui-form-radio"><i class="layui-anim layui-icon"></i><div>是</div></div>
+                            <input type="radio" name="Lock" value="否" title="否"><div class="layui-unselect layui-form-radio"><i class="layui-anim layui-icon"></i><div>否</div></div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-labelSet">备注信息</label>
+                        <div class="layui-input-block">
+                            <textarea id="demo" class="layui-hide" name="Describe"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item Ontheborder">
+                <div class="layui-input-inline ">
+                    <button class="layui-btn"  lay-filter="adver_save2" lay-submit="adver_save2"> 保存</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="layui-card"id="Senior_Location" style="display: none">
+    <div class="layui-tab-content">
+        <div class="layui-tab-item item layui-show">
+            <blockquote class="layui-elem-quote layui-text">
+                新增广告位
+            </blockquote>
+            <form  class="layui-form"  action="<?php echo U('advertising/addtype');?>">
+            <div class="layui-card-body" pad15="">
+                <div class="layui-form" lay-filter="">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-labelStatic">广告位名称</label>
+                            <div class="layui-input-inline ">
+                                <input type="text" name="typename" lay-verify="required" placeholder="请输入……" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-labelStatic">广告位宽度</label>
+                            <div class="layui-input-inline ">
+                                <input type="text" name="type_width" lay-verify="number" placeholder="" autocomplete="off" class="layui-input" value="0">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">PX</div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-labelStatic">广告位高度</label>
+                            <div class="layui-input-inline ">
+                                <input type="text" name="type_height" lay-verify="number" placeholder="" autocomplete="off" class="layui-input" value="0">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">PX</div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-labelStatic">描述</label>
+                        <div class="layui-input-block">
+                            <textarea placeholder="请输入内容" class="layui-textarea" name="Describe"></textarea>
+                        </div>
+                    </div>
+                    <div class="layui-form-item Ontheborder">
+
+                        <div class="layui-input-inline ">
+                            <button class="layui-btn" lay-filter="addsite" lay-submit="addsite"> 保存</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    layui.use('layedit', function(){
+        var layedit = layui.layedit;
+        layedit.build('demo'); //建立编辑器
+    });
+    $('.senior').click(function () {
+        $(this).removeClass('layui-btn-primary').siblings().addClass('layui-btn-primary');
+        var _index = $(this).index()
+        $('.item').eq(_index).addClass('layui-show').siblings().removeClass('layui-show');
+    })
+</script>
+    <script>
+        $(function () {
+            layui.use('upload', function () {
+                var $ = layui.jquery
+                    , upload = layui.upload;
+
+                //普通图片上传
+                var uploadInst = upload.render({
+                    elem: '#LAY_avatarUpload'
+                    , url: "<?php echo U('user/upload?name=advertising');?>"
+                    , before: function (obj) {
+                        //预读本地文件示例，不支持ie8
+                        obj.preview(function (index, file, result) {
+                            $('#LAY_avatarUpload_url').val(result); //图片链接（base64）
+                        });
+                    }
+                    , done: function (res) {
+                        //如果上传失败
+                        if (res.status == 0) {
+                            return layer.msg('上传失败');
+                        }
+                        else {
+                            $('#LAY_avatarUpload_url').val("/" + res.data.src);
+                            return layer.msg('上传成功');
+                        }
+                        //上传成功
+                    }
+                    , error: function () {
+                        layer.msg('上传异常,请重试');
+                    }
+                });
+            });
+        })
+    </script>
+    <script>
+        layui.use(['form','table'], function(){
+            var form = layui.form
+                ,layer = layui.layer
+                ,table = layui.table;
+
+            form.render();
+            //监听提交
+            form.on('submit(addsite)', function(data){
+                var url =  data.form.action;
+                //表单序列化
+                var param = data.field;
+                //提交
+                $.post(url,param, function(res) {
+                    if(res.status == 1) {
+                        layer.msg(res.info, {time: 1500},function(){
+                            //更新数据
+                            table.reload('test1', {
+                                where: {
+                                    type_name: $('#type_name').val(),
+                                },
+                                page: {
+                                    curr: 1
+                                }
+                            });
+                            layer.closeAll();
+                        });
+                    } else {
+                        layer.msg(res.info, {time:1500});
+                    }
+                });
+                //阻止表单跳转
+                return false;
+            });
+            //监听提交
+            form.on('submit(adver_save1)', function(data){
+                var url = "<?php echo U('advertising/adveradd');?>";
+                //表单序列化
+                var param = data.field;
+                //提交
+                $.post(url,param, function(res) {
+                    if(res.status == 1) {
+                        layer.msg(res.info, {time: 1500},function(){
+                            window.parent.location.reload();//刷新父页面
+                            layer.closeAll();
+                        });
+                    } else {
+                        layer.msg(res.info, {time:1500});
+                    }
+                });
+                //阻止表单跳转
+                return false;
+            });
+        });
+
+    </script>
+    <script type="text/html" id="barDemo">
+        {{#  if(d.lock == 0){ }}
+        <a <?php echo authcheck('updatetype');?> class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+        <a <?php echo authcheck('statustype');?> class="layui-btn layui-btn-xs" style="background-color:#c0c2c5" lay-event="stop">禁用</a>
+        <a <?php echo authcheck('deltype');?> class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+        {{#  } else { }}
+        <a <?php echo authcheck('updatetype');?> class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+        <a <?php echo authcheck('statustype');?> class="layui-btn layui-btn-xs" style="background-color:#c0c2c5" lay-event="stop">显示</a>
+        <a <?php echo authcheck('deltype');?> class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+        {{#  } }}
+    </script>
+    <script type="text/html" id="barDemo1">
+        {{#  if(d.lock == 0){ }}
+        <a <?php echo authcheck('adverupdate');?> class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+        <a <?php echo authcheck('adverstatus');?> class="layui-btn layui-btn-xs" style="background-color:#c0c2c5" lay-event="stop">禁用</a>
+        <a <?php echo authcheck('adverdel');?> class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+        {{#  } else { }}
+        <a <?php echo authcheck('adverupdate');?> class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+        <a <?php echo authcheck('adverstatus');?> class="layui-btn layui-btn-xs" style="background-color:#c0c2c5" lay-event="stop">显示</a>
+        <a <?php echo authcheck('adverdel');?> class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+        {{#  } }}
+    </script>
+    <script type="text/html" id="toolbarDemo">
+        <div class="layui-btn-container">
+            <button <?php echo authcheck('deltype');?> class="layui-btn layuiadmin-btn-list" lay-event="type_del" data-type="type_del">删除</button>
+            <button <?php echo authcheck('addtype');?> data-method="notice" id="type_add" lay-event="type_add" class="layui-btn">添加</button>
+        </div>
+    </script>
+    <script type="text/html" id="toolbarDemo1">
+        <div class="layui-btn-container">
+            <button <?php echo authcheck('adverdel');?> class="layui-btn layuiadmin-btn-list" lay-event="adver_del" data-type="adver_del">删除</button>
+            <button <?php echo authcheck('adveradd');?> data-method="notice" id="adver_add" lay-event="adver_add" class="layui-btn">添加</button>
+        </div>
+    </script>
+    <script type="text/html" id="AdverImg">
+        <div><img src="{{ d.adeverimg === null?"":d.adeverimg }}"></div>
+    </script>
+
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+        Copyright  (c)  2019 上海谷程网络科技有限公司
+    </div>
+</div>
+</body>
+</html>
+
+<script>
+    layui.use('element', function(){
+        var $ = layui.jquery
+            ,element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+
+
+    });
+
+</script>
+<script>
+    $(function () {
+        get_base();
+    });
+    function get_base() {
+        $.ajax({
+            url: "<?php echo U('public/base');?>",
+            type: 'get',
+            dataType: 'JSON',
+            async : false,
+            success:function(data){
+                var ul=getHtml(data);
+                $("#LAY-system-side-menu").append(ul);
+                layui.use('element', function() {
+                    var element = layui.element;
+                    element.render("layadmin-system-side-menu");
+                });
+            }
+        });
+    }
+
+    function getHtml(data) {
+        var ulHtml = '';
+        for (var i = 0; i < data.length; i++) {
+            ulHtml += '<li class="layui-nav-item">';
+            if (data[i].children !== undefined && data[i].children !== null && data[i].children.length > 0) {
+                ulHtml += '<a href="javascript:;">' + data[i].name;
+                ulHtml += '<span class="layui-nav-more"></span>';
+                ulHtml += '</a>';
+                ulHtml += '<dl class="layui-nav-child">';
+                //二级菜单
+                for (var j = 0; j < data[i].children.length; j++) {
+                    //是否有孙子节点
+                    if (data[i].children[j].children !== undefined && data[i].children[j].children !== null && data[i].children[j].children.length > 0) {
+                        ulHtml += '<dd>';
+                        ulHtml += '<a href="javascript:;">' + data[i].children[j].name;
+                        ulHtml += '<span class="layui-nav-more"></span>';
+                        ulHtml += '</a>';
+                        //三级菜单
+                        ulHtml += '<dl class="layui-nav-child">';
+                        var grandsonNodes = data[i].children[j].children;
+                        for (var k = 0; k < grandsonNodes.length; k++) {
+                            ulHtml += '<dd>';
+                            ulHtml += '<a href="/admin/'+ grandsonNodes[k].title +'">' + grandsonNodes[k].name + '</a>';
+                            ulHtml += '</dd>';
+                        }
+                        ulHtml += '</dl>';
+                        ulHtml += '</dd>';
+                    }else{
+                        ulHtml += '<dd>';
+                        ulHtml += '<a href="/admin/'+data[i].children[j].title+'">' + data[i].children[j].name;
+                        ulHtml += '</a>';
+                        ulHtml += '</dd>';
+                    }
+                }
+                ulHtml += '</dl>';
+            } else {
+                var dataUrl = (data[i].title !== undefined && data[i].title !== '') ? 'data-url="' + data[i].title + '"' : '';
+                ulHtml += '<a href="/admin/' + data[i].title + '"' + dataUrl + '>';
+                ulHtml += '<cite>' + data[i].name + '</cite>';
+                ulHtml += '</a>';
+            }
+            ulHtml += '</li>';
+        }
+        return ulHtml;
+    }
+
+
+</script>
+<script>
+    //查看未回复留言
+    function run() {
+        $.ajax({
+            url: "<?php echo U('Message/messagenoanswer');?>",
+            type: 'post',
+            dataType: 'JSON',
+            async : false,
+            success:function(data){
+                if(data.status==1){
+                    $('#mes').text(data.info)
+                }else{
+                    clearInterval(time);
+                    return;
+                }
+            }
+        })
+    };
+    // run();
+     var time = setInterval(run,3000);
+</script>

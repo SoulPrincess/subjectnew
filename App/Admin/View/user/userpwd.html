@@ -1,0 +1,125 @@
+<extend name="public:base" />
+<block name="content">
+
+    <!-- 页面标签 -->
+    <script type="text/html" template="" lay-done="layui.element.render('nav', 'layadmin-pagetabs-nav')">
+        {{# if(layui.setter.pageTabs){ }}
+        <div class="layadmin-pagetabs" id="LAY_app_tabs">
+            <div class="layui-icon layadmin-tabs-control layui-icon-prev" layadmin-event="leftPage"></div>
+            <div class="layui-icon layadmin-tabs-control layui-icon-next" layadmin-event="rightPage"></div>
+            <div class="layui-icon layadmin-tabs-control layui-icon-down">
+                <ul class="layui-nav layadmin-tabs-select" lay-filter="layadmin-pagetabs-nav">
+                    <li class="layui-nav-item" lay-unselect>
+                        <a href="javascript:;"></a>
+                        <dl class="layui-nav-child layui-anim-fadein">
+                            <dd layadmin-event="closeThisTabs"><a href="javascript:;">关闭当前标签页</a></dd>
+                            <dd layadmin-event="closeOtherTabs"><a href="javascript:;">关闭其它标签页</a></dd>
+                            <dd layadmin-event="closeAllTabs"><a href="javascript:;">关闭全部标签页</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <div class="layui-tab" lay-unauto lay-allowClose="true" lay-filter="layadmin-layout-tabs">
+                <ul class="layui-tab-title" id="LAY_app_tabsheader">
+                    <li lay-id="/"><i class="layui-icon layui-icon-home"></i></li>
+                </ul>
+            </div>
+        </div>
+        {{# } }}
+    </script>
+
+
+    <!-- 主体内容 -->
+    <div class="layui-body" id="LAY_app_body">
+        <div class="layadmin-tabsbody-item layui-show"><div class="layui-card layadmin-header">
+            <div class="layui-breadcrumb" lay-filter="breadcrumb" style="visibility: visible;">
+                <a lay-href="">主页</a><span lay-separator="">/</span>
+                <a><cite>设置</cite></a><span lay-separator="">/</span>
+                <a><cite>我的密码</cite></a>
+            </div>
+        </div><div class="layui-fluid">
+            <div class="layui-row layui-col-space15">
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div class="layui-card-header">修改密码</div>
+                        <div class="layui-card-body" pad15="">
+
+                            <div class="layui-form" lay-filter="">
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">当前密码</label>
+                                    <div class="layui-input-inline">
+                                        <input type="password" name="oldPassword" lay-verify="required" lay-vertype="tips" class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">新密码</label>
+                                    <div class="layui-input-inline">
+                                        <input type="password" name="password" lay-verify="required|pass" lay-vertype="tips" autocomplete="off" id="LAY_password" class="layui-input">
+                                    </div>
+                                    <div class="layui-form-mid layui-word-aux">6到12个字符</div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">确认新密码</label>
+                                    <div class="layui-input-inline">
+                                        <input type="password" name="repassword" lay-verify="repass" lay-vertype="tips" autocomplete="off" class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <div class="layui-input-block">
+                                        <button class="layui-btn" lay-submit="setmypass" lay-filter="setmypass" >确认修改</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <!-- 辅助元素，一般用于移动设备下遮罩 -->
+    <div class="layadmin-body-shade" layadmin-event="shade"></div>
+    <script>
+        layui.use(['form'], function(){
+            var form = layui.form
+                ,layer = layui.layer
+            form.render();
+            //自定义验证规则
+            form.verify({
+                pass: [
+                    /^[\S]{6,12}$/
+                    ,'密码必须6到12位，且不能出现空格'
+                ]
+            });
+            //监听提交
+            form.on('submit(setmypass)', function(data){
+                //判断两次密码是否一致
+                var password  = $("input[name='password']").val();
+                var repassword = $("input[name='repassword']").val();
+
+                if (password !== repassword) {
+                    layer.msg("两次输入密码不一致！", {time:1500});
+                    return false;
+                };
+
+                //表单序列化
+                var param = data.field;
+                //提交
+                $.post("{:U('user/userpwd')}",param, function(res) {
+                    if(res.status == 1) {
+                        layer.msg(res.info, {time: 1500},function(){
+                            //父页面跳转
+                            window.parent.location.href="{:U('Login/logout')}";
+                        });
+                    } else {
+                        layer.msg(res.info, {time: 1500});
+                    }
+                });
+                //阻止表单跳转
+                return false;
+            });
+        });
+    </script>
+</block>

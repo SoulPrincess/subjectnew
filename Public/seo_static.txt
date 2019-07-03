@@ -1,0 +1,1 @@
+a:6:{s:13:"static_switch";s:30:"首页、内容页面静态化";s:11:"static_type";s:12:"手动生成";s:16:"static_page_type";s:3:"htm";s:16:"static_page_name";s:30:"年月日+ID（如200081510）";s:16:"static_list_type";s:38:"只显示本栏目ID（如product_1）";s:16:"static_list_name";s:51:"所在文件夹名称+class+页码（如software）";}

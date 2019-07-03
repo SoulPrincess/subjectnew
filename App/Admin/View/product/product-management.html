@@ -1,0 +1,323 @@
+<extend name="public:base" />
+<block name="content">
+<!-- 页面标签 -->
+<script type="text/html" template="" lay-done="layui.element.render('nav', 'layadmin-pagetabs-nav')">
+    {{# if(layui.setter.pageTabs){ }}
+    <div class="layadmin-pagetabs" id="LAY_app_tabs">
+        <div class="layui-icon layadmin-tabs-control layui-icon-prev" layadmin-event="leftPage"></div>
+        <div class="layui-icon layadmin-tabs-control layui-icon-next" layadmin-event="rightPage"></div>
+        <div class="layui-icon layadmin-tabs-control layui-icon-down">
+            <ul class="layui-nav layadmin-tabs-select" lay-filter="layadmin-pagetabs-nav">
+                <li class="layui-nav-item" lay-unselect>
+                    <a href="javascript:;"></a>
+                    <dl class="layui-nav-child layui-anim-fadein">
+                        <dd layadmin-event="closeThisTabs"><a href="javascript:;">关闭当前标签页</a></dd>
+                        <dd layadmin-event="closeOtherTabs"><a href="javascript:;">关闭其它标签页</a></dd>
+                        <dd layadmin-event="closeAllTabs"><a href="javascript:;">关闭全部标签页</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <div class="layui-tab" lay-unauto lay-allowClose="true" lay-filter="layadmin-layout-tabs">
+            <ul class="layui-tab-title" id="LAY_app_tabsheader">
+                <li lay-id="/"><i class="layui-icon layui-icon-home"></i></li>
+            </ul>
+        </div>
+    </div>
+    {{# } }}
+</script>
+
+
+<!-- 主体内容 -->
+<div class="layui-body" id="LAY_app_body">
+    <div class="layadmin-tabsbody-item layui-show"><div class="layui-card layadmin-header">
+        <div class="layui-breadcrumb" lay-filter="breadcrumb" style="visibility: visible;">
+            <a lay-href="">应用</a><span lay-separator="">/</span>
+            <a><cite>产品系统</cite></a><span lay-separator="">/</span>
+            <a><cite>分类管理</cite></a>
+        </div>
+    </div><div class="layui-fluid">
+        <div class="layui-card">
+            <div class="layui-form layui-card-header layuiadmin-card-header-auto" lay-filter="layadmin-userfront-formlist">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">ID</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="id" placeholder="请输入" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">用户名</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="username" placeholder="请输入" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">邮箱</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="email" placeholder="请输入" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">性别</label>
+                        <div class="layui-input-block">
+                            <select name="sex">
+                                <option value="0">不限</option>
+                                <option value="1">男</option>
+                                <option value="2">女</option>
+                            </select><div class="layui-unselect layui-form-select"><div class="layui-select-title"><input type="text" placeholder="请选择" value="不限" readonly="" class="layui-input layui-unselect"><i class="layui-edge"></i></div><dl class="layui-anim layui-anim-upbit"><dd lay-value="0" class="layui-this">不限</dd><dd lay-value="1" class="">男</dd><dd lay-value="2" class="">女</dd></dl></div>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <button class="layui-btn layuiadmin-btn-useradmin" lay-submit="" lay-filter="LAY-user-front-search">
+                            <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-card-body">
+                <div style="padding-bottom: 10px;">
+                    <button class="layui-btn layuiadmin-btn-useradmin" data-type="batchdel">删除</button>
+                    <button data-method="notice" id="layerDemo" class="layui-btn">添加</button>
+                </div>
+
+
+                <table class="layui-hide" id="test"></table>
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    </div>
+</div>
+    <script>
+        layui.use('element', function(){
+            var element = layui.element;
+
+        });
+        layui.use('table', function(){
+            var table = layui.table;
+
+            table.render({
+                elem: '#test'
+                ,url:'/demo/table/user/'
+                ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+                ,cols: [[
+                    {field:'id', title: 'ID', sort: true}
+                    ,{field:'username', title: '用户名'} //width 支持：数字、百分比和不填写。你还可以通过 minWidth 参数局部定义当前单元格的最小宽度，layui 2.2.1 新增
+                    ,{field:'sex', title: '性别', sort: true}
+                    ,{field:'city', title: '城市'}
+                    ,{field:'sign', title: '签名'}
+                    ,{field:'classify', title: '职业', align: 'center'} //单元格内容水平居中
+                    ,{field:'experience', title: '积分', sort: true, align: 'right'} //单元格内容水平居中
+                    ,{field:'score', title: '评分', sort: true, align: 'right'}
+                    ,{field:'wealth', title: '财富', sort: true, align: 'right'}
+                ]]
+            });
+        });
+    </script>
+    <style id="LAY_layadmin_theme">.layui-side-menu,.layadmin-pagetabs .layui-tab-title li:after,.layadmin-pagetabs .layui-tab-title li.layui-this:after,.layui-layer-admin .layui-layer-title,.layadmin-side-shrink .layui-side-menu .layui-nav>.layui-nav-item>.layui-nav-child{background-color:#20222A !important;}.layui-nav-tree .layui-this,.layui-nav-tree .layui-this>a,.layui-nav-tree .layui-nav-child dd.layui-this,.layui-nav-tree .layui-nav-child dd.layui-this a{background-color:#009688 !important;}.layui-layout-admin .layui-logo{background-color:#20222A !important;}</style>
+    <script>
+        layui.use('layer', function(){ //独立版的layer无需执行这一句
+            var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+
+            //触发事件
+
+            $('#layerDemo').on('click', function(){
+                layer.open({
+                    type: 1
+                    ,title: false //不显示标题栏
+                    ,closeBtn: false
+                    ,area: ['90%','80%']
+                    ,content: $('#ddddd')
+                    ,btn: ['立即提交', '取消']
+                    ,btnAlign: 'l'
+                    ,skin:'my-skin'
+                });
+            });
+        });
+    </script>
+    <div class="layui-fluid" id="ddddd" style="display: none">
+        <div class="layui-card">
+            <div class="layui-form layui-card-header layuiadmin-card-header-auto" lay-filter="app-content-list">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">分类名称</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" placeholder="搜索" autocomplete="off" class="layui-input">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">同级排序</label>
+                        <div class="layui-input-inline raning">
+                            <input type="text" name="title" value="0" autocomplete="off" class="layui-input small">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">排序越小越靠前</div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">导航栏显示</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="sex" value="不显示" title="不显示">
+                        <div class="layui-unselect layui-form-radio ">
+                            <i class="layui-anim layui-icon"></i>
+                            <div>不显示</div>
+                        </div>
+                        <input type="radio" name="sex" value="头部主导航显示" title="头部主导航显示"><div class="layui-unselect layui-form-radio revel"><i class="layui-anim layui-icon"></i><div>头部主导航显示</div></div>
+                        <input type="radio" name="sex" value="尾部导航条" title="尾部导航条"><div class="layui-unselect layui-form-radio revel"><i class="layui-anim layui-icon"></i><div>尾部导航条</div></div>
+                        <input type="radio" name="sex" value="都显示" title="都显示"><div class="layui-unselect layui-form-radio revel"><i class="layui-anim layui-icon"></i><div>都显示</div></div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">新窗口打开</label>
+                        <div class="layui-input-inline revel">
+                            <input type="radio" name="sex" value="是" title="是"><div class="layui-unselect layui-form-radio "><i class="layui-anim layui-icon"></i><div>是</div></div>
+                            <input type="radio" name="sex" value="否" title="否"><div class="layui-unselect layui-form-radio revel"><i class="layui-anim layui-icon"></i><div>否</div></div>
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">设置分类链接是否在新窗口打开</div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="layui-form layui-card-header layuiadmin-card-header-auto" lay-filter="app-content-list">-->
+            <!---->
+            <!--</div>-->
+            <blockquote class="layui-elem-quote layui-text">
+                搜索引擎优化设置(seo)
+            </blockquote>
+
+            <div class="layui-card-body" pad15="">
+                <div class="layui-form" lay-filter="">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">分类title</label>
+                            <div class="layui-input-inline ccc">
+                                <input type="text" name="title" placeholder="请输入" class="layui-input">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">为空则使用SEO参数设置中设置的title构成的方式</div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">关键词</label>
+                        <div class="layui-input-inline ccc">
+                            <input type="text" name="text" placeholder="请输入"  readonly="" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">多个关键词请用|或，隔开</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">简短描述</label>
+                        <div class="layui-input-block">
+                            <textarea placeholder="请输入内容" class="layui-textarea textA"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <blockquote class="layui-elem-quote layui-text">
+                其它设置（根据模板配置说明设置）
+            </blockquote>
+            <div class="layui-card-body" pad15="">
+
+                <div class="layui-form" lay-filter="">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">分类标识</label>
+                            <div class="layui-input-inline raning">
+                                <input type="text" name="title" value="0" autocomplete="off" class="layui-input small">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">作用于该栏目在前台对应位置的显示</div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">修饰名称</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" id="test1"  placeholder="请输入……" class="layui-input">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">分类图片</label>
+                        <div class="layui-input-inline layui-btn-container" style="width: auto;">
+                            <button type="button" class="layui-btn layui-btn-primary" id="LAY_avatarUpload">
+                                <i class="layui-icon"></i>上传图片
+                            </button>
+                            <input class="layui-upload-file" type="file" accept="undefined" name="file">
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <blockquote class="layui-elem-quote layui-text">
+                权限设置
+            </blockquote>
+            <div class="layui-card-body" pad15="">
+
+                <div class="layui-form" lay-filter="">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">访问权限</label>
+                            <div class="layui-input-inline">
+                                <select name="label">
+                                    <option value="">请选择标签</option>
+                                    <option value="0">不限</option>
+                                    <option value="1">普通会员</option>
+                                    <option value="2">代理商</option>
+                                    <option value="2">管理员</option>
+                                </select><div class="layui-unselect layui-form-select"><div class="layui-select-title"><input type="text" placeholder="请选择标签" value="" readonly="" class="layui-input layui-unselect"><i class="layui-edge"></i></div><dl class="layui-anim layui-anim-upbit"><dd lay-value="" class="layui-select-tips">请选择标签</dd><dd lay-value="0" class="">美食</dd><dd lay-value="1" class="">新闻</dd><dd lay-value="2" class="">八卦</dd><dd lay-value="3" class="">体育</dd><dd lay-value="4" class="">音乐</dd></dl></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">前台显示</label>
+                            <div class="layui-input-inline revel">
+                                <input type="radio" name="sex" value="是" title="是"><div class="layui-unselect layui-form-radio "><i class="layui-anim layui-icon"></i><div>是</div></div>
+                                <input type="radio" name="sex" value="否" title="否"><div class="layui-unselect layui-form-radio revel"><i class="layui-anim layui-icon"></i><div>否</div></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        layui.use('layedit', function(){
+            var layedit = layui.layedit;
+            layedit.build('demo'); //建立编辑器
+        });
+    </script>
+    <script>
+
+        laydate.render({
+            elem: '#test1'
+            ,type: 'datetime'
+        });
+        laydate.render({
+            elem: '#test2'
+            ,type: 'datetime'
+        });
+    </script>
+</block>

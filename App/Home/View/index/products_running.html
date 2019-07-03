@@ -1,0 +1,138 @@
+
+<block name="biaoti">产品防窜</block>
+<extend name="base:index" />
+<block name="head_content">
+<div class="parallax-content baner-content baner-content-run" >
+    <div class="container ">
+        <div class="row text-content wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <div class="col-xs-12">
+                <div class="run">
+                    <h2>一物一码 &nbsp;窜货的终结者</h2>
+
+                <p> 贴心：消费者查询防伪跨区域， 窜货系统自动提醒企业窜货地的出现</p>
+                <p> 省心：窜货数据自动形成，多维度数据分析精准打击</p>
+                <p> 安心：一码掌握市场</p>
+
+                </div>
+                <div class="primary-white-button">
+                    <a href="javascript:void (0);" class="scroll-jump" data-id="about">了解详情</a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="parallax-down tans"><img src="__PUBLIC__/home/img/down.png" alt=""></a>
+    </div>
+</div>
+<!--The head of navigation-->
+
+<!--Digital anti-channeling cargo management process-->
+<section  class="page-section">
+    <div class="container">
+        <div class="text-content wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <h3 class="text-content-color h3-fear">{$productf1['productname']}</h3>
+        </div>
+        <div class="solution">
+            <div class="col-xs-12 col-sm-6 computer traceability-img wow animated bounceInLeft" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                <img src="{$productf1['coverimg']}" alt="">
+            </div>
+            <div class="col-xs-12 col-sm-6 traceability-con traceability-top computer wow animated bounceInRight" data-wow-duration="1.5s" data-wow-delay="0.2s" >
+           <p>{$productf1['describe']|htmlspecialchars_decode}</p>
+            </div>
+            <div class="col-xs-12 brand">
+                <a href="javascript:void (0);" class="scroll-jump brand-btn" data-id="about">了解详情</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Digital anti-channeling cargo management process-->
+
+<!--Function module of anti-channeling cargo system-->
+<section id="module" class="page-section">
+    <div class="container">
+        <div class="text-content wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <h3 class="h3-fear">{$productf2['typename']}</h3>
+        </div>
+        <div class="solution wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <foreach name="productf2['pro']" item="vo" key="k">
+                <div class="col-xs-12 col-sm-3 identify-borR">
+                     <img src="{$vo['coverimg']}" alt="" data-key="{$k}">
+                </div>
+            </foreach>
+        </div>
+    </div>
+</section>
+<!--Function module of anti-channeling cargo system-->
+
+    <script>
+
+        $('.identify-borR').mouseenter(function () {
+            var $this = $(this),
+                current = $this.children('img').attr('src'),
+                key1 = $this.children('img').attr('data-key'),
+                suffixQ = current.lastIndexOf('.png'),
+                suffix = current.substr(current.lastIndexOf('.')),//获取后缀
+                str = current.substr(0,suffixQ);
+                var str1=<?php echo json_encode($productf2['pro'])?>;
+                var aa=str1[key1].describe;
+                $(this).children('img').attr('src',aa.substr(aa.indexOf('src=&quot;')+10,aa.indexOf('&quot; alt')-18));
+        }).mouseleave(function () {
+            var $this = $(this),
+                current = $this.children('img').attr('src'),
+                 key1 = $this.children('img').attr('data-key'),
+                suffixQ = current.lastIndexOf('-B.png'),
+                suffix = current.substr(current.lastIndexOf('.')),//获取后缀
+                str = current.substr(0,suffixQ);
+                var str1=<?php echo json_encode($productf2['pro'])?>;
+                var aa=str1[key1].coverimg;
+                $(this).children('img').attr('src',aa);
+        })
+        $('.bit').mouseenter(function () {
+            var $this = $(this),
+                layer = $this.children('span').remove();
+            $('.Luxury,.FMCG').append('<span class="layer"></span>');
+            $('.Industrial').append('<span class="layerT"></span>')
+            $(layer);
+        }).mouseleave(function () {
+            var $this = $(this),
+                layer = $this.append('<span class="layerT"></span>');
+            $(layer);
+            $(this).children('span').remove();
+        })
+        $('.Luxury').mouseenter(function () {
+            var $this = $(this),
+                layer = $this.children('span').remove();
+            $('.FMCG').append('<span class="layer"></span>');
+            $('.bit,.Industrial').append('<span class="layerT"></span>')
+            $(layer);
+        }).mouseleave(function () {
+            var $this = $(this),
+                layer = $this.append('<span class="layerT"></span>');
+            $(layer);
+            $(this).children('span').remove();
+        })
+        $('.Industrial').mouseenter(function () {
+            var $this = $(this),
+                layer = $this.children('span').remove();
+            $('.Luxury,.FMCG').append('<span class="layer"></span>');
+            $('.bit').append('<span class="layerT"></span>')
+            $(layer);
+        }).mouseleave(function () {
+            var $this = $(this),
+                layer = $this.append('<span class="layerT"></span>');
+            $(layer);
+            $(this).children('span').remove();
+        })
+        $('.FMCG').mouseenter(function () {
+            var $this = $(this),
+                layer = $this.children('span').remove();
+            $('.Luxury').append('<span class="layer"></span>');
+            $('.bit,.Industrial').append('<span class="layerT"></span>')
+            $(layer);
+        }).mouseleave(function () {
+            var $this = $(this),
+                layer = $this.append('<span class="layerT"></span>');
+            $(layer);
+            $(this).children('span').remove();
+        })
+
+    </script>
+</block>

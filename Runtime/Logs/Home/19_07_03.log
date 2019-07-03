@@ -1,0 +1,1655 @@
+[ 2019-07-03T08:54:41+08:00 ] 127.0.0.1 /Home/index/brand_anti.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0120s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f1' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 2 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f2' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 3 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f3' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 4 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f4' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 17 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f5' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 18 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 6   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\3b9bd5a6ce473373708bd7179768d2f1.php 第 164 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.024002s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\d71d1eba0de8e24b87cd9ecfb3f57d98.php 第 164 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.022001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T08:54:41+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0150s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0130s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','dd5a8e0294ad38b7238ca6c3c329a7fc','2019-07-03','1562115281','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/brand_anti.html','其他','其他') [ RunTime:0.0500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:08:05+08:00 ] 127.0.0.1 /Home/index/brand_anti.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0140s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f1' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 2 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f2' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 3 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f3' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 4 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f4' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 17 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f5' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 18 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 6   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\3b9bd5a6ce473373708bd7179768d2f1.php 第 164 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.025002s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\d71d1eba0de8e24b87cd9ecfb3f57d98.php 第 164 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.022001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:08:05+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0130s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0110s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','dd5a8e0294ad38b7238ca6c3c329a7fc','2019-07-03','1562119685','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/brand_anti.html','其他','其他') [ RunTime:0.0290s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2019-07-03T10:08:13+08:00 ] 127.0.0.1 /Home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0120s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '首页-f1' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 14 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '首页-f2' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 15 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的优势' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 16 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 3   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 77 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 77 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 104 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 104 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 146 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 156 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.025001s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 77 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 77 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 104 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 104 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 146 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 156 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.022001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:08:13+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0170s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0150s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','dd5a8e0294ad38b7238ca6c3c329a7fc','2019-07-03','1562119693','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/index.html','其他','其他') [ RunTime:0.0300s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2019-07-03T10:08:29+08:00 ] 127.0.0.1 /Home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0120s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '首页-f1' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 14 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '首页-f2' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 15 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的优势' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 16 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 3   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 77 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 77 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 104 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 104 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 146 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 156 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.024001s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 77 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 77 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 104 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 104 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 146 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 156 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.023001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:08:29+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0130s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0130s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','cf4b098fc6108fdee434a023d9df7de5','2019-07-03','1562119709','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/index.html','其他','其他') [ RunTime:0.0300s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2019-07-03T10:08:40+08:00 ] 127.0.0.1 /Home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0130s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '首页-f1' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 14 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '首页-f2' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 15 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的优势' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 16 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 3   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 77 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 77 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 104 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 104 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 146 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 156 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.023002s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 77 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 77 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 104 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 104 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 146 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 156 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.022001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:08:40+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0150s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0230s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','cf4b098fc6108fdee434a023d9df7de5','2019-07-03','1562119720','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/index.html','其他','其他') [ RunTime:0.0430s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:08:55+08:00 ] 127.0.0.1 /Home/index/digital_marketing.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0130s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f1' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 9 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f2' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 10 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f3' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 11 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 2   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f4' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 12 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.020001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:08:55+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0180s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0140s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','cf4b098fc6108fdee434a023d9df7de5','2019-07-03','1562119735','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/digital_marketing.html','其他','其他') [ RunTime:0.0290s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2019-07-03T10:09:14+08:00 ] 127.0.0.1 /Home/index/brand_anti.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0130s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f1' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 2 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f2' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 3 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f3' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 4 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f4' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 17 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f5' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 18 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 6   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\3b9bd5a6ce473373708bd7179768d2f1.php 第 164 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.025001s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\d71d1eba0de8e24b87cd9ecfb3f57d98.php 第 164 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.003001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.023002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-07-03T10:09:15+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0140s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0180s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','cf4b098fc6108fdee434a023d9df7de5','2019-07-03','1562119755','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/brand_anti.html','其他','其他') [ RunTime:0.0310s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:09:31+08:00 ] 127.0.0.1 /Home/index/product_traceability.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0110s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `productinfoes` [ RunTime:0.0120s ]
+SQL: SELECT p.*,s.typename FROM productinfoes p  LEFT JOIN producttypes s ON s.Id=p.Type_Id  WHERE p.Lock = 1 AND s.typename = '产品溯源-f1' ORDER BY `p`.`ProductDate` DESC,`p`.`Lock` DESC LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT p.*,s.typename FROM productinfoes p  LEFT JOIN producttypes s ON s.Id=p.Type_Id  WHERE p.Lock = 1 AND s.typename = '产品溯源-f2' ORDER BY `p`.`ProductDate` DESC,`p`.`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `producttypes` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `producttypes` WHERE `typename` = '溯源设备' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `productinfoes` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `productinfoes` WHERE `Lock` = 1 AND `type_id` = '9' ORDER BY `ProductDate` DESC,`Lock` DESC LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.021001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.019001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-07-03T10:09:31+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0120s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0120s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','cf4b098fc6108fdee434a023d9df7de5','2019-07-03','1562119771','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/product_traceability.html','其他','其他') [ RunTime:0.0440s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:09:40+08:00 ] 127.0.0.1 /Home/index/products_running.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0120s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `productinfoes` [ RunTime:0.0130s ]
+SQL: SELECT p.*,s.typename FROM productinfoes p  LEFT JOIN producttypes s ON s.Id=p.Type_Id  WHERE p.Lock = 1 AND s.typename = '产品防窜-f1' ORDER BY `p`.`ProductDate` DESC,`p`.`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `producttypes` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `producttypes` WHERE `Lock` = 1 AND `typename` = '防窜货系统功能模块' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `productinfoes` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `productinfoes` WHERE `Lock` = 1 AND `type_id` = '11' ORDER BY `ProductDate` DESC,`Lock` DESC LIMIT 8   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.020001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:09:41+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0330s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0280s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','cf4b098fc6108fdee434a023d9df7de5','2019-07-03','1562119781','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/products_running.html','其他','其他') [ RunTime:0.0280s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:10:11+08:00 ] 127.0.0.1 /Home/index/news_information.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0120s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.019001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:10:11+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0080s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0090s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','cf4b098fc6108fdee434a023d9df7de5','2019-07-03','1562119811','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/news_information.html','其他','其他') [ RunTime:0.0470s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:10:11+08:00 ] 127.0.0.1 /Home/index/news_information.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0060s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '新闻中心' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 1 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 1 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 0,5   [ RunTime:0.0010s ]
+
+[ 2019-07-03T10:10:21+08:00 ] 127.0.0.1 /Home/index/about_us.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0120s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '关于我们-f1' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 5 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '关于我们-f2' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 6 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 2   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '关于我们-f3' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 7 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '关于我们-f4' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 8 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 4   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.023002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.021001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:10:21+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0160s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0110s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','cf4b098fc6108fdee434a023d9df7de5','2019-07-03','1562119821','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/about_us.html','其他','其他') [ RunTime:0.0300s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:12:02+08:00 ] 127.0.0.1 /Home/index/about_us.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0120s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '关于我们-f1' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 5 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '关于我们-f2' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 6 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '关于我们-f3' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 7 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '关于我们-f4' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 8 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.025001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.022002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:12:02+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0090s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0100s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','cf4b098fc6108fdee434a023d9df7de5','2019-07-03','1562119922','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/about_us.html','其他','其他') [ RunTime:0.0280s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2019-07-03T10:13:14+08:00 ] 127.0.0.1 /Home/index/digital_marketing.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0110s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f1' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 9 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f2' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 10 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f3' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 11 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 2   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f4' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 12 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.021001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.020001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:13:15+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0150s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0140s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','cf4b098fc6108fdee434a023d9df7de5','2019-07-03','1562119995','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/digital_marketing.html','其他','其他') [ RunTime:0.0280s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:13:19+08:00 ] 127.0.0.1 /Home/index/brand_anti.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0120s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f1' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 2 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f2' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 3 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f3' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 4 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f4' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 17 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f5' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 18 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 6   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\3b9bd5a6ce473373708bd7179768d2f1.php 第 164 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.024002s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\d71d1eba0de8e24b87cd9ecfb3f57d98.php 第 164 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.022001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:13:20+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0120s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0100s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','cf4b098fc6108fdee434a023d9df7de5','2019-07-03','1562120000','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/brand_anti.html','其他','其他') [ RunTime:0.0280s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:13:28+08:00 ] 127.0.0.1 /Home/index/about_us.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0120s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '关于我们-f1' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 5 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '关于我们-f2' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 6 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '关于我们-f3' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 7 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '关于我们-f4' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 8 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 4   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.020001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:13:28+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0080s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0120s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','cf4b098fc6108fdee434a023d9df7de5','2019-07-03','1562120008','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/about_us.html','其他','其他') [ RunTime:0.0280s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:18:22+08:00 ] 127.0.0.1 /Home/index/about_us.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0110s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '关于我们-f1' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 5 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '关于我们-f2' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 6 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 2   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '关于我们-f3' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 7 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '关于我们-f4' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 8 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.021001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:18:22+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0110s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0120s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','0ebae1505591762e1e4bf6b2997475df','2019-07-03','1562120302','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/about_us.html','其他','其他') [ RunTime:0.0300s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:19:16+08:00 ] 127.0.0.1 /Home/index/brand_anti.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0110s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f1' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 2 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f2' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 3 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f3' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 4 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f4' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 17 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '品牌防伪-f5' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 18 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 6   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\3b9bd5a6ce473373708bd7179768d2f1.php 第 164 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.024002s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\d71d1eba0de8e24b87cd9ecfb3f57d98.php 第 164 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.022001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2019-07-03T10:19:16+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0130s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0110s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','0ebae1505591762e1e4bf6b2997475df','2019-07-03','1562120356','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/brand_anti.html','其他','其他') [ RunTime:0.0410s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:20:03+08:00 ] 127.0.0.1 /Home/index/digital_marketing.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0110s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f1' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 9 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f2' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 10 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f3' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 11 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 2   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f4' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 12 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.020001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:20:03+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0100s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0120s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','0ebae1505591762e1e4bf6b2997475df','2019-07-03','1562120403','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/digital_marketing.html','其他','其他') [ RunTime:0.0320s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:22:18+08:00 ] 127.0.0.1 /Home/index/digital_marketing.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0120s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f1' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 9 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f2' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 10 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f3' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 11 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 2   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f4' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 12 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.020001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:22:18+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0140s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0130s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','0ebae1505591762e1e4bf6b2997475df','2019-07-03','1562120538','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/digital_marketing.html','其他','其他') [ RunTime:0.0360s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:23:04+08:00 ] 127.0.0.1 /Home/index/digital_marketing.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0120s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f1' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 9 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f2' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 10 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f3' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 11 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f4' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 12 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.020001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:23:04+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0080s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0100s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','0ebae1505591762e1e4bf6b2997475df','2019-07-03','1562120584','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/digital_marketing.html','其他','其他') [ RunTime:0.0340s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:23:35+08:00 ] 127.0.0.1 /Home/index/digital_marketing.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0120s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f1' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 9 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f2' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 10 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f3' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 11 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f4' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 12 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.020001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:23:35+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0080s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0090s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','0ebae1505591762e1e4bf6b2997475df','2019-07-03','1562120615','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/digital_marketing.html','其他','其他') [ RunTime:0.0360s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:24:54+08:00 ] 127.0.0.1 /Home/index/digital_marketing.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0110s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f1' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 9 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f2' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 10 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f3' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 11 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 2   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f4' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 12 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: title E:\code\subject\Runtime\Cache\Home\a3ab7f8d0f4375b3b1a968af6e6b9999.php 第 120 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022002s ]
+NOTIC: [8] Undefined index: title E:\code\subject\Runtime\Cache\Home\2806106c5422eea07644d60deb741ee0.php 第 120 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.020001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-07-03T10:24:54+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0120s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0120s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','0ebae1505591762e1e4bf6b2997475df','2019-07-03','1562120694','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/digital_marketing.html','其他','其他') [ RunTime:0.0330s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:25:04+08:00 ] 127.0.0.1 /Home/index/digital_marketing.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0120s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f1' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 9 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f2' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 10 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f3' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 11 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 2   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f4' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 12 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.020001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:25:05+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0120s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0130s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','0ebae1505591762e1e4bf6b2997475df','2019-07-03','1562120705','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/digital_marketing.html','其他','其他') [ RunTime:0.0350s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:25:19+08:00 ] 127.0.0.1 /Home/index/digital_marketing.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0120s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f1' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 9 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f2' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 10 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f3' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 11 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 2   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '数字营销-f4' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 12 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.021001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:25:20+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0100s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0120s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','0ebae1505591762e1e4bf6b2997475df','2019-07-03','1562120720','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/digital_marketing.html','其他','其他') [ RunTime:0.0260s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2019-07-03T10:33:45+08:00 ] 127.0.0.1 /Home/index/about_us.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0120s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '关于我们-f1' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 5 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '关于我们-f2' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 6 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 2   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '关于我们-f3' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 7 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '关于我们-f4' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 8 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.023002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.020001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:33:46+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0160s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0080s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','0ebae1505591762e1e4bf6b2997475df','2019-07-03','1562121226','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/about_us.html','其他','其他') [ RunTime:0.0880s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:34:41+08:00 ] 127.0.0.1 /Home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `programas` [ RunTime:0.0150s ]
+SQL: SELECT Id as id,Id as c_id,Title as Name,`Sort`,`TitleUrl` FROM `programas` WHERE `Lock` = 1 ORDER BY `Sort` DESC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的客户' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `information` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 13 ORDER BY `ReleaseDate` ASC,`Lock` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '首页-f1' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 14 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '首页-f2' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 15 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `smclasses` WHERE `SmName` = '我们的优势' AND `Lock` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `information` WHERE `Lock` = 1 AND `Sm_Id` = 16 ORDER BY `ReleaseDate` DESC,`Lock` DESC LIMIT 3   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 77 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 77 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 104 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 104 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 146 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\60c054d12c12efc256dd4d6c336168ee.php 第 156 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.024002s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 77 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 77 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 104 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 104 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 146 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' E:\code\subject\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 156 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.022001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-07-03T10:34:42+08:00 ] 127.0.0.1 /Home/TallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0140s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-07-03' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0150s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','0ebae1505591762e1e4bf6b2997475df','2019-07-03','1562121282','www.subject.com/Home/TallyTotal/index.html','http://www.subject.com/Home/index/index.html','其他','其他') [ RunTime:0.0240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

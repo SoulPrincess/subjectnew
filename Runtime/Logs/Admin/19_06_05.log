@@ -1,0 +1,1616 @@
+[ 2019-06-05T10:30:39+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `userinfoes` [ RunTime:0.0390s ]
+NOTIC: [8] Undefined offset: 1 E:\code\subject\App\Admin\Model\UserinfoesModel.class.php 第 21 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.012001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.012001s ]
+NOTIC: [8] Undefined variable: username E:\code\subject\Runtime\Cache\Admin\9e16ef9b2db844fc51a9919830447cb9.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-06-05T10:30:39+08:00 ] 127.0.0.1 /Admin/login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-06-05T10:30:54+08:00 ] 127.0.0.1 /Admin/login/check.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `userinfoes` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `userinfoes` WHERE `loginname` = 'admin' LIMIT 1   [ RunTime:0.0430s ]
+SQL: UPDATE `userinfoes` SET `LastLoginTime`='2019-06-05 10:30:54' WHERE ( Id=22 ) [ RunTime:0.0010s ]
+SQL: UPDATE `userinfoes` SET `LoginCount`=LoginCount+1 WHERE ( Id=22 ) [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:31:00+08:00 ] 127.0.0.1 /Admin/index/home.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.109006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.109006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-06-05T10:31:00+08:00 ] 127.0.0.1 /Admin/index/bower.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0280s ]
+SQL: SELECT browser as name,count(tdid) as value FROM `tallydata` GROUP BY browser  [ RunTime:0.0030s ]
+
+[ 2019-06-05T10:31:00+08:00 ] 127.0.0.1 /Admin/index/traffic.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0250s ]
+SQL: SELECT Round((count(distinct ip)/count(distinct tdid))*100,0) as avg FROM `tallydata` WHERE `date` = '2019-06-05'  [ RunTime:0.0020s ]
+
+[ 2019-06-05T10:31:02+08:00 ] 127.0.0.1 /Admin/public/base.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_rule` [ RunTime:0.0320s ]
+SQL: SELECT `id`,title as name,name as title,`pid` FROM `gcsys_auth_rule` WHERE `ismenu` <> 0 AND `status` = 1 ORDER BY `sort` ASC  [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_group_access` [ RunTime:0.0400s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM gcsys_auth_group_access a INNER JOIN gcsys_auth_group g on a.group_id=g.id  WHERE ( a.uid='22' and g.status='1' )  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_rule` [ RunTime:0.0240s ]
+SQL: SELECT `condition`,`name` FROM `gcsys_auth_rule` WHERE `id` IN ('20','21','25','26','27','28','29','56','57','72','73','74','75','76','58','59','60','61','62','30','31','32','33','34','35','36','65','66','37','67','38','68','83','84','85','86','87','88','89','90','91','40','64','41','69','77','78','79','80','81','82','70','71','42','43','46','47','48','49','50','51','52','53','54','55') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:31:02+08:00 ] 127.0.0.1 /Admin/index/hotsearch.html?page=1&limit=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0150s ]
+SQL: SELECT keyword as name,count(distinct tdid) as number,count(distinct cookie) as usernumber FROM `tallydata` WHERE `date` = '2019-06-05' GROUP BY keyword  [ RunTime:0.0020s ]
+SQL: SELECT keyword as name,count(distinct tdid) as number,count(distinct cookie) as usernumber FROM `tallydata` WHERE `date` = '2019-06-05' GROUP BY keyword LIMIT 0,5   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:31:03+08:00 ] 127.0.0.1 /Admin/index/caller.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559491200 AND `time` <= 1559577599  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559577600 AND `time` <= 1559663999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559664000 AND `time` <= 1559750399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559750400 AND `time` <= 1559836799  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559836800 AND `time` <= 1559923199  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559923200 AND `time` <= 1560009599  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1560009600 AND `time` <= 1560095999  ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:31:04+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0650s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:31:04+08:00 ] 127.0.0.1 /Admin/index/eachpv.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0220s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559664000 AND `time` <= 1559671200  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559059200 AND `time` <= 1559066400  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559671200 AND `time` <= 1559678400  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559066400 AND `time` <= 1559073600  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559678400 AND `time` <= 1559685600  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559073600 AND `time` <= 1559080800  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559685600 AND `time` <= 1559692800  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559080800 AND `time` <= 1559088000  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559692800 AND `time` <= 1559700000  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559088000 AND `time` <= 1559095200  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559700000 AND `time` <= 1559707200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559095200 AND `time` <= 1559102400  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559707200 AND `time` <= 1559714400  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559102400 AND `time` <= 1559109600  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559714400 AND `time` <= 1559721600  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559109600 AND `time` <= 1559116800  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559721600 AND `time` <= 1559728800  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559116800 AND `time` <= 1559124000  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559728800 AND `time` <= 1559736000  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559124000 AND `time` <= 1559131200  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559736000 AND `time` <= 1559743200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559131200 AND `time` <= 1559138400  ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 12 E:\code\subject\App\Admin\Controller\IndexController.class.php 第 74 行.
+
+[ 2019-06-05T10:31:07+08:00 ] 127.0.0.1 /Admin/index/caller.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0180s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559491200 AND `time` <= 1559577599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559577600 AND `time` <= 1559663999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559664000 AND `time` <= 1559750399  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559750400 AND `time` <= 1559836799  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559836800 AND `time` <= 1559923199  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559923200 AND `time` <= 1560009599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1560009600 AND `time` <= 1560095999  ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:31:07+08:00 ] 127.0.0.1 /Admin/index/eachpv.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0160s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559664000 AND `time` <= 1559671200  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559059200 AND `time` <= 1559066400  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559671200 AND `time` <= 1559678400  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559066400 AND `time` <= 1559073600  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559678400 AND `time` <= 1559685600  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559073600 AND `time` <= 1559080800  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559685600 AND `time` <= 1559692800  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559080800 AND `time` <= 1559088000  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559692800 AND `time` <= 1559700000  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559088000 AND `time` <= 1559095200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559700000 AND `time` <= 1559707200  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559095200 AND `time` <= 1559102400  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559707200 AND `time` <= 1559714400  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559102400 AND `time` <= 1559109600  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559714400 AND `time` <= 1559721600  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559109600 AND `time` <= 1559116800  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559721600 AND `time` <= 1559728800  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559116800 AND `time` <= 1559124000  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559728800 AND `time` <= 1559736000  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559124000 AND `time` <= 1559131200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559736000 AND `time` <= 1559743200  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559131200 AND `time` <= 1559138400  ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 12 E:\code\subject\App\Admin\Controller\IndexController.class.php 第 74 行.
+
+[ 2019-06-05T10:31:08+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:31:10+08:00 ] 127.0.0.1 /Admin/index/caller.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0180s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559491200 AND `time` <= 1559577599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559577600 AND `time` <= 1559663999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559664000 AND `time` <= 1559750399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559750400 AND `time` <= 1559836799  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559836800 AND `time` <= 1559923199  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559923200 AND `time` <= 1560009599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1560009600 AND `time` <= 1560095999  ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:31:10+08:00 ] 127.0.0.1 /Admin/index/eachpv.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0160s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559664000 AND `time` <= 1559671200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559059200 AND `time` <= 1559066400  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559671200 AND `time` <= 1559678400  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559066400 AND `time` <= 1559073600  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559678400 AND `time` <= 1559685600  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559073600 AND `time` <= 1559080800  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559685600 AND `time` <= 1559692800  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559080800 AND `time` <= 1559088000  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559692800 AND `time` <= 1559700000  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559088000 AND `time` <= 1559095200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559700000 AND `time` <= 1559707200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559095200 AND `time` <= 1559102400  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559707200 AND `time` <= 1559714400  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559102400 AND `time` <= 1559109600  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559714400 AND `time` <= 1559721600  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559109600 AND `time` <= 1559116800  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559721600 AND `time` <= 1559728800  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559116800 AND `time` <= 1559124000  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559728800 AND `time` <= 1559736000  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559124000 AND `time` <= 1559131200  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559736000 AND `time` <= 1559743200  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559131200 AND `time` <= 1559138400  ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 12 E:\code\subject\App\Admin\Controller\IndexController.class.php 第 74 行.
+
+[ 2019-06-05T10:31:11+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0160s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:31:12+08:00 ] 127.0.0.1 /Admin/index/caller.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0160s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559491200 AND `time` <= 1559577599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559577600 AND `time` <= 1559663999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559664000 AND `time` <= 1559750399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559750400 AND `time` <= 1559836799  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559836800 AND `time` <= 1559923199  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559923200 AND `time` <= 1560009599  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1560009600 AND `time` <= 1560095999  ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:31:13+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:31:13+08:00 ] 127.0.0.1 /Admin/index/eachpv.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559664000 AND `time` <= 1559671200  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559059200 AND `time` <= 1559066400  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559671200 AND `time` <= 1559678400  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559066400 AND `time` <= 1559073600  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559678400 AND `time` <= 1559685600  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559073600 AND `time` <= 1559080800  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559685600 AND `time` <= 1559692800  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559080800 AND `time` <= 1559088000  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559692800 AND `time` <= 1559700000  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559088000 AND `time` <= 1559095200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559700000 AND `time` <= 1559707200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559095200 AND `time` <= 1559102400  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559707200 AND `time` <= 1559714400  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559102400 AND `time` <= 1559109600  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559714400 AND `time` <= 1559721600  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559109600 AND `time` <= 1559116800  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559721600 AND `time` <= 1559728800  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559116800 AND `time` <= 1559124000  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559728800 AND `time` <= 1559736000  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559124000 AND `time` <= 1559131200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559736000 AND `time` <= 1559743200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559131200 AND `time` <= 1559138400  ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 12 E:\code\subject\App\Admin\Controller\IndexController.class.php 第 74 行.
+
+[ 2019-06-05T10:31:15+08:00 ] 127.0.0.1 /Admin/index/caller.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559491200 AND `time` <= 1559577599  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559577600 AND `time` <= 1559663999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559664000 AND `time` <= 1559750399  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559750400 AND `time` <= 1559836799  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559836800 AND `time` <= 1559923199  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559923200 AND `time` <= 1560009599  ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1560009600 AND `time` <= 1560095999  ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:31:16+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0160s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:31:16+08:00 ] 127.0.0.1 /Admin/index/eachpv.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559664000 AND `time` <= 1559671200  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559059200 AND `time` <= 1559066400  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559671200 AND `time` <= 1559678400  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559066400 AND `time` <= 1559073600  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559678400 AND `time` <= 1559685600  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559073600 AND `time` <= 1559080800  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559685600 AND `time` <= 1559692800  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559080800 AND `time` <= 1559088000  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559692800 AND `time` <= 1559700000  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559088000 AND `time` <= 1559095200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559700000 AND `time` <= 1559707200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559095200 AND `time` <= 1559102400  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559707200 AND `time` <= 1559714400  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559102400 AND `time` <= 1559109600  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559714400 AND `time` <= 1559721600  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559109600 AND `time` <= 1559116800  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559721600 AND `time` <= 1559728800  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559116800 AND `time` <= 1559124000  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559728800 AND `time` <= 1559736000  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559124000 AND `time` <= 1559131200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559736000 AND `time` <= 1559743200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559131200 AND `time` <= 1559138400  ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 12 E:\code\subject\App\Admin\Controller\IndexController.class.php 第 74 行.
+
+[ 2019-06-05T10:31:18+08:00 ] 127.0.0.1 /Admin/index/caller.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0160s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559491200 AND `time` <= 1559577599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559577600 AND `time` <= 1559663999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559664000 AND `time` <= 1559750399  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559750400 AND `time` <= 1559836799  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559836800 AND `time` <= 1559923199  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559923200 AND `time` <= 1560009599  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1560009600 AND `time` <= 1560095999  ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:31:19+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:31:19+08:00 ] 127.0.0.1 /Admin/index/eachpv.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559664000 AND `time` <= 1559671200  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559059200 AND `time` <= 1559066400  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559671200 AND `time` <= 1559678400  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559066400 AND `time` <= 1559073600  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559678400 AND `time` <= 1559685600  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559073600 AND `time` <= 1559080800  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559685600 AND `time` <= 1559692800  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559080800 AND `time` <= 1559088000  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559692800 AND `time` <= 1559700000  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559088000 AND `time` <= 1559095200  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559700000 AND `time` <= 1559707200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559095200 AND `time` <= 1559102400  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559707200 AND `time` <= 1559714400  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559102400 AND `time` <= 1559109600  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559714400 AND `time` <= 1559721600  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559109600 AND `time` <= 1559116800  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559721600 AND `time` <= 1559728800  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559116800 AND `time` <= 1559124000  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559728800 AND `time` <= 1559736000  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559124000 AND `time` <= 1559131200  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559736000 AND `time` <= 1559743200  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559131200 AND `time` <= 1559138400  ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 12 E:\code\subject\App\Admin\Controller\IndexController.class.php 第 74 行.
+
+[ 2019-06-05T10:31:24+08:00 ] 127.0.0.1 /admin/index/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.104006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.104006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.325018s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.325018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.022001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.022001s ]
+
+[ 2019-06-05T10:31:24+08:00 ] 127.0.0.1 /Admin/index/caller.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0180s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559491200 AND `time` <= 1559577599  ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559577600 AND `time` <= 1559663999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559664000 AND `time` <= 1559750399  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559750400 AND `time` <= 1559836799  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559836800 AND `time` <= 1559923199  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559923200 AND `time` <= 1560009599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1560009600 AND `time` <= 1560095999  ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:31:24+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0160s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:31:24+08:00 ] 127.0.0.1 /Admin/index/eachpv.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0170s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559664000 AND `time` <= 1559671200  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559059200 AND `time` <= 1559066400  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559671200 AND `time` <= 1559678400  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559066400 AND `time` <= 1559073600  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559678400 AND `time` <= 1559685600  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559073600 AND `time` <= 1559080800  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559685600 AND `time` <= 1559692800  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559080800 AND `time` <= 1559088000  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559692800 AND `time` <= 1559700000  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559088000 AND `time` <= 1559095200  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559700000 AND `time` <= 1559707200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559095200 AND `time` <= 1559102400  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559707200 AND `time` <= 1559714400  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559102400 AND `time` <= 1559109600  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559714400 AND `time` <= 1559721600  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559109600 AND `time` <= 1559116800  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559721600 AND `time` <= 1559728800  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559116800 AND `time` <= 1559124000  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559728800 AND `time` <= 1559736000  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559124000 AND `time` <= 1559131200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559736000 AND `time` <= 1559743200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559131200 AND `time` <= 1559138400  ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 12 E:\code\subject\App\Admin\Controller\IndexController.class.php 第 74 行.
+
+[ 2019-06-05T10:31:24+08:00 ] 127.0.0.1 /Admin/index/bower.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0150s ]
+SQL: SELECT browser as name,count(tdid) as value FROM `tallydata` GROUP BY browser  [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:31:24+08:00 ] 127.0.0.1 /Admin/index/traffic.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0200s ]
+SQL: SELECT Round((count(distinct ip)/count(distinct tdid))*100,0) as avg FROM `tallydata` WHERE `date` = '2019-06-05'  [ RunTime:0.0020s ]
+
+[ 2019-06-05T10:31:25+08:00 ] 127.0.0.1 /Admin/public/base.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_rule` [ RunTime:0.0150s ]
+SQL: SELECT `id`,title as name,name as title,`pid` FROM `gcsys_auth_rule` WHERE `ismenu` <> 0 AND `status` = 1 ORDER BY `sort` ASC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_group_access` [ RunTime:0.0200s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM gcsys_auth_group_access a INNER JOIN gcsys_auth_group g on a.group_id=g.id  WHERE ( a.uid='22' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_rule` [ RunTime:0.0200s ]
+SQL: SELECT `condition`,`name` FROM `gcsys_auth_rule` WHERE `id` IN ('20','21','25','26','27','28','29','56','57','72','73','74','75','76','58','59','60','61','62','30','31','32','33','34','35','36','65','66','37','67','38','68','83','84','85','86','87','88','89','90','91','40','64','41','69','77','78','79','80','81','82','70','71','42','43','46','47','48','49','50','51','52','53','54','55') AND `type` = 1 AND `status` = 1  [ RunTime:0.0020s ]
+
+[ 2019-06-05T10:31:25+08:00 ] 127.0.0.1 /Admin/index/hotsearch.html?page=1&limit=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0170s ]
+SQL: SELECT keyword as name,count(distinct tdid) as number,count(distinct cookie) as usernumber FROM `tallydata` WHERE `date` = '2019-06-05' GROUP BY keyword  [ RunTime:0.0020s ]
+SQL: SELECT keyword as name,count(distinct tdid) as number,count(distinct cookie) as usernumber FROM `tallydata` WHERE `date` = '2019-06-05' GROUP BY keyword LIMIT 0,5   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:31:27+08:00 ] 127.0.0.1 /Admin/index/caller.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0160s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559491200 AND `time` <= 1559577599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559577600 AND `time` <= 1559663999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559664000 AND `time` <= 1559750399  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559750400 AND `time` <= 1559836799  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559836800 AND `time` <= 1559923199  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559923200 AND `time` <= 1560009599  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1560009600 AND `time` <= 1560095999  ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:31:27+08:00 ] 127.0.0.1 /Admin/index/eachpv.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0180s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559664000 AND `time` <= 1559671200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559059200 AND `time` <= 1559066400  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559671200 AND `time` <= 1559678400  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559066400 AND `time` <= 1559073600  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559678400 AND `time` <= 1559685600  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559073600 AND `time` <= 1559080800  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559685600 AND `time` <= 1559692800  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559080800 AND `time` <= 1559088000  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559692800 AND `time` <= 1559700000  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559088000 AND `time` <= 1559095200  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559700000 AND `time` <= 1559707200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559095200 AND `time` <= 1559102400  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559707200 AND `time` <= 1559714400  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559102400 AND `time` <= 1559109600  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559714400 AND `time` <= 1559721600  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559109600 AND `time` <= 1559116800  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559721600 AND `time` <= 1559728800  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559116800 AND `time` <= 1559124000  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559728800 AND `time` <= 1559736000  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559124000 AND `time` <= 1559131200  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559736000 AND `time` <= 1559743200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tallydata` WHERE ( `time` >= 1559131200 AND `time` <= 1559138400  ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 12 E:\code\subject\App\Admin\Controller\IndexController.class.php 第 74 行.
+
+[ 2019-06-05T10:31:27+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0160s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:31:29+08:00 ] 127.0.0.1 /admin/content/articlemanagement
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2019-06-05T10:31:30+08:00 ] 127.0.0.1 /Admin/public/base.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_rule` [ RunTime:0.0150s ]
+SQL: SELECT `id`,title as name,name as title,`pid` FROM `gcsys_auth_rule` WHERE `ismenu` <> 0 AND `status` = 1 ORDER BY `sort` ASC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_group_access` [ RunTime:0.0130s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM gcsys_auth_group_access a INNER JOIN gcsys_auth_group g on a.group_id=g.id  WHERE ( a.uid='22' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_rule` [ RunTime:0.0120s ]
+SQL: SELECT `condition`,`name` FROM `gcsys_auth_rule` WHERE `id` IN ('20','21','25','26','27','28','29','56','57','72','73','74','75','76','58','59','60','61','62','30','31','32','33','34','35','36','65','66','37','67','38','68','83','84','85','86','87','88','89','90','91','40','64','41','69','77','78','79','80','81','82','70','71','42','43','46','47','48','49','50','51','52','53','54','55') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:31:30+08:00 ] 127.0.0.1 /Admin/content/articlemanagement.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `lgclasses` [ RunTime:0.0260s ]
+SQL: SHOW COLUMNS FROM `lgclasses` [ RunTime:0.0140s ]
+SQL: SELECT Id as id,Id as c_id,LgName as Name,`Describe`,`Sort`,`Lock`,`Sign` FROM `lgclasses`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0180s ]
+SQL: SELECT Id as c_id,SmName as Name,`Describe`,`Sort`,`Lock`,`Sign`,Lg_Id as pid FROM `smclasses` WHERE `Lg_Id` IN ('4','2','3','6')  [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:31:33+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:31:36+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:31:37+08:00 ] 127.0.0.1 /admin/content/addmanagement.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-06-05T10:31:39+08:00 ] 127.0.0.1 /Admin/content/articlemanagement.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `lgclasses` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `lgclasses` [ RunTime:0.0140s ]
+SQL: SELECT Id as id,Id as c_id,LgName as Name,`Describe`,`Sort`,`Lock`,`Sign` FROM `lgclasses`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `smclasses` [ RunTime:0.0130s ]
+SQL: SELECT Id as c_id,SmName as Name,`Describe`,`Sort`,`Lock`,`Sign`,Lg_Id as pid FROM `smclasses` WHERE `Lg_Id` IN ('4','2','3','6')  [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:31:39+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:31:41+08:00 ] 127.0.0.1 /admin/auth/listrule
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_group_access` [ RunTime:0.0130s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM gcsys_auth_group_access a INNER JOIN gcsys_auth_group g on a.group_id=g.id  WHERE ( a.uid='22' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_rule` [ RunTime:0.0120s ]
+SQL: SELECT `condition`,`name` FROM `gcsys_auth_rule` WHERE `id` IN ('20','21','25','26','27','28','29','56','57','72','73','74','75','76','58','59','60','61','62','30','31','32','33','34','35','36','65','66','37','67','38','68','83','84','85','86','87','88','89','90','91','40','64','41','69','77','78','79','80','81','82','70','71','42','43','46','47','48','49','50','51','52','53','54','55') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-06-05T10:31:42+08:00 ] 127.0.0.1 /Admin/public/base.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `id`,title as name,name as title,`pid` FROM `gcsys_auth_rule` WHERE `ismenu` <> 0 AND `status` = 1 ORDER BY `sort` ASC  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_group_access` [ RunTime:0.0120s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM gcsys_auth_group_access a INNER JOIN gcsys_auth_group g on a.group_id=g.id  WHERE ( a.uid='22' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT `condition`,`name` FROM `gcsys_auth_rule` WHERE `id` IN ('20','21','25','26','27','28','29','56','57','72','73','74','75','76','58','59','60','61','62','30','31','32','33','34','35','36','65','66','37','67','38','68','83','84','85','86','87','88','89','90','91','40','64','41','69','77','78','79','80','81','82','70','71','42','43','46','47','48','49','50','51','52','53','54','55') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:31:42+08:00 ] 127.0.0.1 /Admin/auth/listrule.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_rule` [ RunTime:0.0130s ]
+NOTIC: [8] Undefined variable: sql_where E:\code\subject\App\Admin\Controller\AuthController.class.php 第 252 行.
+SQL: SELECT * FROM `gcsys_auth_rule` ORDER BY `sort` ASC  [ RunTime:0.0020s ]
+
+[ 2019-06-05T10:31:44+08:00 ] 127.0.0.1 /admin/auth/addchild.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-06-05T10:31:44+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0240s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:31:46+08:00 ] 127.0.0.1 /Admin/auth/listrule.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_rule` [ RunTime:0.0140s ]
+NOTIC: [8] Undefined variable: sql_where E:\code\subject\App\Admin\Controller\AuthController.class.php 第 252 行.
+SQL: SELECT * FROM `gcsys_auth_rule` ORDER BY `sort` ASC  [ RunTime:0.0020s ]
+
+[ 2019-06-05T10:31:47+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:31:49+08:00 ] 127.0.0.1 /admin/auth/listadmins
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_group` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_group`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_group_access` [ RunTime:0.0140s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM gcsys_auth_group_access a INNER JOIN gcsys_auth_group g on a.group_id=g.id  WHERE ( a.uid='22' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `condition`,`name` FROM `gcsys_auth_rule` WHERE `id` IN ('20','21','25','26','27','28','29','56','57','72','73','74','75','76','58','59','60','61','62','30','31','32','33','34','35','36','65','66','37','67','38','68','83','84','85','86','87','88','89','90','91','40','64','41','69','77','78','79','80','81','82','70','71','42','43','46','47','48','49','50','51','52','53','54','55') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.074004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.074004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2019-06-05T10:31:50+08:00 ] 127.0.0.1 /Admin/public/base.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `id`,title as name,name as title,`pid` FROM `gcsys_auth_rule` WHERE `ismenu` <> 0 AND `status` = 1 ORDER BY `sort` ASC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_group_access` [ RunTime:0.0130s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM gcsys_auth_group_access a INNER JOIN gcsys_auth_group g on a.group_id=g.id  WHERE ( a.uid='22' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT `condition`,`name` FROM `gcsys_auth_rule` WHERE `id` IN ('20','21','25','26','27','28','29','56','57','72','73','74','75','76','58','59','60','61','62','30','31','32','33','34','35','36','65','66','37','67','38','68','83','84','85','86','87','88','89','90','91','40','64','41','69','77','78','79','80','81','82','70','71','42','43','46','47','48','49','50','51','52','53','54','55') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:31:50+08:00 ] 127.0.0.1 /Admin/auth/listadmins.html?page=1&limit=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_group` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gcsys_auth_group` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `gcsys_auth_group` ORDER BY `id` DESC LIMIT 0,5   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:31:51+08:00 ] 127.0.0.1 /Admin/Auth/rolegroup.html?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_group` [ RunTime:0.0140s ]
+SQL: SELECT `id`,`title`,`rules` FROM `gcsys_auth_group` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_rule` [ RunTime:0.0170s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid = 0 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =20 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =21 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =25 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =26 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =27 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =28 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =29 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =56 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =57 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =72 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =73 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =74 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =75 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =76 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =58 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =59 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =60 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =61 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =62 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =30 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =31 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =32 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =33 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =34 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =35 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =36 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =65 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =66 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =37 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =67 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =38 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =68 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =83 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =84 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =85 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =86 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =87 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =88 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =89 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =90 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =91 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =40 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =64 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =41 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =69 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =77 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =78 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =79 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =80 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =81 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =82 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =70 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =71 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =42 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =43 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =46 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =47 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =48 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =49 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =50 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =51 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =52 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =53 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =54 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =55 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 27 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Array to string conversion E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-06-05T10:31:52+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:31:55+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:31:55+08:00 ] 127.0.0.1 /Admin/auth/listadmins.html?page=1&limit=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_group` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gcsys_auth_group` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `gcsys_auth_group` ORDER BY `id` DESC LIMIT 0,5   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:31:57+08:00 ] 127.0.0.1 /Admin/Auth/rolegroup.html?id=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_group` [ RunTime:0.0190s ]
+SQL: SELECT `id`,`title`,`rules` FROM `gcsys_auth_group` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid = 0 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =20 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =21 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =25 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =26 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =27 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =28 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =29 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =56 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =57 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =72 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =73 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =74 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =75 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =76 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =58 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =59 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =60 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =61 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =62 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =30 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =31 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =32 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =33 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =34 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =35 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =36 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =65 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =66 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =37 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =67 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =38 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =68 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =83 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =84 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =85 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =86 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =87 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =88 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =89 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =90 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =91 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =40 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =64 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =41 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =69 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =77 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =78 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =79 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =80 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =81 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =82 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =70 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =71 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =42 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =43 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =46 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =47 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =48 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =49 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =50 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =51 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =52 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =53 ) ORDER BY `id` ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =54 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `gcsys_auth_rule` WHERE ( pid =55 ) ORDER BY `id` ASC  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 27 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Undefined index: rule E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 34 行.
+NOTIC: [8] Array to string conversion E:\code\subject\Runtime\Cache\Admin\805ba428ed5205e326607c5ff372f8b8.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-06-05T10:31:58+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:32:01+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:32:03+08:00 ] 127.0.0.1 /Admin/auth/listadmins.html?page=1&limit=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_group` [ RunTime:0.0180s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gcsys_auth_group` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `gcsys_auth_group` ORDER BY `id` DESC LIMIT 0,5   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:32:04+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:32:07+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:32:10+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:32:13+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:32:16+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:32:19+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:32:22+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:32:25+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:32:28+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:32:31+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0180s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:32:34+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0190s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:32:37+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0220s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:32:40+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:32:43+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0230s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:32:46+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:32:49+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:32:52+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0230s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:32:55+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0240s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:32:58+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0260s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:33:01+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0260s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:33:04+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0280s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:33:07+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:33:10+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0230s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:33:13+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0220s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:33:16+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0270s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:33:19+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0220s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:33:22+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0240s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:33:23+08:00 ] 127.0.0.1 /Admin/message/messageinfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-06-05T10:33:24+08:00 ] 127.0.0.1 /Admin/message/messagetype.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `messagetypes` [ RunTime:0.0400s ]
+SQL: SELECT `Id`,`TypeName` FROM `messagetypes` WHERE `Lock` = 1  [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:33:24+08:00 ] 127.0.0.1 /Admin/public/base.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_rule` [ RunTime:0.0230s ]
+SQL: SELECT `id`,title as name,name as title,`pid` FROM `gcsys_auth_rule` WHERE `ismenu` <> 0 AND `status` = 1 ORDER BY `sort` ASC  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_group_access` [ RunTime:0.0240s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM gcsys_auth_group_access a INNER JOIN gcsys_auth_group g on a.group_id=g.id  WHERE ( a.uid='22' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gcsys_auth_rule` [ RunTime:0.0220s ]
+SQL: SELECT `condition`,`name` FROM `gcsys_auth_rule` WHERE `id` IN ('20','21','25','26','27','28','29','56','57','72','73','74','75','76','58','59','60','61','62','30','31','32','33','34','35','36','65','66','37','67','38','68','83','84','85','86','87','88','89','90','91','40','64','41','69','77','78','79','80','81','82','70','71','42','43','46','47','48','49','50','51','52','53','54','55') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:33:24+08:00 ] 127.0.0.1 /Admin/message/messageinfo.html?page=1&limit=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0210s ]
+NOTIC: [8] Undefined index: message_dispose E:\code\subject\App\Admin\Model\MessageinfoesModel.class.php 第 41 行.
+NOTIC: [8] Undefined index: message_type E:\code\subject\App\Admin\Model\MessageinfoesModel.class.php 第 44 行.
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0280s ]
+SQL: SELECT COUNT(*) AS tp_count FROM messageinfoes a  LEFT JOIN messagetypes t  ON a.Type_Id=t.Id  LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,t.TypeName FROM messageinfoes a  LEFT JOIN messagetypes t  ON a.Type_Id=t.Id  ORDER BY `a`.`Id` DESC LIMIT 0,5   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:33:24+08:00 ] 127.0.0.1 /Admin/message/messageform.html?page=1&limit=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageform` [ RunTime:0.0350s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageform` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `messageform` LIMIT 0,5   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:33:27+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0240s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:33:30+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0270s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:33:30+08:00 ] 127.0.0.1 /Admin/message/messagesys.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-06-05T10:33:33+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0220s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:33:36+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0240s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:33:39+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-06-05T10:33:42+08:00 ] 127.0.0.1 /Admin/Message/messagenoanswer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `messageinfoes` [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `messageinfoes` WHERE `Dispose` = 0 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-06-05T10:33:43+08:00 ] 127.0.0.1 /Admin/login/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: username E:\code\subject\Runtime\Cache\Admin\9e16ef9b2db844fc51a9919830447cb9.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-06-05T10:33:43+08:00 ] 127.0.0.1 /Admin/login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

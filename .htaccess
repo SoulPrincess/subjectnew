@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+  Options +FollowSymlinks
+  RewriteEngine On
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+#  RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L]
+   RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L]
+#  RewriteRule index-([1-9]+[0-9]*).html$ index.php?p=$1
+#  RewriteRule ([a-z]{1,})-([0-9]{1,}).html$ index.php?action=$1&id=$2</IfModule>
+</IfModule>

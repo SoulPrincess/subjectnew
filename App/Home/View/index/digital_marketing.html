@@ -1,0 +1,182 @@
+<block name="biaoti">数字营销</block>
+<extend name="base:index" />
+<block name="head_content">
+<div class="parallax-content baner-content baner-content-digital" >
+    <div class="container">
+        <div class="text-content  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <h2>AI+IQ</h2>
+            <h2>互联网+大数据+人工智能</h2>
+            <p>全面提升企业精准营销</p>
+        </div>
+        <div class="primary-white-button  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <a href="javascript:void (0);" class=" scroll-link scroll-jump" data-id="about">了解详情</a>
+        </div>
+        <a href="{:U('index/digital_marketing')}" class="parallax-down"><img src="__PUBLIC__/home/img/down.png" alt=""></a>
+    </div>
+</div>
+<!--The head of navigation-->
+
+<!--How to realize online and offline multi-touch fusion and collect multi-dimensional customer data in full-->
+<section class="page-section">
+    <div class="container">
+        <div class="text-content  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <h3 class="text-content-color h3-fear">{$marketing['info']['title']|htmlspecialchars_decode}</h3>
+            <p class="text-content-color p-fear">{$marketing['info']['entitle']|htmlspecialchars_decode}</p>
+        </div>
+        <div class="solution  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <div class="worth-item">
+                <img src="__PUBLIC__/home/img/subpage/channel.png"  alt="">
+            </div>
+            <div class="worth-item-add">
+                <p>+</p>
+            </div>
+            <div class="worth-item">
+                <img src="__PUBLIC__/home/img/subpage/crowd.png" alt="">
+            </div>
+            <div class="col-xs-12 col-sm-6">
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <p>+</p>
+            </div>
+            <div class="worth-item">
+                <img src="__PUBLIC__/home/img/subpage/market.png" alt="">
+            </div>
+            <div class="worth-item-add">
+                <p>=</p>
+            </div>
+            <div class="worth-item">
+                <img src="__PUBLIC__/home/img/subpage/creative.png"  alt="">
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--How to realize online and offline multi-touch fusion and collect multi-dimensional customer data in full-->
+<!--Digital marketing creates a unique marketing experience for each customer-->
+<section class="page-section">
+    <div class="container">
+        <div class="text-content  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <h3 class="text-content-color h3-fear">{$marketing2['info']['title']|htmlspecialchars_decode}</h3>
+            <p class="text-content-color">{$marketing2['info']['entitle']|htmlspecialchars_decode}</p>
+        </div>
+        <div class="solution">
+            <div class="col-xs-12 col-sm-6 market-numR wow animated bounceInLeft"  data-wow-duration="1.5s" data-wow-delay="0.2s">
+                <img src="{$marketing3['info'][0]['rmationimg']}" alt="">
+            </div>
+            <div class="col-xs-12 col-sm-6 market-numL wow animated bounceInRight"  data-wow-duration="1.5s" data-wow-delay="0.2s">
+                <img src="{$marketing3['info'][1]['rmationimg']}" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<!--Digital marketing creates a unique marketing experience for each customer-->
+<!--In the sea of data we can help you to achieve-->
+<section class="page-section">
+    <div class="container">
+        <div class="text-content wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <h3 class="text-content-color h3-fear">{$marketing4['info']['title']|htmlspecialchars_decode}</h3>
+        </div>
+        <div class="solution  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <div class="worth-item">
+                <img src="__PUBLIC__/home/img/subpage/drive.png"  alt="">
+            </div>
+            <div class="worth-item-add">
+                <img src="__PUBLIC__/home/img/subpage/left-ico.png"  alt="">
+                <span>数据挖掘</span>
+            </div>
+            <div class="worth-item">
+                <img src="__PUBLIC__/home/img/subpage/integration.png" alt="">
+            </div>
+            <div class="col-xs-12 col-sm-6">
+            </div>
+            <div class="col-xs-12 col-sm-6 worth-item-add-img">
+                <img src="__PUBLIC__/home/img/subpage/down-ico.png" alt="">
+            </div>
+            <div class="worth-item">
+                <img src="__PUBLIC__/home/img/subpage/scheme.png"  alt="">
+
+            </div>
+            <div class="worth-item-add">
+                <img src="__PUBLIC__/home/img/subpage/right-ico.png" alt="">
+            </div>
+            <div class="worth-item">
+                <img src="__PUBLIC__/home/img/subpage/analyze.png" alt="">
+            </div>
+
+        </div>
+    </div>
+</section>
+    <script>
+        $('.worth-item').mouseenter(function () {
+            var $this = $(this),
+                current = $this.children('img').attr('src'),
+                suffixQ = current.lastIndexOf('.png'),
+                suffix = current.substr(current.lastIndexOf('.')),//获取后缀
+                str = current.substr(0,suffixQ);
+            $(this).children('img').attr('src',str+'-B'+suffix);
+            // $(this).siblings().children('img').attr('src',str2+''+suffix)
+        }).mouseleave(function () {
+            var $this = $(this),
+                current = $this.children('img').attr('src'),
+                suffixQ = current.lastIndexOf('-B.png'),
+                suffix = current.substr(current.lastIndexOf('.')),//获取后缀
+                str = current.substr(0,suffixQ);
+            $(this).children('img').attr('src',str+''+suffix);
+        })
+        $('.bit').mouseenter(function () {
+            var $this = $(this),
+                layer = $this.children('span').remove();
+            $('.Luxury,.FMCG').append('<span class="layer"></span>');
+            $('.Industrial').append('<span class="layerT"></span>')
+            $(layer);
+        }).mouseleave(function () {
+            var $this = $(this),
+                layer = $this.append('<span class="layerT"></span>');
+            $(layer);
+            $(this).children('span').remove();
+        })
+        $('.Luxury').mouseenter(function () {
+            var $this = $(this),
+                layer = $this.children('span').remove();
+            $('.FMCG').append('<span class="layer"></span>');
+            $('.bit,.Industrial').append('<span class="layerT"></span>')
+            $(layer);
+        }).mouseleave(function () {
+            var $this = $(this),
+                layer = $this.append('<span class="layerT"></span>');
+            $(layer);
+            $(this).children('span').remove();
+        })
+        $('.Industrial').mouseenter(function () {
+            var $this = $(this),
+                layer = $this.children('span').remove();
+            $('.Luxury,.FMCG').append('<span class="layer"></span>');
+            $('.bit').append('<span class="layerT"></span>')
+            $(layer);
+        }).mouseleave(function () {
+            var $this = $(this),
+                layer = $this.append('<span class="layerT"></span>');
+            $(layer);
+            $(this).children('span').remove();
+        })
+        $('.FMCG').mouseenter(function () {
+            var $this = $(this),
+                layer = $this.children('span').remove();
+            $('.Luxury').append('<span class="layer"></span>');
+            $('.bit,.Industrial').append('<span class="layerT"></span>')
+            $(layer);
+        }).mouseleave(function () {
+            var $this = $(this),
+                layer = $this.append('<span class="layerT"></span>');
+            $(layer);
+            $(this).children('span').remove();
+        })
+        $('#main-nav ul li').click(function(){
+
+            $(this).addClass('nav-color').siblings().removeClass('nav-color');
+            $('.content > div').eq($(this).index()).addClass('selected').siblings().removeClass('selected');
+        })
+    </script>
+<!--In the sea of data we can help you to achieve-->
+</block>
+

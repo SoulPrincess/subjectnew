@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>谷程后台</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/layui/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/css/tai.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/css/popup.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/css/class.css">
+
+    <script type="text/javascript" src="__PUBLIC__/admin/js/jquery.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/admin/js/echarts.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/admin/layui/laydate/laydate.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/admin/layui/layui/layui.js" ></script>
+
+
+
+</head>
+<body layadmin-themealias="default" class="layui-layout-body" style="">
+<div  id="LAY_app" class="layadmin-tabspage-none">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-headerC">
+        <!-- 头部区域（可配合layui已有的水平导航） -->
+        <ul class="layui-nav navCo layui-layout-left">
+            <li class="layui-nav-item"></li>
+            <li class="layui-nav-item"></li>
+            <li class="layui-nav-item"></li>
+        </ul>
+        <ul class="layui-nav navCo layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    贤心
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="{:U('user/information')}">基本资料</a></dd>
+                    <dd><a href="{:U('user/userpwd')}">修改密码</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="">退了</a></li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-logoC" lay-href="">
+            <img src="__PUBLIC__/admin/img/logo.png" alt=""> </div>
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree"  id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu" lay-shrink="all">
+                <!--<li class="layui-nav-item" data-jump="" data-name="">-->
+                <!--<a href="{:U('index/home')}" lay-direction="2" lay-tips="主页">-->
+                <!--<i class="layui-icon layui-icon-home"></i>-->
+                <!--<cite>主页</cite>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--<li class="layui-nav-item" data-jump="" data-name="app">-->
+                <!--<a href="javascript:;" lay-direction="2" lay-tips="应用"> <i class="layui-icon layui-icon-app"></i> <cite>应用</cite> <span class="layui-nav-more"></span></a>-->
+                <!--<dl class="layui-nav-child">-->
+                <!--<dd data-jump="" data-name="content"><a href="javascript:;">内容系统<span class="layui-nav-more"></span></a>-->
+                <!--<dl class="layui-nav-child">-->
+                <!--<dd data-jump="" data-name="list"><a href="{:U('content/articlelist')}" lay-href="app/content/list">文章列表</a>-->
+                <!--</dd>-->
+                <!--<dd data-jump="" data-name="tags"><a href="{:U('content/articlemanagement')}" lay-href="app/content/tags">分类管理</a>-->
+                <!--</dd>-->
+                <!--</dl>-->
+                <!--</dd>-->
+                <!--<dd data-jump="" data-name="forum"><a href="javascript:;">产品系统<span class="layui-nav-more"></span></a>-->
+                <!--<dl class="layui-nav-child">-->
+                <!--<dd data-jump="" data-name="list"><a href="{:U('product/productlist')}" lay-href="app/forum/list">产品列表</a></dd>-->
+                <!--<dd data-jump="" data-name="replys"><a href="{:U('product/productmanagement')}" lay-href="app/forum/replys">分类管理</a>-->
+                <!--</dd>-->
+                <!--</dl>-->
+                <!--</dd>-->
+                <!--<dd data-jump="" data-name="forum"><a href="javascript:;">图片系统<span class="layui-nav-more"></span></a>-->
+                <!--<dl class="layui-nav-child">-->
+                <!--<dd data-jump="" data-name="list"><a href="{:U('img/imglist')}" lay-href="app/forum/list">图片列表</a></dd>-->
+                <!--</dl>-->
+                <!--</dd>-->
+                <!--<dd data-jump="" data-name="message"><a href="javascript:;" lay-href="app/message/">广告系统<span class="layui-nav-more"></span></a>-->
+                <!--<dl class="layui-nav-child">-->
+                <!--<dd data-jump="" data-name="list"><a href="{:U('advertising/advertisinginfo')}" lay-href="app/forum/list">广告管理</a></dd>-->
+
+                <!--</dl>-->
+                <!--</dd>-->
+                <!--<dd data-jump="" data-name="forum"><a href="javascript:;">营销系统<span class="layui-nav-more"></span></a>-->
+                <!--<dl class="layui-nav-child">-->
+                <!--<dd data-jump="" data-name="list"><a href="{:U('marketing/marketinfo')}" lay-href="app/forum/list">访问统计</a></dd>-->
+                <!--<dd data-jump="" data-name="replys"><a href="{:U('marketing/seoinfo')}" lay-href="app/forum/replys">SEO</a></dd>-->
+                <!--<dd data-jump="" data-name="customer"><a href="{:U('marketing/customer')}" lay-href="app/forum/replys">客服列表</a></dd>-->
+                <!--</dl>-->
+                <!--</dd>-->
+                <!--<dd data-jump="app/workorder/list" data-name="workorder"><a href="javascript:;" lay-href="app/workorder/list">留言系统</a>-->
+                <!--<dl class="layui-nav-child">-->
+                <!--<dd data-jump="" data-name="message"><a href="{:U('message/messageinfo')}" lay-href="app/message/set">留言设置</a></dd>-->
+                <!--</dl>-->
+                <!--</dd>-->
+                <!--</dl>-->
+                <!--</li>-->
+                <!--<li class="layui-nav-item" data-jump="" data-name="user">-->
+                <!--<a href="javascript:;" lay-direction="2" lay-tips="用户"> <i class="layui-icon layui-icon-user"></i> <cite>用户</cite> <span class="layui-nav-more"></span></a>-->
+                <!--<dl class="layui-nav-child">-->
+                <!--<dd data-jump="user/administrators/list" data-name="administrators-list">-->
+                <!--<a href="{:U('user/useradmin')}" lay-href="user/administrators/list">后台管理员</a>-->
+                <!--</dd>-->
+                <!--<dd data-jump="" data-name="content"><a href="javascript:;">权限管理<span class="layui-nav-more"></span></a>-->
+                <!--<dl class="layui-nav-child">-->
+                <!--<dd data-jump="" data-name="list"><a href="{:U('auth/listadmins')}" lay-href="app/content/list">角色管理</a>-->
+                <!--</dd>-->
+                <!--<dd data-jump="" data-name="tags"><a href="{:U('auth/listrule')}" lay-href="app/content/tags">权限列表</a>-->
+                <!--</dd>-->
+                <!--</dl>-->
+                <!--</dd>-->
+                <!--</dl>-->
+                <!--</li>-->
+                <!--<li class="layui-nav-item" data-jump="" data-name="set">-->
+                <!--<a href="javascript:;" lay-direction="2" lay-tips="设置">-->
+                <!--<i class="layui-icon layui-icon-set"></i> <cite>设置</cite> <span class="layui-nav-more"></span></a>-->
+                <!--<dl class="layui-nav-child">-->
+                <!--<dd class="layui-nav-itemed" data-jump="" data-name="system">-->
+                <!--<a href="javascript:;">栏目设置<span class="layui-nav-more"></span></a>-->
+                <!--<dl class="layui-nav-child">-->
+                <!--<dd data-jump="" data-name="website"><a href="{:U('programa/programainfo')}" lay-href="set/system/website">栏目管理</a></dd>-->
+                <!--</dl>-->
+                <!--</dd>-->
+                <!--<dd class="layui-nav-itemed" data-jump="" data-name="system"><a href="javascript:;">系统设置<span class="layui-nav-more"></span></a>-->
+                <!--<dl class="layui-nav-child">-->
+                <!--<dd data-jump="" data-name="website"><a href="{:U('websys/websysinfo')}" lay-href="set/system/website">网站设置</a></dd>-->
+                <!--</dl>-->
+                <!--</dd>-->
+                <!--<dd class="layui-nav-itemed" data-jump="" data-name="system"><a href="javascript:;">友情链接设置<span class="layui-nav-more"></span></a>-->
+                <!--<dl class="layui-nav-child">-->
+                <!--<dd data-jump="" data-name="website"><a href="{:U('link/linkinfo')}" lay-href="set/system/website">友情链接列表</a></dd>-->
+                <!--</dl>-->
+                <!--</dd>-->
+                <!--<dd class="layui-nav-itemed" data-jump="" data-name="user">-->
+                <!--<a href="javascript:;">我的设置<span-->
+                <!--class="layui-nav-more"></span></a>-->
+                <!--<dl class="layui-nav-child">-->
+                <!--<dd data-jump="" data-name="info">-->
+                <!--<a href="{:U('user/information')}" lay-href="set/user/info">基本资料</a>-->
+                <!--</dd>-->
+                <!--<dd data-jump="" data-name="password">-->
+                <!--<a href="{:U('user/userpwd')}" lay-href="set/user/password">修改密码</a>-->
+                <!--</dd>-->
+                <!--</dl>-->
+                <!--</dd>-->
+                <!--</dl>-->
+                <!--</li>-->
+
+
+                <li class="layui-nav-item" data-jump="" data-name="">
+                    <a href="{:U('index/home')}" lay-direction="2" lay-tips="主页">
+                        <i class="layui-icon layui-icon-home"></i>
+                        <cite>主页</cite>
+                    </a>
+                </li>
+                <li class="layui-nav-item" data-jump="" data-name="app">
+                    <a href="javascript:;" lay-direction="2" lay-tips="应用"> <i class="layui-icon layui-icon-app"></i> <cite>应用</cite> <span class="layui-nav-more"></span></a>
+                    <dl class="layui-nav-child">
+                        <dd data-jump="" data-name="content"><a href="javascript:;">内容系统<span class="layui-nav-more"></span></a>
+                            <dl class="layui-nav-child">
+                                <dd data-jump="" data-name="list"><a href="{:U('content/articlelist')}" lay-href="app/content/list">文章列表</a>
+                                </dd>
+                                <dd data-jump="" data-name="tags"><a href="{:U('content/articlemanagement')}" lay-href="app/content/tags">分类管理</a>
+                                </dd>
+                            </dl>
+                        </dd>
+                        <dd data-jump="" data-name="forum"><a href="javascript:;">产品系统<span class="layui-nav-more"></span></a>
+                            <dl class="layui-nav-child">
+                                <dd data-jump="" data-name="list"><a href="{:U('product/productlist')}" lay-href="app/forum/list">产品列表</a></dd>
+                                <dd data-jump="" data-name="replys"><a href="{:U('product/productmanagement')}" lay-href="app/forum/replys">分类管理</a>
+                                </dd>
+                            </dl>
+                        </dd>
+                        <dd data-jump="" data-name="forum"><a href="javascript:;">图片系统<span class="layui-nav-more"></span></a>
+                            <dl class="layui-nav-child">
+                                <dd data-jump="" data-name="list"><a href="{:U('img/imglist')}" lay-href="app/forum/list">图片列表</a></dd>
+                            </dl>
+                        </dd>
+                        <dd data-jump="" data-name="message"><a href="javascript:;" lay-href="app/message/">广告系统<span class="layui-nav-more"></span></a>
+                            <dl class="layui-nav-child">
+                                <dd data-jump="" data-name="list"><a href="{:U('advertising/advertisinginfo')}" lay-href="app/forum/list">广告管理</a></dd>
+
+                            </dl>
+                        </dd>
+                        <dd data-jump="" data-name="forum"><a href="javascript:;">营销系统<span class="layui-nav-more"></span></a>
+                            <dl class="layui-nav-child">
+                                <dd data-jump="" data-name="list"><a href="{:U('marketing/marketinfo')}" lay-href="app/forum/list">访问统计</a></dd>
+                                <dd data-jump="" data-name="replys"><a href="{:U('marketing/seoinfo')}" lay-href="app/forum/replys">SEO</a></dd>
+                                <dd data-jump="" data-name="customer"><a href="{:U('marketing/customer')}" lay-href="app/forum/replys">客服列表</a></dd>
+                            </dl>
+                        </dd>
+                        <dd data-jump="app/workorder/list" data-name="workorder"><a href="javascript:;" lay-href="app/workorder/list">留言系统</a>
+                            <dl class="layui-nav-child">
+                                <dd data-jump="" data-name="message"><a href="{:U('message/messageinfo')}" lay-href="app/message/set">留言设置</a></dd>
+                            </dl>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item" data-jump="" data-name="user">
+                    <a href="javascript:;" lay-direction="2" lay-tips="用户"> <i class="layui-icon layui-icon-user"></i> <cite>用户</cite> <span class="layui-nav-more"></span></a>
+                    <dl class="layui-nav-child">
+                        <dd data-jump="user/administrators/list" data-name="administrators-list">
+                            <a href="{:U('user/useradmin')}" lay-href="user/administrators/list">后台管理员</a>
+                        </dd>
+                        <dd data-jump="" data-name="content"><a href="javascript:;">权限管理<span class="layui-nav-more"></span></a>
+                            <dl class="layui-nav-child">
+                                <dd data-jump="" data-name="list"><a href="{:U('auth/listadmins')}" lay-href="app/content/list">角色管理</a>
+                                </dd>
+                                <dd data-jump="" data-name="tags"><a href="{:U('auth/listrule')}" lay-href="app/content/tags">权限列表</a>
+                                </dd>
+                            </dl>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item" data-jump="" data-name="set">
+                    <a href="javascript:;" lay-direction="2" lay-tips="设置">
+                        <i class="layui-icon layui-icon-set"></i> <cite>设置</cite> <span class="layui-nav-more"></span></a>
+                    <dl class="layui-nav-child">
+                        <dd class="layui-nav-itemed" data-jump="" data-name="system">
+                            <a href="javascript:;">栏目设置<span class="layui-nav-more"></span></a>
+                            <dl class="layui-nav-child">
+                                <dd data-jump="" data-name="website"><a href="{:U('programa/programainfo')}" lay-href="set/system/website">栏目管理</a></dd>
+                            </dl>
+                        </dd>
+                        <dd class="layui-nav-itemed" data-jump="" data-name="system"><a href="javascript:;">系统设置<span class="layui-nav-more"></span></a>
+                            <dl class="layui-nav-child">
+                                <dd data-jump="" data-name="website"><a href="{:U('websys/websysinfo')}" lay-href="set/system/website">网站设置</a></dd>
+                            </dl>
+                        </dd>
+                        <dd class="layui-nav-itemed" data-jump="" data-name="system"><a href="javascript:;">友情链接设置<span class="layui-nav-more"></span></a>
+                            <dl class="layui-nav-child">
+                                <dd data-jump="" data-name="website"><a href="{:U('link/linkinfo')}" lay-href="set/system/website">友情链接列表</a></dd>
+                            </dl>
+                        </dd>
+                        <dd class="layui-nav-itemed" data-jump="" data-name="user">
+                            <a href="javascript:;">我的设置<span
+                                    class="layui-nav-more"></span></a>
+                            <dl class="layui-nav-child">
+                                <dd data-jump="" data-name="info">
+                                    <a href="{:U('user/information')}" lay-href="set/user/info">基本资料</a>
+                                </dd>
+                                <dd data-jump="" data-name="password">
+                                    <a href="{:U('user/userpwd')}" lay-href="set/user/password">修改密码</a>
+                                </dd>
+                            </dl>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+            <span class="layui-nav-bar" style="top: 252px; height: 0px; opacity: 0;"></span>
+        </div>
+
+    </div>
+</div>
+
+    <block name="content"></block>
+
+</body>
+</html>

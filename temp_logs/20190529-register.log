@@ -1,0 +1,17 @@
+[2019-05-29 21:40:20]  注册错误array (
+  'info' => '1062:Duplicate entry \'admin\' for key \'name\'
+ [ SQL语句 ] : INSERT INTO `userinfoes` (`LoginName`,`UserPhone`,`LoginPwd`,`UserRealName`,`Lock`,`UserRegistrTime`) VALUES (\'admin\',\'15636985632\',\'e10adc3949ba59abbe56e057f20f883e\',\'123\',\'1\',\'2019-05-29 21:40:20\')',
+  'status' => 0,
+)
+[2019-05-29 21:41:31]  注册错误array (
+  'info' => '该登录名已存在!',
+  'status' => 0,
+)
+[2019-05-29 21:43:31]  注册错误array (
+  'info' => '该登录名已存在!',
+  'status' => 0,
+)
+[2019-05-29 21:44:32]  注册错误array (
+  'info' => '该登录名已存在!',
+  'status' => 0,
+)

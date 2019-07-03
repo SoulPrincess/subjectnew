@@ -1,0 +1,192 @@
+
+<block name="biaoti">产品防窜</block>
+<extend name="base:index" />
+<block name="head_content">
+    <div class="parallax-content baner-content baner-content-news">
+        <div class="container  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+
+            <a href="#" class="parallax-down"><img src="__PUBLIC__/home/img/down.png" alt=""></a>
+        </div>
+    </div>
+    <!--The head of navigation-->
+
+    <!--News center-->
+    <section class="page-section">
+        <div class="container" id="contents">
+
+        </div>
+    </section>
+    <!--News center-->
+    <script src="__PUBLIC__/home/js/pageMe.js"></script>
+    <script>
+        (function($) {
+            $.extend({
+                myTime: {
+                    /**
+                     * 当前时间戳
+                     * @return <int>    unix时间戳(秒)
+                     */
+                    CurTime: function(){
+                        return Date.parse(new Date())/1000;
+                    },
+                    /**
+                     * 日期 转换为 Unix时间戳
+                     * @param <string> 2014-01-01 20:20:20 日期格式
+                     * @return <int>    unix时间戳(秒)
+                     */
+                    DateToUnix: function(string) {
+                        var f = string.split(' ', 2);
+                        var d = (f[0] ? f[0] : '').split('-', 3);
+                        var t = (f[1] ? f[1] : '').split(':', 3);
+                        return (new Date(
+                            parseInt(d[0], 10) || null,
+                            (parseInt(d[1], 10) || 1) - 1,
+                            parseInt(d[2], 10) || null,
+                            parseInt(t[0], 10) || null,
+                            parseInt(t[1], 10) || null,
+                            parseInt(t[2], 10) || null
+                        )).getTime() / 1000;
+                    },
+                    /**
+                     * 时间戳转换日期
+                     * @param <int> unixTime  待时间戳(秒)
+                     * @param <bool> isFull  返回完整时间(Y-m-d 或者 Y-m-d H:i:s)
+                     * @param <int> timeZone  时区
+                     */
+                    UnixToDate: function(unixTime, isFull, timeZone) {
+                        if (typeof (timeZone) == 'number')
+                        {
+                            unixTime = parseInt(unixTime) + parseInt(timeZone) * 60 * 60;
+                        }
+                        var time = new Date(unixTime * 1000);
+                        var ymdhis = "";
+                        ymdhis += (time.getUTCMonth()+1) + "月";
+                        ymdhis += time.getUTCDate()+ "日";;
+                        if (isFull === true)
+                        {
+                            ymdhis += " " + time.getUTCHours() + ":";
+                            ymdhis += time.getUTCMinutes() + ":";
+                            ymdhis += time.getUTCSeconds();
+                        }
+                        return ymdhis;
+                    }
+                }
+            });
+        })(jQuery);
+    </script>
+
+    <script type="text/javascript">
+
+        function product_data(page=1,limit=5) {
+            var str = "";
+            $.ajax({
+                url: "{:U('index/news_information')}",
+                data: { page: page, limit: limit },
+                dataType: "json",
+                type: "post",
+                success: function (data) {
+                    str +=' <div class="text-content  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">\n' +
+                        '                <h3 class="text-content-color h3-fear">'+data.info.smname+'</h3>\n' +
+                        '                <p class="text-content-color p-fear">'+data.info.describe+'</p>\n' +
+                        '            </div>';
+
+                    if (data.count>0) {
+                        str +='<div class="solution">';
+                        for (var i = 0; i < data.info.info.length; i++) {
+                            var is_img = data.info.info[i].rmationimg === null ? "" : data.info.info[i].rmationimg;
+                            var des=data.info.info[i].describe.replace(/<.+?>/g, '');
+                            var strdes=des.length>200?des.substring(0,200)+"...":des;
+                            str+='<div class="col-xs-12 news-item wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">\n' +
+                                '                        <div class="col-sm-3 news-img">\n' +
+                                '                            <img src="'+is_img+'" alt="">\n' +
+                                '                        </div>\n' +
+                                '                        <div class="col-sm-9">\n' +
+                                '                            <div class="news-title">\n' +
+                                '                                <h6>'+data.info.info[i].title+'</h6>\n' +
+                                '                                <h6>'+$.myTime.UnixToDate($.myTime.DateToUnix(''+data.info.info[i].releasedate)+'')+'</h6>\n' +
+                                '                            </div>\n' +
+                                '                            <p class="computer">' + strdes+'</p>\n' +
+                                '                            <div class="col-xs-12 news-content">\n' +
+                                '                                <a href="{:U(\'index/news_detail\')}?id='+data.info.info[i].id+'" class="news-btn view" data-id="about" >查看更多</a>\n' +
+                                '                            </div>\n' +
+                                '                        </div>\n' +
+                                '                    </div>'
+                        }
+                        str+='<div class="col-xs-12 wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">\n' +
+                            '                    <div id="page" class="page_div"></div>\n' +
+                            '                </div></div>'
+                    }
+                    else {
+                        str += '<div class="solution">暂无数据</div>';
+                    }
+
+                    $("#contents").html("").append(str);
+                    // pageMe.js 使用方法
+                    $("#page").paging({
+                        pageNum: page, // 当前页面
+                        totalNum: Math.ceil(data.count / limit),
+                        callback: function (page,size) { //page为当前页码,size为每页条数，count为总页数
+                            product_data(page,size);
+                        }
+                    });
+
+                }
+            })
+        }
+        $(function () {
+            product_data();
+        })
+    </script>
+    <script>
+        $('.bit').mouseenter(function () {
+            var $this = $(this),
+                layer = $this.children('span').remove();
+            $('.Luxury,.FMCG').append('<span class="layer"></span>');
+            $('.Industrial').append('<span class="layerT"></span>')
+            $(layer);
+        }).mouseleave(function () {
+            var $this = $(this),
+                layer = $this.append('<span class="layerT"></span>');
+            $(layer);
+            $(this).children('span').remove();
+        })
+        $('.Luxury').mouseenter(function () {
+            var $this = $(this),
+                layer = $this.children('span').remove();
+            $('.FMCG').append('<span class="layer"></span>');
+            $('.bit,.Industrial').append('<span class="layerT"></span>')
+            $(layer);
+        }).mouseleave(function () {
+            var $this = $(this),
+                layer = $this.append('<span class="layerT"></span>');
+            $(layer);
+            $(this).children('span').remove();
+        })
+        $('.Industrial').mouseenter(function () {
+            var $this = $(this),
+                layer = $this.children('span').remove();
+            $('.Luxury,.FMCG').append('<span class="layer"></span>');
+            $('.bit').append('<span class="layerT"></span>')
+            $(layer);
+        }).mouseleave(function () {
+            var $this = $(this),
+                layer = $this.append('<span class="layerT"></span>');
+            $(layer);
+            $(this).children('span').remove();
+        })
+        $('.FMCG').mouseenter(function () {
+            var $this = $(this),
+                layer = $this.children('span').remove();
+            $('.Luxury').append('<span class="layer"></span>');
+            $('.bit,.Industrial').append('<span class="layerT"></span>')
+            $(layer);
+        }).mouseleave(function () {
+            var $this = $(this),
+                layer = $this.append('<span class="layerT"></span>');
+            $(layer);
+            $(this).children('span').remove();
+        })
+
+    </script>
+</block>
+

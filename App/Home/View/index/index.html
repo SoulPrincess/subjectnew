@@ -1,0 +1,130 @@
+<block name="biaoti">首页</block>
+<extend name="Base:index" />
+<block name="head_div_start">
+<!--The head of navigation-->
+<div class="cc" style="background-color: #2D2D2D">
+</block>
+    <block name="head_content">
+    <div  class="parallax-content baner-content baner-content-index  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s" id="home">
+        <div class="home-address baner-content-index">
+            <div class="container">
+                <div class="text-content">
+                    <h2>互联网AI驱动，满足企业品牌数字化营销</h2>
+                    <p>打通信息孤岛链接品牌与消费者互动，实时动态运营 数据收集—挖掘—分析—精准转化用户终端</p>
+                </div>
+                <div class="primary-white-button">
+                    <a href="javascript:void (0);" id="scroll-jump" class="scroll-jump" data-id="about">了解详情</a>
+                </div>
+                <a href="{:U('index/news_information')}" class="parallax-down"><img src="__PUBLIC__/home/img/down.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    </block>
+    <block name="head_div_end">
+</div>
+ </block>
+<!--The head of navigation-->
+<block name="body_content">
+<!--According to different product requirements of the enterprise, customized various solutions-->
+<section class="page-section">
+    <div class="container">
+        <div class="text-content  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <h3 class="text-content-color h3-fear">{$index1['info']['title']}</h3>
+            <p class="text-content-color p-fear">{$index1['info']['entitle']}</p>
+            <p class="text-content-color p-fear">{$index1['info']['describe']|strip_tags}</p>
+        </div>
+        <div class="solution contetn-list  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <ul class="">
+                <foreach name="index2[info]" item="vo" key="k">
+                    <li class="col-sm-3 col-xs-12 content-list-w">
+                        <div class="contetn-list-main">
+                            <div class="contetn-list-main-1">
+                                <div class="contetn-icon">
+                                    <i class="iconfont icon-fangwei"><img src="{$vo['rmationimg']}" alt=""></i>
+                                </div>
+                                <h3 class="txt-hidden">{$vo['title']}</h3>
+                                <div class="main-hide">
+                                    <a href="{:U($vo['entitle'])}" class="main-hide-btn scroll-jump">查看详情</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </foreach>
+                <div class="clear"></div>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--According to different product requirements of the enterprise, customized various solutions-->
+<!--Our advantages-->
+<section id="advantages">
+    <div class="container">
+        <div class="text-content wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <h3 class="h3-fear">{$index3['smname']}</h3>
+            <p>{$index3['describe']}</p>
+        </div>
+        <div class="advantages wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <foreach name="index3[info]" item="vo" key="k">
+                <div class="col-md-4 col-sm-6 text-center">
+                    <div class="advantages-icon  wow animated fadeInUp"  data-wow-duration="2s" data-wow-delay="0.2s ">
+                        <img src="{$vo['rmationimg']}" alt="{$vo['title']}" data-key="{$k}">
+                        <div class="icon-text">{$vo['title']}</div>
+                    </div>
+                    <div class="advantages-content  wow animated fadeInUp"  data-wow-duration="2s" data-wow-delay="0.2s">
+                        <p class="text-white">{$vo['miaoshu']|strip_tags}</p>
+                    </div>
+                </div>
+            </foreach>
+        </div>
+    </div>
+</section>
+    <script src="__PUBLIC__/home/js/canvas-particle.js"></script>
+    <!--suspension-->
+    <script type="text/javascript">
+        window.onload = function() {
+            //配置
+            var config = {
+                vx: 4,	//小球x轴速度,正为右，负为左
+                vy: 4,	//小球y轴速度
+                height: 2,	//小球高宽，其实为正方形，所以不宜太大
+                width: 2,
+                count: 200,		//点个数
+                color: "121, 162, 185", 	//点颜色
+                stroke: "130,255,255", 		//线条颜色
+                dist: 6000, 	//点吸附距离
+                e_dist: 20000, 	//鼠标吸附加速距离
+                max_conn: 10 	//点到点最大连接数
+            }
+
+            //调用
+            CanvasParticle(config);
+        }
+    </script>
+    <script>
+        $('.advantages-icon').mouseenter(function () {
+            var $this = $(this),
+                current = $this.children('img').attr('src'),
+                key1 = $this.children('img').attr('data-key'),
+                suffixQ = current.lastIndexOf('.png'),
+                suffix = current.substr(current.lastIndexOf('.')),//获取后缀
+                str = current.substr(0,suffixQ);
+            var str1=<?php echo json_encode($index3[info])?>;
+                var aa=str1[key1].futupian;
+            $(this).children('img').attr('src',aa);
+        }).mouseleave(function () {
+            var $this = $(this),
+                current = $this.children('img').attr('src'),
+                key1 = $this.children('img').attr('data-key'),
+                suffixQ = current.lastIndexOf('-B.png'),
+                suffix = current.substr(current.lastIndexOf('.')),//获取后缀
+                str = current.substr(0,suffixQ);
+                var str1=<?php echo json_encode($index3[info])?>;
+                var aa=str1[key1].rmationimg;
+            $(this).children('img').attr('src',aa);
+        })
+    </script>
+<!--Our advantages-->
+ </block>
+
+
+

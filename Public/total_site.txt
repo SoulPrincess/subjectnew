@@ -1,0 +1,1 @@
+a:3:{s:6:"switch";s:2:"on";s:10:"total_time";s:1:"0";s:11:"total_maxpv";s:5:"10000";}

@@ -1,0 +1,110 @@
+[ 2019-05-08T09:27:24+08:00 ] 127.0.0.1 /Public/admin/layui/layui/lay/modules/theme/default/laydate.css?v=5.0.9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Admin
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-08T13:21:54+08:00 ] 127.0.0.1 /Public/Public/admin/layui/layui/index.js?v=1.2.1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+ERR: 无法加载控制器:Public
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-08T14:29:30+08:00 ] 127.0.0.1 /Public/Public/admin/layui/layui/index.js?v=1.2.1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-08T14:31:05+08:00 ] 127.0.0.1 /Public/Public/admin/layui/layui/index.js?v=1.2.1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-08T14:31:15+08:00 ] 127.0.0.1 /Public/Public/admin/layui/layui/index.js?v=1.2.1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-08T14:31:54+08:00 ] 127.0.0.1 /Public/Public/admin/layui/layui/index.js?v=1.2.1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+ERR: 无法加载控制器:Public
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-08T14:34:06+08:00 ] 127.0.0.1 /Public/Public/admin/layui/layui/index.js?v=1.2.1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-08T14:55:58+08:00 ] 127.0.0.1 /Public/Public/admin/layui/layui/index.js?v=1.2.1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-08T14:57:32+08:00 ] 127.0.0.1 /Public/Public/admin/layui/layui/index.js?v=1.2.1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+
+[ 2019-05-08T15:00:10+08:00 ] 127.0.0.1 /Public/Public/admin/layui/layui/index.js?v=1.2.1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载控制器:Public
+NOTIC: [2] include(): Filename cannot be empty E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+NOTIC: [2] include(): Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\code\subject\ThinkPHP\Library\Think\Think.class.php 第 347 行.
+

@@ -1,0 +1,87 @@
+<block name="biaoti">产品溯源</block>
+<extend name="base:index" />
+<block name="head_content">
+
+<div class="parallax-content baner-content baner-content-product">
+    <div class="container">
+        <div class="row text-content-location  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <div class="col-xs-12 col-sm-6 ">
+                <div class="">
+                    <h2>一物一码承载多种使命</h2>
+
+                    <p>来源可溯 去向可追 <br>
+                        责任可纠 风险可控</p>
+                </div>
+                <div class="primary-white-button">
+                    <a href="javascript:void (0);" class="scroll-jump" data-id="about">了解详情</a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 product">
+                <img src="__PUBLIC__/home/img/subpage/pro-erweima.png" alt="">
+            </div>
+        </div>
+        <a href="#" class="parallax-down"><img src="__PUBLIC__/home/img/down.png" alt=""></a>
+    </div>
+</div>
+<!--The head of navigation-->
+
+<!--Product traceability lifecycle monitoring flow chart-->
+<section class="page-section">
+    <div class="container">
+        <div class="text-content  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <h3 class="text-content-color h3-fear">{$productf1['productname']}</h3>
+            <p class="text-content-color">{$productf1['productenname']}</p>
+        </div>
+        <div class="solution wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <div class="col-xs-12 flow">
+                <img src="{$productf1['coverimg']}" alt="">
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--Product traceability lifecycle monitoring flow chart-->
+<!--Characteristics of traceability platform-->
+<section id="traceability" class="page-section">
+        <div class="container">
+            <div class="text-content wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                <h3 class="text-content-color h3-fear">{$productf2['productname']}</h3>
+                <p class="text-content-color">{$productf2['productenname']}</p>
+
+            </div>
+            <div class="solution">
+                <div class="col-xs-12 col-sm-6 computer traceability-img wow animated bounceInLeft" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                    <img src="{$productf2['coverimg']}" alt="">
+                </div>
+                <div class="col-xs-12 col-sm-6 traceability-con computer wow animated bounceInRight" data-wow-duration="1.5s" data-wow-delay="0.2s" >
+
+                    <p>{$productf2['describe']|htmlspecialchars_decode}</p>
+                </div>
+                <div class="col-xs-12 brand">
+                    <a href="javascript:void (0);" class="scroll-jump brand-btn" data-id="about">了解详情</a>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--Characteristics of traceability platform-->
+<!--Traceability equipment-->
+<section class="page-section">
+    <div class="container">
+        <div class="text-content wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <h3 class="text-content-color h3-fear">{$productf3['typename']}</h3>
+            <p class="text-content-color">{$productf3['describe']}</p>
+        </div>
+        <div class="solution wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <foreach name="productf3['pro']" item="vo" key="k">
+                <div class="col-xs-12 col-sm-3 identify-borR">
+                    <div class="equipment">
+                        <img src="{$vo['coverimg']}" alt="">
+                        <span>{$vo['productname']}</span>
+                    </div>
+                </div>
+            </foreach>
+        </div>
+    </div>
+</section>
+<!--Traceability equipment-->
+</block>

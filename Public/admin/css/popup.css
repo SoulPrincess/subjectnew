@@ -1,0 +1,65 @@
+.layui-form-label{
+    text-align:left ;
+}
+.layui-form-item .ccc{
+    width: 388px;
+}
+.layui-elem-quote{
+    margin-top: 10px;
+}
+.layui-card-body[pad15] {
+    border-top: 1px solid #f2f2f2;
+}
+.layui-input-block .textA{
+    width: 26.5%;
+}
+.ccc .layui-icon:before {
+    content: '\e654';
+    margin-right: 3px;
+    font-size: 18px;
+    vertical-align: bottom;
+}
+.layui-input-block .release{
+    width: 13%;
+}
+
+.my-skin .layui-layer-btn .layui-layer-btn0{
+    background-color: #009688;
+    border-color:#009688 ;
+}
+
+
+
+/*.elfinder-toolbar{*/
+    /*background-color: #F2F2F2;*/
+/*}*/
+/*.ui-state-default .ui-resizable-e{*/
+    /*z-index: 10;*/
+    /*top: 0px;*/
+    /*left: 206px;*/
+    /*position: absolute;*/
+    /*height: 321px;*/
+/*}*/
+
+/*.elfinder-workzone .ui-resizable{*/
+    /*background-color: #F2F2F2;*/
+/*}*/
+/*!*.elfinder-ltr .elfinder-button-search .ui-icon-search{*!*/
+    /*!*left: 0;*!*/
+/*!*}*!*/
+/*.elfinder-button-search .ui-icon{*/
+    /*position: absolute;*/
+    /*height: 18px;*/
+    /*top: 50%;*/
+    /*margin: -8px 4px 0;*/
+    /*opacity: .6;*/
+/*}*/
+/*.elfinder .ui-icon-search{*/
+    /*cursor: pointer;*/
+/*}*/
+/*.ui-widget-header .ui-icon {*/
+    /*background-image: url(elfinder/img/ui-icons_444444_256x240.png);*/
+/*}*/
+/*.ui-icon, .ui-widget-content .ui-icon {*/
+    /*background-image: url(elfinder/img/ui-icons_444444_256x240.png);*/
+/*}*/

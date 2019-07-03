@@ -1,0 +1,9 @@
+[2019-05-22 18:10:49]  权限添加错误array (
+  'info' => '1062:Duplicate entry \'auth/listadmins\' for key \'name\'
+ [ SQL语句 ] : INSERT INTO `gcsys_auth_rule` (`pid`,`title`,`name`,`ismenu`,`Sort`,`type`,`status`) VALUES (\'57\',\'添加角色\',\'auth/listadmins\',\'2\',\'0\',\'1\',\'1\')',
+  'status' => 0,
+)
+[2019-05-22 18:12:41]  权限添加错误array (
+  'info' => '权限节点已存在',
+  'status' => 0,
+)

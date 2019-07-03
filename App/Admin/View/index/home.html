@@ -1,0 +1,594 @@
+<block name="biaoti">谷程-主页</block>
+<extend name="public:base" />
+<block name="content">
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div class="layadmin-tabsbody-item layui-show">
+            <div class="layui-fluid">
+                <div class="layui-row layui-col-space15">
+                    <div class="layui-col-md8">
+                        <div class="layui-row layui-col-space15">
+                            <div class="layui-col-md12">
+                                <div class="layui-card">
+                                    <div class="layui-card-header">数据概览</div>
+                                    <div class="layui-card-body">
+
+                                        <div class="layui-carousel layadmin-carousel layadmin-dataview" id="myline" data-anim="fade" lay-filter="LAY-index-dataview" lay-anim="" lay-indicator="inside" lay-arrow="hover" style="width: 100%; height: 280px;">
+                                            <div carousel-item="" id="LAY-index-dataview">
+                                                <div class="layui-this" id="aaa" >
+
+                                                </div>
+                                                <div class="layui-this" id="ccc" >
+                                                    
+                                                </div>
+                                                <div class="layui-this"  id="bbb">
+
+                                                </div>
+                                            </div>
+
+
+                                            <div class="layui-carousel-ind">
+                                                <ul>
+                                                    <li class=""></li>
+                                                    <li class="layui-this"></li>
+                                                    <li class=""></li>
+                                                </ul>
+                                            </div>
+                                            <button class="layui-icon layui-carousel-arrow" lay-type="sub"></button>
+                                            <button class="layui-icon layui-carousel-arrow" lay-type="add"></button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="layui-card">
+                                    <div class="layui-tab layui-tab-brief layadmin-latestData">
+                                        <ul class="layui-tab-title">
+                                            <li class="layui-this">今日热搜</li>
+                                        </ul>
+                                        <div class="layui-tab-content">
+                                            <table class="layui-hide" id="hotsearch"></table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layui-col-md4">
+                        <div class="layui-card">
+                            <div class="layui-card-header">版本信息</div>
+                            <div class="layui-card-body layui-text">
+                                <table class="layui-table">
+                                    <colgroup>
+                                        <col width="100">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <td>当前版本</td>
+                                        <td>
+                                            <script type="text/html" template="">
+                                                v{{ layui.admin.v }}
+                                                <a href="http://fly.layui.com/docs/3/" target="_blank" style="padding-left: 15px;">更新日志</a>
+                                            </script>
+                                            v1.2.1 pro <!--<a href="http://fly.layui.com/docs/3/" target="_blank" style="padding-left: 15px;">更新日志</a>-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>开发语言</td>
+                                        <td>PHP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>主要特色</td>
+                                        <td>单页面 / 响应式 / 清爽 / 极简</td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="layui-card">
+                            <div class="layui-card-header">实时监控</div>
+                            <div class="layui-card-body layadmin-takerates">
+                                <div class="layui-progress" lay-showpercent="yes">
+                                    <h3>CPU使用率</h3>
+                                    <div class="layui-progress-bar" lay-percent="{$datacpu['cpu']}%" style="width: 58%;"><span class="layui-progress-text">{$datacpu['cpu']}%</span></div>
+                                </div>
+                                <div class="layui-progress" lay-showpercent="yes">
+                                    <h3>内存占用率</h3>
+                                    <div class="layui-progress-bar layui-bg-red" lay-percent="{$datacpu['memory']}%" style="width: 90%;"><span class="layui-progress-text">{$datacpu['memory']}%</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="layui-card">
+                            <div class="layui-card-header">网站流量</div>
+                            <div class="layui-card-body">
+                                <div class="layui-carousel layadmin-carousel layadmin-news" id="mychart" data-autoplay="true" data-anim="fade" lay-filter="news" lay-anim="fade" lay-indicator="inside" lay-arrow="none" style="width: 100%; height: 280px;">
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="layui-card">
+                            <div class="layui-card-header">
+                                系统版权
+                                <i class="layui-icon layui-icon-tips" lay-tips="要支持的噢" lay-offset="5"></i>
+                            </div>
+                            <div class="layui-card-body layui-text layadmin-text">
+                                <p>谷程【GC】建站品牌在网站建站领域有着10年技术运营经验，于2015年正式成立谷程网络科技公司。我们凭借着高品质视觉体验及互联网设计开发,专业为客户提供高端品牌网站建设、营销型网站建设、手机网站设计、微信公众号定制开发、微信小程序开发、APP定制开发、品牌形象设计以及网络营销服务，我们坚守着用高品质视觉的设计方案与技术开发实力作基础，以企业及品牌的互联网商业目标为核心，为客户打造最具商业价值与用户体验的互联网+产品。</p>
+                                <p>2019-05</p>
+                                <p>Copyright  (c)  2019 上海谷程网络科技有限公司</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <script>
+                //加载 controller 目录下的对应模块
+                /*
+
+                  小贴士：
+                    这里 console 模块对应 的 console.js 并不会重复加载，
+                    然而该页面的视图则是重新插入到容器，那如何保证能重新来控制视图？有两种方式：
+                      1): 借助 layui.factory 方法获取 console 模块的工厂（回调函数）给 layui.use
+                      2): 直接在 layui.use 方法的回调中书写业务代码，即:
+                          layui.use('console', function(){
+                            //同 console.js 中的 layui.define 回调中的代码
+                          });
+
+                  这里我们采用的是方式1。其它很多视图中采用的其实都是方式2，因为更简单些，也减少了一个请求数。
+
+                */
+                // layui.use('console', layui.factory('console'));
+            </script>
+        </div>
+    </div>
+
+    <script>
+        layui.use('element', function(){
+            var element = layui.element;
+
+        });
+        layui.use('table', function(){
+            var table = layui.table;
+
+            table.render({
+                elem: '#hotsearch'
+                ,url:"{:U('index/hotsearch')}"
+                ,cols: [[
+                    {field:'name', title: '关键词', minWidth: 150}
+                    ,{field:'number', title: 'PV', minWidth: 150, sort: true}
+                    ,{field:'usernumber', title: '独立访客', minWidth: 150, sort: true}
+                ]]
+                ,page: {
+                    layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'] //自定义分页布局
+                    ,limit:5 //一页显示多少条
+                    ,limits:[5,10,15,20,25]//每页条数的选择项
+                    ,groups: 5 //只显示 5 个连续页码
+                    ,first: "首页" //不显示首页
+                    ,last: "尾页" //不显示尾页
+                }
+                // ,page: true
+            });
+        });
+        layui.use('carousel',function () {
+            var carousel = layui.carousel;
+            var ins = carousel.render({
+                elem: '#test2'
+                ,width:"100%"
+                ,arrow:'none'
+                ,full:false
+                ,autoplay:false
+                // ,interval:2000
+                ,index:1
+                ,indicator:'inside'
+            });
+            ins.reload({arrow:'hover'});
+        });
+        layui.use('carousel',function () {
+            var carousel = layui.carousel;
+            var ins = carousel.render({
+                elem: '#test3'
+                ,width:"100%"
+                ,arrow:'always'
+                ,full:false
+                ,autoplay:false
+                // ,interval:2000
+                ,index:0
+                ,indicator:'inside'
+            });
+
+            ins.reload({arrow:'hover'});
+        })
+        layui.use('carousel',function () {
+            var carousel = layui.carousel;
+            var ins = carousel.render({
+                elem: '#myline'
+                ,width:"100%"
+                ,arrow:'always'
+                ,full:false
+                ,autoplay:false
+                // ,interval:2000
+                ,index:0
+                ,indicator:'inside'
+            });
+
+            ins.reload({arrow:'hover'});
+        })
+    </script>
+
+    <script type="text/javascript">
+        var myChart;
+        myChart = echarts.init(document.getElementById('aaa'));
+        myChart.showLoading();
+        myChart.setOption({
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            legend: {
+                left: '25%',
+                textAlign: 'center',
+                data: []
+            },
+            series: [
+                {
+                    name: '访问来源',
+                    type: 'pie',
+                    radius: '55%',
+                    center: ['50%', '60%'],
+                    data: [],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }
+            ]
+        });
+        // 异步加载后台数据，通过定时器在实现
+        function bower() {
+
+            $.ajax({
+                url: "{:U('index/bower')}",
+                type: 'POST',
+                dataType: 'JSON',
+                success:function(data){
+                    if(data.status==1){
+                        myChart.setOption({
+                            legend: {
+                                data: data.data.name
+                            },
+                            series: [{
+                                data: data.data
+                            }]
+                        });
+                        myChart.hideLoading();
+                    }else{
+                        clearInterval(time);
+                        return;
+                    }
+                }
+            })
+        };
+        bower();
+        // var time = setInterval(bower,3000);
+
+    </script>
+    <script  type="text/javascript">
+        var myChart1;
+        myChart1= echarts.init(document.getElementById('bbb'));
+        myChart1.showLoading();
+        myChart1.setOption({
+            legend: {
+                data: ['本周每天访客量']
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            color:['#009688'],
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: []
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    name:'访客量',
+                    type:'line',
+                    data:[]
+                }
+            ]
+        });
+        // 异步加载后台数据，通过定时器在实现
+        function caller() {
+            $.ajax({
+                url: "{:U('index/caller')}",
+                type: 'POST',
+                dataType: 'JSON',
+                success:function(data){
+                    if(data.status==1){
+                        myChart1.setOption({
+                            xAxis: {
+                                data: data.time_sc
+                            },
+                            series: [{
+                                data: data.data
+                            }]
+                        });
+                        myChart1.hideLoading();
+                    }else{
+                        clearInterval(time1);
+                        return;
+                    }
+                }
+            })
+        };
+    // caller();
+    var time1 = setInterval(caller,3000);
+</script>
+
+    <script>
+        var myChart2 = echarts.init(document.getElementById('ccc'));
+        myChart2.showLoading();
+        myChart2.setOption({
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    lineStyle: {
+                        color: '#ddd'
+                    }
+                },
+                backgroundColor: 'rgba(255,255,255,1)',
+                padding: [5, 10],
+                textStyle: {
+                    color: '#red',
+                },
+                extraCssText: 'box-shadow: 0 0 5px rgba(41,60,85，0.3)'
+            },
+            legend: {
+                left: '50%',
+                textAlign: 'center',
+                data: ['今日','上周同期']
+            },
+            grid: {
+                left: '3%',
+                right: '3%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                data: [],
+                boundaryGap: false,
+                axisTick: {
+                    show: false
+                },
+                axisLine: {
+                    lineStyle: {
+                        color: '#000'
+                    }
+                },
+                axisLabel: {
+                    margin: 10,
+                    textStyle: {
+                        fontSize: 14
+                    }
+                }
+            },
+            yAxis: {
+                type: 'value',
+                splitLine: {
+                    lineStyle: {
+                        color: ['#ccc']
+                    }
+                },
+                axisTick: {
+                    show: false
+                },
+                axisLine: {
+                    lineStyle: {
+                        color: '#000'
+                    }
+                },
+                axisLabel: {
+                    margin: 10,
+                    textStyle: {
+                        fontSize: 14
+                    }
+                }
+            },
+            series: [{
+                name: '今日',
+                type: 'line',
+                smooth: true,
+                showSymbol: false,
+                symbol: 'circle',
+                symbolSize: 6,
+                data: [],
+                areaStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                            offset: 0,
+                            color: 'rgba(0,150,136,0.5)'
+                        }, {
+                            offset: 1,
+                            color: 'rgba(0,150,136,0.2)'
+                        }], false)
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#009688'
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 3
+                    }
+                }
+            }, {
+                name: '上周同期',
+                type: 'line',
+                smooth: true,
+                showSymbol: false,
+                symbol: 'circle',
+                symbolSize: 6,
+                data: [],
+                areaStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                            offset: 0,
+                            color: 'rgba(15,154,195,1)'
+                        }, {
+                            offset: 1,
+                            color: 'rgba(15,154,195,1)'
+                        }], false)
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#0F9AC3'
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 3
+                    }
+                }
+            }]
+        });
+        function eachpv() {
+            $.ajax({
+                url: "{:U('index/eachpv')}",
+                type: 'POST',
+                dataType: 'JSON',
+                success:function(data){
+                    if(data.status==1){
+                        myChart2.setOption({
+                            xAxis: {
+                                data: data.hours
+                            },
+                            series: [{
+                                 data: data.data
+                            }
+                            ,{
+                                 data: data.weekdata
+                                }]
+                        });
+                        myChart2.hideLoading();
+                    }else{
+                        clearInterval(time1);
+                        return;
+                    }
+                }
+            })
+        };
+        // eachpv();
+        var time1 = setInterval(eachpv,3000);
+    </script>
+    <script>
+        var myChart3 = echarts.init(document.getElementById('mychart'));
+        myChart3.showLoading();
+        myChart3.setOption({
+            color: ['rgba(176, 212, 251, 1)'],
+            legend: {
+                show: true,
+                itemGap: 12,
+                data: ['当天网站流量']
+            },
+
+            series: [{
+                name: 'Line 1',
+                type: 'pie',
+                clockWise: true,
+                radius: ['50%', '66%'],
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: false
+                        },
+                        labelLine: {
+                            show: false
+                        }
+                    }
+                },
+                hoverAnimation: false,
+
+            }]
+        });
+        function traffic() {
+            $.ajax({
+                url: "{:U('index/traffic')}",
+                type: 'POST',
+                dataType: 'JSON',
+                success:function(data){
+                    if(data.status==1){
+                        myChart3.setOption({
+                            title:{
+                                text:data.data+'%',
+                                x: 'center',
+                                y: 'center',
+                                textStyle: {
+                                    fontWeight: 'normal',
+                                    color: '#0580f2'
+                                }
+                            },
+                            series: [{
+                                data:[{
+                                    value:data.data,
+                                    name: '当天网站流量',
+                                    itemStyle: {
+                                        normal: {
+                                            color: { // 完成的圆环的颜色
+                                                colorStops: [{
+                                                    offset: 0,
+                                                    color: '#00cefc' // 0% 处的颜色
+                                                }, {
+                                                    offset: 1,
+                                                    color: '#367bec' // 100% 处的颜色
+                                                }]
+                                            },
+                                            label: {
+                                                show: false
+                                            },
+                                            labelLine: {
+                                                show: false
+                                            }
+                                        }
+                                    }
+                                },{value: 100-data.data,
+                                    name: ''
+                                 }]
+                            }]
+                        });
+                        myChart3.hideLoading();
+                    }else{
+                        clearInterval(time1);
+                        return;
+                    }
+                }
+            })
+        };
+        traffic();
+    </script>
+
+</block>
+
+

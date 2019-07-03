@@ -1,0 +1,46 @@
+[ 2019-06-04T10:41:59+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.011000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-06-04T10:41:59+08:00 ] 127.0.0.1 /Home/tallyTotal/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Model\TallydataModel::page() should be compatible with Think\Model::page($page, $listRows = NULL) E:\code\subject\App\Admin\Model\TallydataModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0150s ]
+SQL: SELECT count(distinct tdid) as pv FROM `tallydata` WHERE `date` = '2019-06-04' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `tallydata` [ RunTime:0.0130s ]
+SQL: INSERT INTO `tallydata` (`ip`,`browser`,`ydns`,`sdns`,`cookie`,`date`,`time`,`uri`,`referer`,`keyword`,`se`) VALUES ('127.0.0.1','Chrome','www.subject.com','www.subject.com','46253a6586d913af67f1907177230402','2019-06-04','1559616119','www.subject.com/Home/tallyTotal/index.html','http://www.subject.com/','其他','其他') [ RunTime:0.0330s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

@@ -1,0 +1,46 @@
+<block name="biaoti">谷程-图片系统</block>
+<extend name="public:base" />
+<block name="content">
+    <link rel="stylesheet" type="text/css" media="screen" href="__PUBLIC__/admin/css/elfinder/js/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="__PUBLIC__/admin/css/elfinder/css/elfinder.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/admin/css/elfinder/css/elf.css">
+    <script type="text/javascript" src="__PUBLIC__/admin/css/elfinder/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/admin/css/elfinder/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/admin/css/elfinder/js/elfinder.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/admin/css/elFinder/js/i18n/elfinder.zh_CN.js"></script>
+
+    <!-- 主体内容 -->
+    <div class="layui-body" id="LAY_app_body">
+        <div class="layadmin-tabsbody-item layui-show">
+            <div class="layui-card layadmin-header">
+                <div class="layui-breadcrumb" lay-filter="breadcrumb" style="visibility: visible;">
+                    <a lay-href="">应用</a><span lay-separator="">/</span>
+                    <a><cite>图片系统</cite></a><span lay-separator="">/</span>
+                    <a><cite>图片列表</cite></a>
+                </div>
+            </div>
+            <div class="layui-fluid">
+                <div class="layui-card">
+
+                    <div class="layui-card-body">
+                        <!--<div style="padding-bottom: 10px;">-->
+                            <!--<button data-method="notice" id="layerDemo" class="layui-btn">上传</button>-->
+                        <!--</div>-->
+                        <div id="elfinder" class="ui-helper-reset ui-helper-clearfix ui-widget ui-widget-content ui-corner-all elfinder elfinder-ltr ui-resizable" style="width: auto; height: 400px;">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- elFinder initialization (REQUIRED) -->
+    <script type="text/javascript" charset="utf-8">
+        $().ready(function() {
+            var elf = $('#elfinder').elfinder({
+                url : '__PUBLIC__/admin/css/elFinder/php/connector.php',  // connector URL (REQUIRED)
+                // lang: 'zh_CN',             // language (OPTIONAL)
+            }).elfinder('instance');
+        });
+    </script>
+</block>

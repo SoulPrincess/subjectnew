@@ -1,0 +1,96 @@
+<block name='key'>
+    {$result['keywords']}
+</block>
+<block name='des'>
+    {$result['description']}
+</block>
+<block name="biaoti">新闻详情</block>
+<extend name="base:index" />
+<block name="head_content">
+<div class="parallax-content baner-content baner-content-news">
+    <div class="container  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+        <a href="javascript:void (0);" class="parallax-down"><img src="__PUBLIC__/home/img/down.png" alt=""></a>
+    </div>
+</div>
+<!--The head of navigation-->
+
+<!--News center-->
+<article>
+    <input type="hidden" value="{$result['id']}" name="id">
+<h2>{$result['title']}</h2>
+    <div class="note">
+        <span>来源：速沣科技</span>
+        <span>时间：{:date('m月d日',strtotime($result['releasedate']))}</span>
+        <span>关键词：{$result['keywords']}</span>
+    </div>
+    <p>
+        {$result['describe']}
+    </p>
+</article>
+<div class="text-content-space">
+    <a href="{:U('index/news_information')}" class="note-btn"> 返回</a>
+</div>
+    <script>
+        $(function(){
+            var id=$("input[name=id]").val();
+            $.ajax({
+                url: "{:U('admin/content/articlepvupdate')}",
+                data:{id:id},
+                type: 'post'
+            });
+        });
+        $('.bit').mouseenter(function () {
+            var $this = $(this),
+                layer = $this.children('span').remove();
+            $('.Luxury,.FMCG').append('<span class="layer"></span>');
+            $('.Industrial').append('<span class="layerT"></span>')
+            $(layer);
+        }).mouseleave(function () {
+            var $this = $(this),
+                layer = $this.append('<span class="layerT"></span>');
+            $(layer);
+            $(this).children('span').remove();
+        })
+        $('.Luxury').mouseenter(function () {
+            var $this = $(this),
+                layer = $this.children('span').remove();
+            $('.FMCG').append('<span class="layer"></span>');
+            $('.bit,.Industrial').append('<span class="layerT"></span>')
+            $(layer);
+        }).mouseleave(function () {
+            var $this = $(this),
+                layer = $this.append('<span class="layerT"></span>');
+            $(layer);
+            $(this).children('span').remove();
+        })
+        $('.Industrial').mouseenter(function () {
+            var $this = $(this),
+                layer = $this.children('span').remove();
+            $('.Luxury,.FMCG').append('<span class="layer"></span>');
+            $('.bit').append('<span class="layerT"></span>')
+            $(layer);
+        }).mouseleave(function () {
+            var $this = $(this),
+                layer = $this.append('<span class="layerT"></span>');
+            $(layer);
+            $(this).children('span').remove();
+        })
+        $('.FMCG').mouseenter(function () {
+            var $this = $(this),
+                layer = $this.children('span').remove();
+            $('.Luxury').append('<span class="layer"></span>');
+            $('.bit,.Industrial').append('<span class="layerT"></span>')
+            $(layer);
+        }).mouseleave(function () {
+            var $this = $(this),
+                layer = $this.append('<span class="layerT"></span>');
+            $(layer);
+            $(this).children('span').remove();
+        })
+
+    </script>
+
+</block>
+
+
+
