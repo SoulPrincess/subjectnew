@@ -111,8 +111,8 @@
                 <div class="layui-form layui-card-header layuiadmin-card-header-auto" lay-filter="app-content-list">
                     <div class="layui-form-item">
                         <button class="layui-btn">留言信息管理</button>
-                        <button class="layui-btn layui-btn-primary op">留言表单设置</button>
-                        <button class="layui-btn layui-btn-primary op" id="syssite">留言系统设置</button>
+                        <button  class="layui-btn layui-btn-primary op">留言表单设置</button>
+                        <button <?php echo authcheck('message/messagesys');?> class="layui-btn layui-btn-primary op" id="syssite">留言系统设置</button>
 
                     </div>
                 </div>
@@ -140,7 +140,7 @@
                                                 <label class="layui-form-labelSet">留言信息分类</label>
                                                 <div class="layui-input-block">
                                                     <select name="Dispose" id="message_dispose" lay-filter="message_dispose">
-                                                        <option value="">请选择状态</option>
+                                                        <option value="">请选择标签</option>
                                                         <option value="0">未处理</option>
                                                         <option value="1">已处理</option>
                                                     </select>

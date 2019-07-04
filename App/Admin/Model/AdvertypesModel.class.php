@@ -19,7 +19,11 @@ class AdvertypesModel extends Model{
     public function typecun(){
         $advertypes=M('advertypes t')->field(['Id'])->select();
         $type=array_column($advertypes,'id');
-        $where['Type_Id']=array("in", $type);
+		if(count($advertypes)>0){
+			$where['Type_Id']=array("in", $type);
+		}else{
+			$where=array();
+		}
         $result =M('adeverinfoes')->where($where)->field(['count(Id) as total,Type_Id'])->group('Type_Id')->select();
         $data=array_column($result,'total','type_id');
         return $data;

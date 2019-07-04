@@ -1,23 +1,22 @@
 
-<link rel="stylesheet" href="../../../../../sfkj/sfkj-07-02/css/templatemo-style(2).css">
 <block name="biaoti">品牌防伪</block>
 <extend name="base:index" />
 <block name="head_content">
 <div class="parallax-content baner-content baner-content-brand" >
     <div class="container about-content-last">
         <div class="text-content about-content-last">
-            <h2 class="  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">一物一码产品身份唯一性</h2>
+            <h2 class="  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">一物一码产品身份唯一性认证</h2>
             <p class="fraud-text  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">造假的克星</p>
             <div class="item-list  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
-                <a href="#" class="fraud" data-id="about">扫码辨真伪</a>
-                <a href="#" class="fraud" data-id="about">动态营销</a>
-                <a href="#" class="fraud" data-id="about">在线互动</a>
-                <a href="#" class="fraud" data-id="about">积分</a>
-                <a href="#" class="fraud" data-id="about">兑奖</a>
+                <span class="fraud" data-id="about">扫码辨真伪</span>
+                <span class="fraud" data-id="about">动态营销</span>
+                <span class="fraud" data-id="about">在线互动</span>
+                <span class="fraud" data-id="about">积分</span>
+                <span class="fraud" data-id="about">兑奖</span>
             </div>
         </div>
         <div class="primary-white-button">
-            <a href="javascript:void (0);" class="scroll-link scroll-jump" data-id="about">了解详情</a>
+            <a href="javascript:void (0);" class="scroll-jump" data-id="about">了解详情</a>
         </div>
         <!--<a href="#" class="parallax-down"><img src="img/down.png" alt=""></a>-->
     </div>
@@ -53,7 +52,7 @@
             <h3 class="h3-fear h3-fear wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">微信扫一扫即刻辩真伪</h3>
         </div>
         <div class="solution">
-            <foreach name="brand4['info']" item="vo" key="k">
+		 <foreach name="brand4['info']" item="vo" key="k">
                 <if condition="$k eq 0|$k eq 1|$k eq 2">
                     <div class="col-xs-12 col-sm-4 identify-borR wow animated bounceInLeft"  data-wow-duration="1.5s" data-wow-delay="0.2s">
                         <img src="{$vo['rmationimg']}" alt="" data-key="{$k}">
@@ -64,22 +63,7 @@
                     </div>
                 </if>
             </foreach>
-
-            <!--<div class="col-xs-12 col-sm-4 identify-borR wow animated bounceInLeft"  data-wow-duration="1.5s" data-wow-delay="0.2s">-->
-                <!--<img src="__PUBLIC__/home/img/subpage/operate.png" alt="">-->
-            <!--</div>-->
-            <!--<div class="col-xs-12 col-sm-4 identify-borR wow animated bounceInLeft"  data-wow-duration="1.5s" data-wow-delay="0.2s">-->
-                <!--<img src="__PUBLIC__/home/img/subpage/person.png" alt="">-->
-            <!--</div>-->
-            <!--<div class="col-xs-12 col-sm-4 identify-borR wow animated bounceInRight"  data-wow-duration="1.5s" data-wow-delay="0.2s">-->
-                <!--<img src="__PUBLIC__/home/img/subpage/online.png"  alt="">-->
-            <!--</div>-->
-            <!--<div class="col-xs-12 col-sm-4 identify-borR wow animated bounceInRight"  data-wow-duration="1.5s" data-wow-delay="0.2s">-->
-                <!--<img src="__PUBLIC__/home/img/subpage/control.png" alt="">-->
-            <!--</div>-->
-            <!--<div class="col-xs-12 col-sm-4 identify-borR wow animated bounceInRight"  data-wow-duration="1.5s" data-wow-delay="0.2s">-->
-                <!--<img src="__PUBLIC__/home/img/subpage/analysis.png" alt="">-->
-            <!--</div>-->
+           
         </div>
     </div>
 </section>
@@ -105,7 +89,7 @@
         </div>
     </div>
 </section>
-    <script>
+   <script>
         $('.identify-borR').mouseenter(function () {
             var $this = $(this),
                 current = $this.children('img').attr('src'),
@@ -177,5 +161,6 @@
             $(this).children('span').remove();
         })
     </script>
+        
 <!--Using digital identity management leaves fakes nowhere to hide-->
 </block>

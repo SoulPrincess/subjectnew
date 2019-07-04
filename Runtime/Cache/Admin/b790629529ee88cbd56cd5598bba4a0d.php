@@ -118,7 +118,6 @@
                                     <button class="layui-btn" id="btn-fold">全部折叠</button>
                                     <button class="layui-btn" id="btn-refresh">刷新表格</button>
                                 </div>
-                                <span style="color:#c0c2c5">（排序值越大越靠前）</span>
                             </div>
                             <table class="layui-hide" id="pro_list" lay-filter="pro_list"></table>
                         </div>

@@ -20,7 +20,6 @@
     <script src="/Public/home/js/vendor/jquery-1.11.2.min.js"></script>
 </head>
 <body>
-
 <!--The head of navigation-->
 
     
@@ -43,7 +42,6 @@
                 <div id="main-nav" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <?php if($navigation): if(is_array($navigation)): foreach($navigation as $k=>$vo): ?><li><a href="<?php echo U($vo['titleurl']);?>" class="<?php echo ($k==0?'scroll-top nav-color':'scroll-link'); ?>"><?php echo ($vo['name']); ?></a></li><?php endforeach; endif; endif; ?>
-
                     </ul>
                 </div>
             </nav>
@@ -52,8 +50,7 @@
 
 <div class="parallax-content baner-content baner-content-news">
     <div class="container  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
-
-        <a href="#" class="parallax-down"><img src="/Public/home/img/down.png" alt=""></a>
+        <a href="javascript:void (0);" class="parallax-down"><img src="/Public/home/img/down.png" alt=""></a>
     </div>
 </div>
 <!--The head of navigation-->
@@ -175,7 +172,7 @@
 <!--footer-->
 
 <!--suspension-->
-<section>
+<section style="display:none">
     <!--Online communication-->
     <div class="counseling-communication  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
         <div class="counselingR text-white">
@@ -286,7 +283,6 @@
 
 </section>
 
-
 </body>
 <script src="/Public/home/js/wow.min.js"></script>
 <script src="/Public/home/js/main.js"></script>
@@ -302,10 +298,22 @@
         new WOW().init();
     };
 </script>
+<div id="baidu"></div>
+<script type="text/javascript">
+    setTimeout(function(){$('.qiao-icon-close').append("<span id='bdclick'></span>");$('#bdclick').click();},1000);
+</script>
 <script>
+    var str="<?php echo C('websyscode.footcode');?>";
+    var aa= str.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, "'");
+    $("#baidu").append(aa);
+    $('.scroll-jump').click(function () {
+	 //点击按钮时判断 百度商桥代码中的“我要咨询”按钮的元素是否存在，存在的话就执行一次点击事件
+        if ($('#nb_icon_wrap').length > 0) {
+            $('#nb_icon_wrap').click();
+        }
+    })
     $('#consulting').click(function () {
-        "<?php echo C('websyscode.footcode');?>"
-        // $('.chatBox-kuang').css('display','block');
+        $('.chatBox-kuang').css('display','block');
     })
     $('#plan').click(function () {
         $('.chatBox-kuang').css('display','block');
@@ -415,22 +423,7 @@
 </script>
 <script>
 
-    $('.advantages-icon').mouseenter(function () {
-        var $this = $(this),
-            current = $this.children('img').attr('src'),
-            suffixQ = current.lastIndexOf('.png'),
-            suffix = current.substr(current.lastIndexOf('.')),//获取后缀
-            str = current.substr(0,suffixQ);
-        $(this).children('img').attr('src',str+'-B'+suffix);
-        // $(this).parent().siblings().children('.advantages-icon').children('img').attr('src',str2+''+suffix)
-    }).mouseleave(function () {
-        var $this = $(this),
-            current = $this.children('img').attr('src'),
-            suffixQ = current.lastIndexOf('-B.png'),
-            suffix = current.substr(current.lastIndexOf('.')),//获取后缀
-            str = current.substr(0,suffixQ);
-        $(this).children('img').attr('src',str+''+suffix);
-    })
+
     $('.bit').mouseenter(function () {
         var $this = $(this),
             layer = $this.children('span').remove();
@@ -472,13 +465,27 @@
             layer = $this.children('span').remove();
         $('.Luxury').append('<span class="layer"></span>');
         $('.bit,.Industrial').append('<span class="layerT"></span>')
-        $(layer);down.png
+        $(layer);
     }).mouseleave(function () {
         var $this = $(this),
             layer = $this.append('<span class="layerT"></span>');
         $(layer);
         $(this).children('span').remove();
     })
+    var url=window.location.pathname;
+    console.log();
+    $('#main-nav ul li a').each(function(i,n){
 
+        if($(n).attr('href')==url){
+            $(n).addClass('nav-color').siblings().removeClass('nav-color');
+        }else{
+            $(n).removeClass('nav-color')
+        }
+    });
+    $('#main-nav ul li a').click(function(){
+
+        $(this).addClass('nav-color').siblings().removeClass('nav-color');
+        $('.content > div').eq($(this).index()).addClass('selected').siblings().removeClass('selected');
+    })
 </script>
 </html>

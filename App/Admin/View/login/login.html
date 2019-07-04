@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="__PUBLIC__/admin/layui/layui/css/layui.css">
     <link rel="stylesheet" href="__PUBLIC__/admin/css/login.css">
     <script src="__PUBLIC__/admin/js/jquery.min.js"></script>
-    <link rel="stylesheet" href="../../../../../sfkj/sfkj-07-02/css/bootstrap.css">
 </head>
 <body layadmin-themealias="default" class="layui-layout-body" style="">
 <div id="LAY_app" class="layadmin-tabspage-none">
@@ -50,8 +49,8 @@
                     <div class="layui-form-item">
                         <button class="layui-btn layui-btn-fluid" lay-submit="" lay-filter="LAY-user-login-submit">登 入</button>
                     </div>
-                    <div class="layui-trans layui-form-item layadmin-user-login-other">
-                        <a href="{:U('login/register')}" class="layadmin-user-jump-change layadmin-link">注册帐号</a>
+                    <div class="layui-trans layui-form-item layadmin-user-login-other layui-hide">
+                        <a  href="{:U('login/register')}" class="layadmin-user-jump-change layadmin-link">注册帐号</a>
                     </div>
                 </div>
             </div>

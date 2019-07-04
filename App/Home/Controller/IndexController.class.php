@@ -18,12 +18,12 @@ class IndexController extends BaseController
             $type['info'][$k]=$v;
         }
         $type2=M('smclasses')->where(['SmName'=>'首页-f2','Lock'=>1])->find();
-        $data2=M('information')->where(['Lock'=>1,'Sm_Id'=>$type2['id']])->order(['ReleaseDate desc','Lock desc'])->limit(4)->select();
+        $data2=M('information')->where(['Lock'=>1,'Sm_Id'=>$type2['id']])->order(['ReleaseDate ASC','Lock desc'])->limit(4)->select();
         foreach($data2 as $k=>$v){
             $type2['info'][$k]=$v;
         }
         $type3=M('smclasses')->where(['SmName'=>'我们的优势','Lock'=>1])->find();
-        $data3=M('information')->where(['Lock'=>1,'Sm_Id'=>$type3['id']])->order(['ReleaseDate desc','Lock desc'])->limit(3)->select();
+        $data3=M('information')->where(['Lock'=>1,'Sm_Id'=>$type3['id']])->order(['ReleaseDate asc','Lock desc'])->limit(3)->select();
         foreach($data3 as $k=>$v){
             preg_match(' /<img.*?src="?(.*?)"?\s.*?>/i',$v['describe'],$match);
             $type3['info'][$k]=$v;
@@ -92,7 +92,7 @@ class IndexController extends BaseController
         foreach($data3 as $k=>$v){
             $type3['info'][$k]=$v;
         }
-        $type4=M('smclasses')->where(['SmName'=>'品牌防伪-f5','Lock'=>1])->find();
+		 $type4=M('smclasses')->where(['SmName'=>'品牌防伪-f5','Lock'=>1])->find();
         $data4=M('information')->where(['Lock'=>1,'Sm_Id'=>$type4['id']])->order(['ReleaseDate asc','Lock desc'])->limit(6)->select();
         foreach($data4 as $k=>$v){
             $type4['info'][$k]=$v;
@@ -101,7 +101,7 @@ class IndexController extends BaseController
         $this->assign('brand1',$type1);
         $this->assign('brand2',$type2);
         $this->assign('brand3',$type3);
-        $this->assign('brand4',$type4);
+		  $this->assign('brand4',$type4);
         $this->buildHtml('brand_anti', HTML_PATH . '/','Home@index:brand_anti', 'utf8');
 
         $this->display();
@@ -138,7 +138,7 @@ class IndexController extends BaseController
         $data2=M('productinfoes p')->field("p.*,s.typename",false)->join(" LEFT JOIN producttypes s ON s.Id=p.Type_Id")->where(['p.Lock'=>1,'s.typename'=>'产品溯源-f2'])->order(['p.ProductDate desc','p.Lock desc'])->find();
 
         $type=M('producttypes')->where(['typename'=>'溯源设备'])->find();
-        $data3=M('productinfoes')->where(['Lock'=>1,'type_id'=>$type['id']])->order(['ProductDate desc','Lock desc'])->limit(8)->select();
+        $data3=M('productinfoes')->where(['Lock'=>1,'type_id'=>$type['id']])->order(['ProductDate asc','Lock desc'])->limit(8)->select();
         foreach($data3 as $k=>$v){
             $type['pro'][$k]=$v;
         }
@@ -185,7 +185,7 @@ class IndexController extends BaseController
             $type2['info'][$k]=$v;
         }
         $type3=M('smclasses')->where(['SmName'=>'关于我们-f4','Lock'=>1])->find();
-        $data3=M('information')->where(['Lock'=>1,'Sm_Id'=>$type3['id']])->order(['ReleaseDate desc','Lock desc'])->limit(4)->select();
+        $data3=M('information')->where(['Lock'=>1,'Sm_Id'=>$type3['id']])->order(['ReleaseDate asc','Lock desc'])->limit(4)->select();
         foreach($data3 as $k=>$v){
             $type3['info'][$k]=$v;
         }

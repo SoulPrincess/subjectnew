@@ -46,19 +46,19 @@
     </div>
 
     <div  class="parallax-content baner-content baner-content-index  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s" id="home">
-        <div class="home-address baner-content-index">
-            <div class="container">
-                <div class="text-content">
-                    <h2>互联网AI驱动，满足企业品牌数字化营销</h2>
-                    <p>打通信息孤岛链接品牌与消费者互动，实时动态运营 数据收集—挖掘—分析—精准转化用户终端</p>
-                </div>
-                <div class="primary-white-button">
-                    <a href="javascript:void (0);" id="scroll-jump" class="scroll-jump" data-id="about">了解详情</a>
-                </div>
-                <a href="<?php echo U('index/news_information');?>" class="parallax-down"><img src="/Public/home/img/down.png" alt=""></a>
+    <div class="home-address baner-content-index">
+        <div class="container">
+            <div class="text-content">
+                <h2>互联网AI驱动，满足企业品牌数字化营销</h2>
+                <p class="interactive">打通信息孤岛链接品牌与消费者互动，实时动态运营 数据收集—挖掘—分析—精准转化用户终端</p>
             </div>
+            <div class="primary-white-button">
+                <a href="javascript:void (0);" id="scroll-jump" class="scroll-jump" data-id="about">了解详情</a>
+            </div>
+            <a href="news_and_information_page.html" class="parallax-down"><img src="/Public/home/img/down.png" alt=""></a>
         </div>
     </div>
+	</div>
     
 
 </div>
@@ -69,7 +69,7 @@
     <div class="container">
         <div class="text-content  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
             <h3 class="text-content-color h3-fear"><?php echo ($index1['info']['title']); ?></h3>
-            <p class="text-content-color p-fear"><?php echo ($index1['info']['entitle']); ?></p>
+			<p class="text-content-color p-fear"><?php echo ($index1['info']['entitle']); ?></p>
             <p class="text-content-color p-fear"><?php echo (strip_tags($index1['info']['describe'])); ?></p>
         </div>
         <div class="solution contetn-list  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
@@ -82,7 +82,7 @@
                                 </div>
                                 <h3 class="txt-hidden"><?php echo ($vo['title']); ?></h3>
                                 <div class="main-hide">
-                                    <a href="<?php echo U($vo['entitle']);?>" class="main-hide-btn scroll-jump">查看详情</a>
+                                    <a href="<?php echo U($vo['entitle']);?>" class="main-hide-btn">查看详情</a>
                                 </div>
                             </div>
                         </div>
@@ -176,7 +176,7 @@
                         <div class="customers-richtext ">
                             <h3><span class="text-white"><?php echo ($vo['title']); ?></span></h3>
                         </div>
-                        <a href="#">  <img src="<?php echo ($vo['rmationimg']); ?>" alt="<?php echo ($vo['title']); ?>"></a>
+                        <a href="#">  <img src="<?php echo ($vo['rmationimg']); ?>" alt="奢侈品"></a>
                         <?php if($k == 1|$k == 3): ?><span class="layerT"></span>
                         <?php else: ?>
                             <span class="layer"></span><?php endif; ?>
@@ -312,7 +312,7 @@
 <script>
     $(function(){
         $.ajax({
-            url: "<?php echo U('TallyTotal/index');?>",
+            url: "<?php echo U('tallyTotal/index');?>",
             type: 'post'
         });
     });
@@ -325,19 +325,14 @@
     setTimeout(function(){$('.qiao-icon-close').append("<span id='bdclick'></span>");$('#bdclick').click();},1000);
 </script>
 <script>
-
     var str="<?php echo C('websyscode.footcode');?>";
     var aa= str.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, "'");
     $("#baidu").append(aa);
     $('.scroll-jump').click(function () {
-        //点击按钮时判断 百度商桥代码中的“我要咨询”按钮的元素是否存在，存在的话就执行一次点击事件
+	 //点击按钮时判断 百度商桥代码中的“我要咨询”按钮的元素是否存在，存在的话就执行一次点击事件
         if ($('#nb_icon_wrap').length > 0) {
             $('#nb_icon_wrap').click();
         }
-        $('#nb_nodeboard_close').removeClass('nb-nodeboard-max');
-        $('#nb_nodeboard_text').css('display',"block");
-        $('#nb_node_contain').css('display',"block");
-        $('#nb_nodeboard_set').css('display',"block");
     })
     $('#consulting').click(function () {
         $('.chatBox-kuang').css('display','block');

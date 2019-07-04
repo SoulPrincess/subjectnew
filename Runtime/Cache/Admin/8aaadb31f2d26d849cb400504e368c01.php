@@ -157,7 +157,7 @@
                             </div>
                         </div>
 
-                        <div class="layui-card">
+                        <!--<div class="layui-card">
                             <div class="layui-card-header">实时监控</div>
                             <div class="layui-card-body layadmin-takerates">
                                 <div class="layui-progress" lay-showpercent="yes">
@@ -169,7 +169,7 @@
                                     <div class="layui-progress-bar layui-bg-red" lay-percent="<?php echo ($datacpu['memory']); ?>%" style="width: 90%;"><span class="layui-progress-text"><?php echo ($datacpu['memory']); ?>%</span></div>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
 
                         <div class="layui-card">
                             <div class="layui-card-header">网站流量</div>

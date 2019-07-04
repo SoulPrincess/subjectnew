@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>谷程-主页</title>
+    <title>标题</title>
     <link rel="stylesheet" type="text/css" href="/Public/admin/layui/layui/css/layui.css">
     <link rel="stylesheet" type="text/css" href="/Public/admin/css/tai.css">
     <link rel="stylesheet" type="text/css" href="/Public/admin/css/popup.css">
@@ -39,10 +39,13 @@
             <li class="layui-nav-item"></li>
         </ul>
         <ul class="layui-nav navCo layui-layout-right">
+            <li class="layui-nav-item"><a href="<?php echo U('message/messageinfo');?>">待回复(<cite id="mes" style="color:red">0</cite>)</a></li>
             <li class="layui-nav-item">
-                <a href="javascript:;">
-                    <?php if(session('userInfo.admin_pic') != '' ): ?><img src="<?php echo session('userInfo.admin_pic');?>" class="layui-nav-img"><?php endif; ?>
 
+                <a href="javascript:;">
+                    <?php if(session('userInfo.admin_pic') != '' ): ?><img src="<?php echo session('userInfo.admin_pic');?>" class="layui-nav-img">
+                        <?php else: ?>
+                        <img src="/Public/admin/timg.jpg" alt="头像" class="layui-nav-img"><?php endif; ?>
                     <?php echo session('userInfo.admin_username');?>
                 </a>
                 <dl class="layui-nav-child">
@@ -198,30 +201,33 @@
 </html>
 
 <script>
-    //注意：选项卡 依赖 element 模块，否则无法进行功能性操作
-    layui.use('element', function() {
-        var element = layui.element;
-        //触发事件
+    layui.use('element', function(){
+        var $ = layui.jquery
+            ,element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+
+
     });
 
 </script>
 <script>
     $(function () {
         get_base();
-
     });
     function get_base() {
-        $.getJSON(
-            "<?php echo U('public/base');?>",
-            function (data) {
+        $.ajax({
+            url: "<?php echo U('public/base');?>",
+            type: 'get',
+            dataType: 'JSON',
+            async : false,
+            success:function(data){
                 var ul=getHtml(data);
                 $("#LAY-system-side-menu").append(ul);
                 layui.use('element', function() {
                     var element = layui.element;
                     element.render("layadmin-system-side-menu");
                 });
-            });
-
+            }
+        });
     }
 
     function getHtml(data) {
@@ -271,4 +277,25 @@
     }
 
 
+</script>
+<script>
+    //查看未回复留言
+    function run() {
+        $.ajax({
+            url: "<?php echo U('Message/messagenoanswer');?>",
+            type: 'post',
+            dataType: 'JSON',
+            async : false,
+            success:function(data){
+                if(data.status==1){
+                    $('#mes').text(data.info)
+                }else{
+                    clearInterval(time);
+                    return;
+                }
+            }
+        })
+    };
+    // run();
+     var time = setInterval(run,3000);
 </script>

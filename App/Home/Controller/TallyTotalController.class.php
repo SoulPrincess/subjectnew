@@ -35,7 +35,7 @@ class TallyTotalController extends Controller {
             $totalpv=$total->dayinfo();
             //每日不能超出设定的最大pv值
             if($totalpv['pv']<C('total.total_maxpv')){
-                if($_SERVER['SERVER_NAME']!='subject.com'&& $_SERVER['SERVER_NAME']!='www.subject.com') exit;
+                if($_SERVER['SERVER_NAME']!='sfengrz.com'&& $_SERVER['SERVER_NAME']!='www.sfengrz.com') exit;
                 $add['ip']=get_client_ip();
                 //设置cookie
                 if(!cookie('gcweb')){
@@ -53,7 +53,7 @@ class TallyTotalController extends Controller {
                 $add['time']=time();
                 $add['uri']=$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
                 if(isset($_SERVER['HTTP_REFERER'])){
-                   $add['referer']=$_SERVER['HTTP_REFERER'];
+                    $add['referer']=$_SERVER['HTTP_REFERER'];
                    $data= switchkey($_SERVER['HTTP_REFERER']);
                    $add['keyword']=$data['keyword']!=''?$data['keyword']:'其他';
                    $add['se']=$data['urlname']==$host['host']?'其他':$data['urlname'];
@@ -63,6 +63,7 @@ class TallyTotalController extends Controller {
                     $add['se']='其他';
                 }
                 $tallydata_=D('Tallydata');
+				
                 $tallydata_->create($add);
                 $tallydata_->add();
             }

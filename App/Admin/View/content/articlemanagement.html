@@ -41,7 +41,7 @@
             </div><div class="layui-fluid">
             <div class="layui-card">
                 <div class="layui-card-header layuiadmin-card-header-auto">
-                    <button class="layui-btn layuiadmin-btn-tags" id="btn-add">添加一级分类</button>
+                    <button {:authcheck('addmanagement')} class="layui-btn layuiadmin-btn-tags" id="btn-add">添加一级分类</button>
                     <div class="layui-btn-group">
                         <button class="layui-btn" id="btn-expand">全部展开</button>
                         <button class="layui-btn" id="btn-fold">全部折叠</button>

@@ -6,19 +6,19 @@
 </block>
     <block name="head_content">
     <div  class="parallax-content baner-content baner-content-index  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s" id="home">
-        <div class="home-address baner-content-index">
-            <div class="container">
-                <div class="text-content">
-                    <h2>互联网AI驱动，满足企业品牌数字化营销</h2>
-                    <p>打通信息孤岛链接品牌与消费者互动，实时动态运营 数据收集—挖掘—分析—精准转化用户终端</p>
-                </div>
-                <div class="primary-white-button">
-                    <a href="javascript:void (0);" id="scroll-jump" class="scroll-jump" data-id="about">了解详情</a>
-                </div>
-                <a href="{:U('index/news_information')}" class="parallax-down"><img src="__PUBLIC__/home/img/down.png" alt=""></a>
+    <div class="home-address baner-content-index">
+        <div class="container">
+            <div class="text-content">
+                <h2>互联网AI驱动，满足企业品牌数字化营销</h2>
+                <p class="interactive">打通信息孤岛链接品牌与消费者互动，实时动态运营 数据收集—挖掘—分析—精准转化用户终端</p>
             </div>
+            <div class="primary-white-button">
+                <a href="javascript:void (0);" id="scroll-jump" class="scroll-jump" data-id="about">了解详情</a>
+            </div>
+            <a href="news_and_information_page.html" class="parallax-down"><img src="__PUBLIC__/home/img/down.png" alt=""></a>
         </div>
     </div>
+	</div>
     </block>
     <block name="head_div_end">
 </div>
@@ -30,7 +30,7 @@
     <div class="container">
         <div class="text-content  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
             <h3 class="text-content-color h3-fear">{$index1['info']['title']}</h3>
-            <p class="text-content-color p-fear">{$index1['info']['entitle']}</p>
+			<p class="text-content-color p-fear">{$index1['info']['entitle']}</p>
             <p class="text-content-color p-fear">{$index1['info']['describe']|strip_tags}</p>
         </div>
         <div class="solution contetn-list  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
@@ -44,7 +44,7 @@
                                 </div>
                                 <h3 class="txt-hidden">{$vo['title']}</h3>
                                 <div class="main-hide">
-                                    <a href="{:U($vo['entitle'])}" class="main-hide-btn scroll-jump">查看详情</a>
+                                    <a href="{:U($vo['entitle'])}" class="main-hide-btn">查看详情</a>
                                 </div>
                             </div>
                         </div>

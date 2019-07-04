@@ -100,41 +100,40 @@
 </section>
 <!--Research purpose-->
 <!--Contact us-->
-    <section id="contact">
-        <div class="container">
-            <div class="text-content wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
-                <h3 class="h3-fear">联系我们</h3>
-                <p>Our Customers</p>
-            </div>
-            <div class="solution wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
-                <div class="col-xs-12 col-sm-6 about-content-last wow animated bounceInLeft" data-wow-duration="1.5s" data-wow-delay="0.2s">
-                    <div class="i-tail-ffund">
-                        <ul>
-                            <li><i class="i-tail-bupic1"></i><p>电话：021-3412-2712</p></li>
-                            <li><i class="i-tail-bupic2"></i><p>上海市闵行区泰虹路168号</p></li>
-                            <li><i class="i-tail-bupic3"></i><p>postmaster@xingbafw.com</p></li>
-                            <li><i class="i-tail-bupic4"></i><p>网址：www.sfengrz.com</p></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-6 contact-title wow animated bounceInRight" data-wow-duration="1.5s" data-wow-delay="0.2s" >
-                    <p>业务咨询</p>
+<section id="contact">
+    <div class="container">
+        <div class="text-content wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <h3 class="h3-fear">联系我们</h3>
+            <p>Our Customers</p>
+        </div>
+        <div class="solution wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+            <div class="col-xs-12 col-sm-6 about-content-last wow animated bounceInLeft" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                <div class="i-tail-ffund">
                     <ul>
-                        <li> <small>公司名称：</small> <input type="text" name="name"> </li>
-                        <li> <small>联系电话：</small> <input type="text" name="phone"> </li>
-                        <li>
-                            <small class="small-last">您的留言：</small>
-                            <textarea  name="message"  id="" cols="30" rows="10"></textarea>
-                        </li>
-                        <button id="send_mes">发送</button>
+                        <li><i class="i-tail-bupic1"></i><p>电话：021-3412-2712</p></li>
+                        <li><i class="i-tail-bupic2"></i><p>上海市闵行区泰虹路168号</p></li>
+                        <li><i class="i-tail-bupic3"></i><p>postmaster@xingbafw.com</p></li>
+                        <li><i class="i-tail-bupic4"></i><p>网址：www.sfengrz.com</p></li>
                     </ul>
                 </div>
-
             </div>
 
+            <div class="col-xs-12 col-sm-6 contact-title wow animated bounceInRight" data-wow-duration="1.5s" data-wow-delay="0.2s" >
+                <p>业务咨询</p>
+                <ul>
+                    <li> <small>公司名称：</small> <input type="text" name="name"> </li>
+                    <li> <small>联系电话：</small> <input type="text" name="phone"> </li>
+                    <li>
+                        <small class="small-last">您的留言：</small>
+                        <textarea name="message" id="" cols="30" rows="10"></textarea>
+                    </li>
+                    <button id="send_mes">发送</button>
+                </ul>
+            </div>
         </div>
-    </section>
+
+    </div>
+</section>
 
     <script>
         $('#send_mes').click(function(){
@@ -185,7 +184,7 @@
                         <div class="customers-richtext ">
                             <h3><span class="text-white"><?php echo ($vo['title']); ?></span></h3>
                         </div>
-                        <a href="#">  <img src="<?php echo ($vo['rmationimg']); ?>" alt="<?php echo ($vo['title']); ?>"></a>
+                        <a href="#">  <img src="<?php echo ($vo['rmationimg']); ?>" alt="奢侈品"></a>
                         <?php if($k == 1|$k == 3): ?><span class="layerT"></span>
                         <?php else: ?>
                             <span class="layer"></span><?php endif; ?>
@@ -321,7 +320,7 @@
 <script>
     $(function(){
         $.ajax({
-            url: "<?php echo U('TallyTotal/index');?>",
+            url: "<?php echo U('tallyTotal/index');?>",
             type: 'post'
         });
     });
@@ -334,19 +333,14 @@
     setTimeout(function(){$('.qiao-icon-close').append("<span id='bdclick'></span>");$('#bdclick').click();},1000);
 </script>
 <script>
-
     var str="<?php echo C('websyscode.footcode');?>";
     var aa= str.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, "'");
     $("#baidu").append(aa);
     $('.scroll-jump').click(function () {
-        //点击按钮时判断 百度商桥代码中的“我要咨询”按钮的元素是否存在，存在的话就执行一次点击事件
+	 //点击按钮时判断 百度商桥代码中的“我要咨询”按钮的元素是否存在，存在的话就执行一次点击事件
         if ($('#nb_icon_wrap').length > 0) {
             $('#nb_icon_wrap').click();
         }
-        $('#nb_nodeboard_close').removeClass('nb-nodeboard-max');
-        $('#nb_nodeboard_text').css('display',"block");
-        $('#nb_node_contain').css('display',"block");
-        $('#nb_nodeboard_set').css('display',"block");
     })
     $('#consulting').click(function () {
         $('.chatBox-kuang').css('display','block');

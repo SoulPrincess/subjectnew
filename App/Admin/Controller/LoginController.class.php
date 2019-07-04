@@ -10,7 +10,6 @@ class LoginController extends Controller {
     */
     public function login()
     {
-
         //判断是否永久登录
         $this->checkLong();
         //已经登录则跳转至个人中心

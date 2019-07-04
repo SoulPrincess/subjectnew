@@ -253,7 +253,7 @@
                         <div class="customers-richtext ">
                             <h3><span class="text-white"><?php echo ($vo['title']); ?></span></h3>
                         </div>
-                        <a href="#">  <img src="<?php echo ($vo['rmationimg']); ?>" alt="<?php echo ($vo['title']); ?>"></a>
+                        <a href="#">  <img src="<?php echo ($vo['rmationimg']); ?>" alt="奢侈品"></a>
                         <?php if($k == 1|$k == 3): ?><span class="layerT"></span>
                         <?php else: ?>
                             <span class="layer"></span><?php endif; ?>
@@ -389,7 +389,7 @@
 <script>
     $(function(){
         $.ajax({
-            url: "<?php echo U('TallyTotal/index');?>",
+            url: "<?php echo U('tallyTotal/index');?>",
             type: 'post'
         });
     });
@@ -402,19 +402,14 @@
     setTimeout(function(){$('.qiao-icon-close').append("<span id='bdclick'></span>");$('#bdclick').click();},1000);
 </script>
 <script>
-
     var str="<?php echo C('websyscode.footcode');?>";
     var aa= str.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, "'");
     $("#baidu").append(aa);
     $('.scroll-jump').click(function () {
-        //点击按钮时判断 百度商桥代码中的“我要咨询”按钮的元素是否存在，存在的话就执行一次点击事件
+	 //点击按钮时判断 百度商桥代码中的“我要咨询”按钮的元素是否存在，存在的话就执行一次点击事件
         if ($('#nb_icon_wrap').length > 0) {
             $('#nb_icon_wrap').click();
         }
-        $('#nb_nodeboard_close').removeClass('nb-nodeboard-max');
-        $('#nb_nodeboard_text').css('display',"block");
-        $('#nb_node_contain').css('display',"block");
-        $('#nb_nodeboard_set').css('display',"block");
     })
     $('#consulting').click(function () {
         $('.chatBox-kuang').css('display','block');

@@ -6,6 +6,7 @@ use Think\Controller;
 class BaseController extends Controller {
     public function _initialize()
     {
+        
         // 获取当前用户ID
         define('US_ID',is_login());
 
@@ -13,7 +14,7 @@ class BaseController extends Controller {
         if(!US_ID){
             $this->redirect('login/login');
         }
-        else{
+		else{
             $T=3600;
             if(time()-session('userInfo.admin_time')>=$T){
                 session_unset();
@@ -35,16 +36,14 @@ class BaseController extends Controller {
         if(in_array($ctl.'/'.$act,$not_check) || session('userInfo.admin_username') == C('ADMIN_NAME')){
          //白名单控制器无需验证,超级管理员无需验证
             return true;
-        }
-        else{
-            if(IS_AJAX){
+        }else{
+			  if(IS_AJAX){
                 return true;
             }else{
                 $auth = new \Think\Auth();
                 if(!$auth->check(CONTROLLER_NAME.'/'.ACTION_NAME,US_ID)){
                     $this->error('您没有访问的权限!',"/Admin/index/home");
                 }
-
             }
         }
     }

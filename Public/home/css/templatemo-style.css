@@ -942,6 +942,7 @@ p {
 .worth-item-add{
 	text-align: center;
 	padding-top: 10vh;
+	margin: 10px 0;
 }
 .col-xs-12>p,.col-sm-6>p{
 	font-size: 35px;
@@ -1306,8 +1307,7 @@ p {
 	letter-spacing: 2px;
 }
 article{
-	max-width: 800px;
-	min-width: 500px;
+	width: 50%;
 	padding: 80px 0;
 	margin: 0 auto;
 	border-bottom: 1px solid #333333;
@@ -1362,8 +1362,46 @@ article p{
 
 
 }
-
+.pc{
+	display: block;
+}
+.worth-item-add-ph{
+	display: none;
+}
 @media (max-width: 768px){
+	.pc{
+		display: none;
+	}
+	.worth-item-add-ph{
+		text-align: center;
+		display: block;
+		margin: 10px 0;
+	}
+	.news-title{
+		display: flex;
+		flex-direction: column;
+	}
+	.news-title h6{
+		font-size: 16px;
+	}
+	article{
+		width: 85%;
+	}
+	.fraud{
+		margin-bottom: 10px;
+	}
+	.text-content .fraud-text{
+		font-size: 24px;
+	}
+	.text-content h2,.text-content>h3.h3-fear,article h2{
+		font-size: 28px;
+	}
+	.text-content p,.text-content>p.p-fear{
+		font-size: 18px;
+	}
+	article .note{
+		font-size: 14px;
+	}
 	.contact-title>ul>li>small.small-last{
 		float: none;
 	}
@@ -1435,6 +1473,8 @@ article p{
 
 @media (max-width: 385px){
 
-
+	.contact-title>ul>li>input,.contact-title textarea{
+		width: 338px;
+	}
 
 }

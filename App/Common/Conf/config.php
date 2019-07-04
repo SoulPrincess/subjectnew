@@ -12,7 +12,7 @@ return array(
     'DB_HOST'   => '127.0.0.1', // 服务器地址
     'DB_NAME'   => 'gcsys', // 数据库名
     'DB_USER'   => 'root', // 用户名
-    'DB_PWD'    => 'root', // 密码
+    'DB_PWD'    => 'gcroot', // 密码
     'DB_PORT'   => 3306, // 端口
     'DB_PARAMS' =>  array(), // 数据库连接参数
     'DB_CHARSET'=> 'utf8', // 字符集
@@ -32,6 +32,9 @@ return array(
         'Index/bower',
         'Index/hotsearch',
         'Index/eachpv',
+        'content/articlelg',
+        'content/articlesm',
+        'product/productlg'
     ),
 
     //权限配置
@@ -39,7 +42,7 @@ return array(
         'AUTH_ON'           => true, //认证开关
         'AUTH_TYPE'         => 1, // 认证方式，1为时时认证；2为登录认证。
         'AUTH_GROUP'        => 'gcsys_auth_group', //用户组数据表名
-        'AUTH_GROUP_ACCESS' => 'gcsys_auth_group_access', //用户组明细表
+        'AUTH_GROUP_ACCESS' => 'gcsys_auth_group_access', //用	户组明细表
         'AUTH_RULE'         => 'gcsys_auth_rule', //权限规则表
         'AUTH_USER'         => 'userinfoes'//用户信息表
     ),
@@ -55,11 +58,11 @@ return array(
     'URL_ROUTER_ON'   => true, //开启路由
     'URL_ROUTE_RULES'=>array(
         '/^index$/'=>'Home/index/index',
-//        '/^admin$/'=>'Admin/Index/home',
+        '/^admin$/'=>'Admin/Index/home',
     ),
 
 
-//    'TMPL_EXCEPTION_FILE' => './Public/Admin/404.html', //异常页面
+    'TMPL_EXCEPTION_FILE' => './Public/Admin/404.html', //异常页面
 //    'RULE_EXCEPTION_FILE' => './Public/Admin/500.html', //无权限异常页面
 
 );

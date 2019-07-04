@@ -33,7 +33,6 @@ class PublicController extends  Controller
     WScript.Echo(objProc.LoadPercentage)"
         );
     }
-
     /**
      * 获得总内存及可用物理内存JSON vbs文件生成函数
      * @return string 返回vbs文件路径
@@ -57,7 +56,7 @@ class PublicController extends  Controller
     public function getCpuUsage()
     {
         $path = $this->getCupUsageVbsPath();
-        exec("cscript -nologo $path", $usage);
+        exec("cscript -nologo $path",$usage,$aa);
         return $usage[0];
     }
     /**

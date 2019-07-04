@@ -1,290 +1,141 @@
-[ 2019-07-02T17:03:43+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
+[ 2019-07-02T00:08:29+08:00 ] 123.125.67.156 /robots.txt
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000443s ]
+ERR: 无法加载模块:Robots
 
-[ 2019-07-02T17:03:43+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
+[ 2019-07-02T08:52:43+08:00 ] 101.224.115.75 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
 
-[ 2019-07-02T17:03:43+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056803_23-B.png
+[ 2019-07-02T08:52:43+08:00 ] 101.224.115.75 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000499s ]
 
-[ 2019-07-02T17:03:43+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056803_23-B.png
+[ 2019-07-02T08:52:43+08:00 ] 101.224.115.75 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
 
-[ 2019-07-02T17:03:43+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056803_23-B.png
+[ 2019-07-02T09:54:39+08:00 ] 218.83.25.94 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000339s ]
 
-[ 2019-07-02T17:03:43+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056803_23-B.png
+[ 2019-07-02T10:02:57+08:00 ] 114.94.84.179 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
 
-[ 2019-07-02T17:03:43+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056803_23-B.png
+[ 2019-07-02T13:27:01+08:00 ] 116.231.197.48 /Home/index/img/down.png
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
 
-[ 2019-07-02T17:03:43+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056803_23-B.png
+[ 2019-07-02T15:12:08+08:00 ] 222.64.242.170 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
 
-[ 2019-07-02T17:03:43+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056803_23-B.png
+[ 2019-07-02T15:46:36+08:00 ] 49.7.4.162 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000394s ]
 
-[ 2019-07-02T17:03:43+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056803_23-B.png
+[ 2019-07-02T15:47:53+08:00 ] 49.7.4.162 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
 
-[ 2019-07-02T17:03:43+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056803_23-B.png
+[ 2019-07-02T15:49:27+08:00 ] 49.7.4.162 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000460s ]
 
-[ 2019-07-02T17:03:43+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056803_23-B.png
+[ 2019-07-02T15:49:49+08:00 ] 49.7.4.162 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
 
-[ 2019-07-02T17:03:43+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056803_23-B.png
+[ 2019-07-02T15:50:27+08:00 ] 49.7.4.162 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
 
-[ 2019-07-02T17:03:44+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056803_23-B.png
+[ 2019-07-02T15:50:30+08:00 ] 49.7.4.162 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
 
-[ 2019-07-02T17:03:44+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056803_23-B.png
+[ 2019-07-02T15:50:38+08:00 ] 49.7.4.162 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
 
-[ 2019-07-02T17:03:44+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056803_23-B.png
+[ 2019-07-02T15:50:46+08:00 ] 49.7.4.162 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
 
-[ 2019-07-02T17:03:44+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056803_23-B.png
+[ 2019-07-02T15:51:13+08:00 ] 49.7.4.162 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
 
-[ 2019-07-02T17:03:44+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
+[ 2019-07-02T15:51:19+08:00 ] 49.7.4.162 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
 
-[ 2019-07-02T17:03:44+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
+[ 2019-07-02T15:52:19+08:00 ] 49.7.4.162 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
 
-[ 2019-07-02T17:03:44+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
+[ 2019-07-02T15:53:20+08:00 ] 49.7.4.162 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
 
-[ 2019-07-02T17:03:44+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
+[ 2019-07-02T16:08:03+08:00 ] 114.94.84.181 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
 
-[ 2019-07-02T17:03:44+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
+[ 2019-07-02T16:28:11+08:00 ] 49.7.4.162 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
 
-[ 2019-07-02T17:03:44+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
+[ 2019-07-02T16:52:05+08:00 ] 222.64.242.170 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000435s ]
 
-[ 2019-07-02T17:03:44+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
+[ 2019-07-02T17:28:01+08:00 ] 49.7.4.162 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
 
-[ 2019-07-02T17:03:44+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
+[ 2019-07-02T17:28:08+08:00 ] 49.7.4.162 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
 
-[ 2019-07-02T17:03:45+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
+[ 2019-07-02T17:35:28+08:00 ] 49.7.4.162 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
 
-[ 2019-07-02T17:03:45+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
+[ 2019-07-02T17:49:35+08:00 ] 210.22.121.14 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000444s ]
 
-[ 2019-07-02T17:03:46+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562057099_23-B.png
+[ 2019-07-02T18:00:23+08:00 ] 49.7.4.162 /favicon.ico
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-
-[ 2019-07-02T17:03:49+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-
-[ 2019-07-02T17:03:49+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
-
-[ 2019-07-02T17:03:49+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-
-[ 2019-07-02T17:03:49+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-
-[ 2019-07-02T17:03:49+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-
-[ 2019-07-02T17:03:49+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-
-[ 2019-07-02T17:03:49+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-
-[ 2019-07-02T17:03:49+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-
-[ 2019-07-02T17:03:49+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-
-[ 2019-07-02T17:03:49+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-
-[ 2019-07-02T17:03:49+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562057099_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-
-[ 2019-07-02T17:03:51+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562057099_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-
-[ 2019-07-02T17:03:51+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562057099_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-
-[ 2019-07-02T17:03:51+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-
-[ 2019-07-02T17:03:51+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-
-[ 2019-07-02T17:03:51+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-
-[ 2019-07-02T17:03:51+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-
-[ 2019-07-02T17:03:51+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-
-[ 2019-07-02T17:03:51+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-
-[ 2019-07-02T17:03:51+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-
-[ 2019-07-02T17:03:52+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-
-[ 2019-07-02T17:03:52+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-
-[ 2019-07-02T17:03:52+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-
-[ 2019-07-02T17:03:52+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-
-[ 2019-07-02T17:03:52+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-
-[ 2019-07-02T17:03:54+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-
-[ 2019-07-02T17:03:54+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056973_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-
-[ 2019-07-02T17:03:54+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056803_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-
-[ 2019-07-02T17:05:53+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056803_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-
-[ 2019-07-02T17:05:53+08:00 ] 127.0.0.1 /Public/admin/upload/information/2019-07-02/information_1562056803_23-B.png
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
 

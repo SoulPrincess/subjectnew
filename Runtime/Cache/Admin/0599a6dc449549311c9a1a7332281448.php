@@ -129,7 +129,7 @@
                                 <button class="layui-btn layui-btn-primary op">访问分析</button>
                             </div>
                             <div class="layui-inline">
-                                <button class="layui-btn layui-btn-primary op"  id="total_site">统计设置</button>
+                                <button  class="layui-btn layui-btn-primary op"  id="total_site">统计设置</button>
                             </div>
                         </div>
                     </div>
@@ -252,7 +252,7 @@
                             <div class="layui-form-item Ontheborder">
 
                                 <div class="layui-input-inline ">
-                                    <button class="layui-btn" lay-filter="total_save" lay-submit="total_save"> 保存</button>
+                                    <button <?php echo authcheck('totaldel');?> class="layui-btn" lay-filter="total_save" lay-submit="total_save"> 保存</button>
                                 </div>
                             </div>
 

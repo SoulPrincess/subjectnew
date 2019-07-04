@@ -47,18 +47,18 @@
 <div class="parallax-content baner-content baner-content-brand" >
     <div class="container about-content-last">
         <div class="text-content about-content-last">
-            <h2 class="  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">一物一码产品身份唯一性</h2>
+            <h2 class="  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">一物一码产品身份唯一性认证</h2>
             <p class="fraud-text  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">造假的克星</p>
             <div class="item-list  wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
-                <a href="#" class="fraud" data-id="about">扫码辨真伪</a>
-                <a href="#" class="fraud" data-id="about">动态营销</a>
-                <a href="#" class="fraud" data-id="about">在线互动</a>
-                <a href="#" class="fraud" data-id="about">积分</a>
-                <a href="#" class="fraud" data-id="about">兑奖</a>
+                <span class="fraud" data-id="about">扫码辨真伪</span>
+                <span class="fraud" data-id="about">动态营销</span>
+                <span class="fraud" data-id="about">在线互动</span>
+                <span class="fraud" data-id="about">积分</span>
+                <span class="fraud" data-id="about">兑奖</span>
             </div>
         </div>
         <div class="primary-white-button">
-            <a href="javascript:void (0);" class="scroll-link scroll-jump" data-id="about">了解详情</a>
+            <a href="javascript:void (0);" class="scroll-jump" data-id="about">了解详情</a>
         </div>
         <!--<a href="#" class="parallax-down"><img src="img/down.png" alt=""></a>-->
     </div>
@@ -94,29 +94,14 @@
             <h3 class="h3-fear h3-fear wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">微信扫一扫即刻辩真伪</h3>
         </div>
         <div class="solution">
-            <?php if(is_array($brand4['info'])): foreach($brand4['info'] as $k=>$vo): if($k == 0|$k == 1|$k == 2): ?><div class="col-xs-12 col-sm-4 identify-borR wow animated bounceInLeft"  data-wow-duration="1.5s" data-wow-delay="0.2s">
+		 <?php if(is_array($brand4['info'])): foreach($brand4['info'] as $k=>$vo): if($k == 0|$k == 1|$k == 2): ?><div class="col-xs-12 col-sm-4 identify-borR wow animated bounceInLeft"  data-wow-duration="1.5s" data-wow-delay="0.2s">
                         <img src="<?php echo ($vo['rmationimg']); ?>" alt="" data-key="<?php echo ($k); ?>">
                     </div>
                 <?php else: ?>
                     <div class="col-xs-12 col-sm-4 identify-borR wow animated bounceInRight"  data-wow-duration="1.5s" data-wow-delay="0.2s">
                         <img src="<?php echo ($vo['rmationimg']); ?>" alt="" data-key="<?php echo ($k); ?>">
                     </div><?php endif; endforeach; endif; ?>
-
-            <!--<div class="col-xs-12 col-sm-4 identify-borR wow animated bounceInLeft"  data-wow-duration="1.5s" data-wow-delay="0.2s">-->
-                <!--<img src="/Public/home/img/subpage/operate.png" alt="">-->
-            <!--</div>-->
-            <!--<div class="col-xs-12 col-sm-4 identify-borR wow animated bounceInLeft"  data-wow-duration="1.5s" data-wow-delay="0.2s">-->
-                <!--<img src="/Public/home/img/subpage/person.png" alt="">-->
-            <!--</div>-->
-            <!--<div class="col-xs-12 col-sm-4 identify-borR wow animated bounceInRight"  data-wow-duration="1.5s" data-wow-delay="0.2s">-->
-                <!--<img src="/Public/home/img/subpage/online.png"  alt="">-->
-            <!--</div>-->
-            <!--<div class="col-xs-12 col-sm-4 identify-borR wow animated bounceInRight"  data-wow-duration="1.5s" data-wow-delay="0.2s">-->
-                <!--<img src="/Public/home/img/subpage/control.png" alt="">-->
-            <!--</div>-->
-            <!--<div class="col-xs-12 col-sm-4 identify-borR wow animated bounceInRight"  data-wow-duration="1.5s" data-wow-delay="0.2s">-->
-                <!--<img src="/Public/home/img/subpage/analysis.png" alt="">-->
-            <!--</div>-->
+           
         </div>
     </div>
 </section>
@@ -142,7 +127,7 @@
         </div>
     </div>
 </section>
-    <script>
+   <script>
         $('.identify-borR').mouseenter(function () {
             var $this = $(this),
                 current = $this.children('img').attr('src'),
@@ -214,6 +199,7 @@
             $(this).children('span').remove();
         })
     </script>
+        
 <!--Using digital identity management leaves fakes nowhere to hide-->
 
 
@@ -238,7 +224,7 @@
                         <div class="customers-richtext ">
                             <h3><span class="text-white"><?php echo ($vo['title']); ?></span></h3>
                         </div>
-                        <a href="#">  <img src="<?php echo ($vo['rmationimg']); ?>" alt="<?php echo ($vo['title']); ?>"></a>
+                        <a href="#">  <img src="<?php echo ($vo['rmationimg']); ?>" alt="奢侈品"></a>
                         <?php if($k == 1|$k == 3): ?><span class="layerT"></span>
                         <?php else: ?>
                             <span class="layer"></span><?php endif; ?>
@@ -374,7 +360,7 @@
 <script>
     $(function(){
         $.ajax({
-            url: "<?php echo U('TallyTotal/index');?>",
+            url: "<?php echo U('tallyTotal/index');?>",
             type: 'post'
         });
     });
@@ -387,19 +373,14 @@
     setTimeout(function(){$('.qiao-icon-close').append("<span id='bdclick'></span>");$('#bdclick').click();},1000);
 </script>
 <script>
-
     var str="<?php echo C('websyscode.footcode');?>";
     var aa= str.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, "'");
     $("#baidu").append(aa);
     $('.scroll-jump').click(function () {
-        //点击按钮时判断 百度商桥代码中的“我要咨询”按钮的元素是否存在，存在的话就执行一次点击事件
+	 //点击按钮时判断 百度商桥代码中的“我要咨询”按钮的元素是否存在，存在的话就执行一次点击事件
         if ($('#nb_icon_wrap').length > 0) {
             $('#nb_icon_wrap').click();
         }
-        $('#nb_nodeboard_close').removeClass('nb-nodeboard-max');
-        $('#nb_nodeboard_text').css('display',"block");
-        $('#nb_node_contain').css('display',"block");
-        $('#nb_nodeboard_set').css('display',"block");
     })
     $('#consulting').click(function () {
         $('.chatBox-kuang').css('display','block');

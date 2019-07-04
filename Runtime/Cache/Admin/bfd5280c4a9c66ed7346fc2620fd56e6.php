@@ -43,8 +43,9 @@
             <li class="layui-nav-item">
 
                 <a href="javascript:;">
-                    <?php if(session('userInfo.admin_pic') != '' ): ?><img src="<?php echo session('userInfo.admin_pic');?>" class="layui-nav-img"><?php endif; ?>
-
+                    <?php if(session('userInfo.admin_pic') != '' ): ?><img src="<?php echo session('userInfo.admin_pic');?>" class="layui-nav-img">
+                        <?php else: ?>
+                        <img src="/Public/admin/timg.jpg" alt="头像" class="layui-nav-img"><?php endif; ?>
                     <?php echo session('userInfo.admin_username');?>
                 </a>
                 <dl class="layui-nav-child">

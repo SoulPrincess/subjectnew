@@ -160,7 +160,7 @@
                         </div>
                         <div class="layui-form-item Ontheborder">
                             <div class="layui-input-inline ">
-                                <button class="layui-btn" id="save1"  lay-filter="save1" lay-submit="save1"> 保存</button>
+                                <button {:authcheck('websys/websysinfo')}  class="layui-btn" id="save1"  lay-filter="save1" lay-submit="save1"> 保存</button>
                             </div>
                         </div>
                     </div>
@@ -234,14 +234,14 @@
                                 <div class="layui-form-item">
                                     <div class="layui-inline empty">
                                         <label class="layui-form-labelStatic"></label>
-                                        <a href="javascript:void(0);" id="setStai1" onclick="sendtest()">发送测试</a>
+                                        <a {:authcheck('websys/websysinfo')} href="javascript:void(0);" id="setStai1" onclick="sendtest()">发送测试</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="layui-form-item Ontheborder">
                             <div class="layui-input-inline ">
-                                <button class="layui-btn" lay-filter="save2" lay-submit="save2"> 保存</button>
+                                <button {:authcheck('websys/websysinfo')} class="layui-btn" lay-filter="save2" lay-submit="save2"> 保存</button>
                             </div>
                         </div>
                     </div>
@@ -268,7 +268,7 @@
                             </div>
                             <div class="layui-form-item Ontheborder">
                                 <div class="layui-input-inline ">
-                                    <button class="layui-btn" lay-filter="save3" lay-submit="save3"> 保存</button>
+                                    <button {:authcheck('websys/websysinfo')} class="layui-btn" lay-filter="save3" lay-submit="save3"> 保存</button>
                                 </div>
                             </div>
                         </div>

@@ -368,7 +368,7 @@
     <script type="text/html" id="toolbarDemo">
         <div class="layui-btn-container">
             <button <?php echo authcheck('useradmindel');?> class="layui-btn layuiadmin-btn-list" lay-event="batchdel" data-type="batchdel">删除</button>
-            <button <?php echo authcheck('useradmin');?> data-method="notice" id="consult_add" lay-event="consult_add" class="layui-btn">添加</button>
+            <button <?php echo authcheck('user/useradmin');?> data-method="notice" id="consult_add" lay-event="consult_add" class="layui-btn">添加</button>
         </div>
     </script>
     <script type="text/html" id="toolbar">

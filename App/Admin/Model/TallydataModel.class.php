@@ -85,7 +85,7 @@ class TallydataModel extends Model{
         $now=$tallydata_->field(['count(distinct ip) as ip,count(distinct tdid) as pv,count(distinct cookie) as uv,date,Round(count(distinct tdid)/count(distinct cookie),2) as avg,'.$data.' as referer'])
             ->group($data)
             ->limit($tol,$limit)
-            ->order('time desc')
+			->order('time desc')
             ->select();
         $result=[
             'result'=>$now,
@@ -106,7 +106,7 @@ class TallydataModel extends Model{
         $tol=($page-1)*$limit;
         $now=$tallydata_->field(["ip,FROM_UNIXTIME(time,'%Y-%m-%d %H:%i:%s') as time,browser,referer,uri"])
             ->limit($tol,$limit)
-            ->order('time desc')
+			->order('time desc')
             ->select();
         $result=[
             'result'=>$now,

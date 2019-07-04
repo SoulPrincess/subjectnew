@@ -103,6 +103,9 @@ class UserController extends BaseController
         $user_email=I('get.user_email');
         $user_role=I('get.user_role');
         $data=array();
+		 if(session('userInfo.admin_username') != C('ADMIN_NAME')){
+            $data['Id']=session('userInfo.admin_uid');
+        }
         if($user_loginname!=''){
             $data['LoginName'] = array('like', "%$user_loginname%");
         }

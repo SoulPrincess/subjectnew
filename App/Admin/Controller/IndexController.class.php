@@ -123,7 +123,6 @@ class IndexController extends BaseController
         //当天网站流量
         $time['date']=date('Y-m-d',time());
         $tally=M("tallydata")->field(['Round((count(distinct ip)/count(distinct tdid))*100,0) as avg'])->where($time)->select();
-
         $dayinfo=array_column($tally,'avg');
 
         $data=array(

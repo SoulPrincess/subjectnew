@@ -114,7 +114,7 @@ class ContentController extends BaseController
             $data['Id']=I('post.id');
             $data['Recommend_Id']=I('post.Recommend');
             $data['RmationImg']=I('post.src');
-            $data['UpdateDate']=date('Y-m-d H:i:s',time());
+          
             //提交
             $res = $infomation->save($data);
             if($res){

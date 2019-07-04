@@ -94,17 +94,22 @@ class MessageController extends BaseController
 
     //*****************查询未回复留言*************
     public function messagenoanswer(){
-        if (IS_AJAX) {
-            $Rule = M('messageinfoes');
-            $count=$Rule->where(['Dispose'=>0])->count();
-            $info['info'] = $count;
-            $info['status'] = 1;
-            $this->ajaxReturn($info,'JSON');
-        }else{
-            $info['info'] = '这是个意外！';
-            $info['status'] = 0;
-            $this->ajaxReturn($info,'JSON');
+		try{
+			if (IS_AJAX) {
+				$Rule = M('messageinfoes');
+				$count=$Rule->where(['Dispose'=>0])->count();
+				$info['info'] = $count;
+				$info['status'] = 1;
+				$this->ajaxReturn($info,'JSON');
+			}else{
+				$info['info'] = '这是个意外！';
+				$info['status'] = 0;
+				$this->ajaxReturn($info,'JSON');
+			}
+		}catch(\Exception $e){
+            saveLog('查询未回复留言：', $e->getMessage(), 'messagenoanswer');
         }
+        
     }
 
     //*****************留言系统设置*************
@@ -297,6 +302,7 @@ class MessageController extends BaseController
             $data['ContactName']=I('post.name');
             $data['ContactTel']=I('post.phone');
             $data['Describe']=I('post.message');
+			$data['Dispose']=0;
             $data['Lock']=1;
             $data['MessageDate']=date('Y-m-d H:i:s',time());
             $res=$Rule->add($data);
